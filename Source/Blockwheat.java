@@ -1,4 +1,4 @@
-package Vanityblocks;
+package vanityblocksstorage;
 
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -12,8 +12,8 @@ public class Blockwheat extends net.minecraft.block.Block {
 		super(id, Material.cloth);
 		//setLightValue(1.0F);
         setCreativeTab(CreativeTabs.tabDecorations);
-        blockIndexInTexture = 11;
-        //setHardness(5.0F);
+        //blockIndexInTexture = 11;
+        setHardness(0.6F);
         // setResistance(3.0F);
         //setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.75F, 1.0F);
         //setLightOpacity(0);
@@ -35,6 +35,6 @@ public class Blockwheat extends net.minecraft.block.Block {
 
 	//@Override
 	public String getTextureFile () {
-		return "/Vanityblocks/textures/block.png";
+		return "/VanityBlocksStorage/storage.png";
 	}
 }

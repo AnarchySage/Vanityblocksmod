@@ -1,9 +1,14 @@
 
-package Vanityblocks;
+package vanityblocksstorage;
+
+import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class Proxy {
 
     public void registerRenderInformation() {
 
     }
+	public void addNames()
+	{
+	}
 }
