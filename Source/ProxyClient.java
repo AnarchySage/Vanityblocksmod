@@ -10,11 +10,8 @@ public class ProxyClient extends Proxy {
     @Override
 public void registerRenderInformation()  {
     	
-    MinecraftForgeClient.preloadTexture("/VanityBlocksStorage/storage.png");
+    MinecraftForgeClient.preloadTexture("/vanityblocksstorage/vanstorage.png");
+    MinecraftForgeClient.preloadTexture("/vanityblocksstorage/modstorage.png");
     //    MinecraftForgeClient.preloadTexture(anarchysvanitys.TEXTURE_ITEMS);
     }
-	public void addNames()
-	{
-		LanguageRegistry.instance().addStringLocalization("redstoneblock.name", "en_US", "Redstone Block");
-	}
 }

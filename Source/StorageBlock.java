@@ -13,18 +13,28 @@ import net.minecraft.item.ItemStack;
 public class StorageBlock extends Block {
 	public StorageBlock (int id) {
 		super(id, Material.ground);
-		setBlockName("multiBlock");
+//		setBlockName("storageblock");
 		setCreativeTab(CreativeTabs.tabBlock);
 	}
 	
 	@Override
 	public int getBlockTextureFromSideAndMetadata (int side, int metadata) {
-		return 16 + metadata;
+		if (metadata == 4) {
+	        switch (side) {
+        case 0:
+            return 32;
+        case 1:
+            return 32;
+        default:
+            return 33;
+		}
+		}else
+		return metadata + 0;
 	}
 	
 	@Override
 	public String getTextureFile () {
-		return "/VanityBlocksStorage/storage.png";
+		return "/VanityBlocksStorage/vanstorage.png";
 	}
 	@Override
 	public int damageDropped (int metadata) {
@@ -33,7 +43,7 @@ public class StorageBlock extends Block {
 	
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(int par1, CreativeTabs tab, List subItems) {
-		for (int ix = 0; ix < 16; ix++) {
+		for (int ix = 0; ix < 7; ix++) {
 			subItems.add(new ItemStack(this, 1, ix));
 		}
 	}

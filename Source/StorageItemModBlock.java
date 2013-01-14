@@ -8,7 +8,7 @@ public class StorageItemModBlock extends ItemBlock {
 	private final static String[] subNames = {
 		"Tin Block", "Copper Block", "Silver Block",
 		"Lead Block", "Nikolite Block", "Nickel/Ferrous Block", "Electrum Block",
-		"Platinum/Shiny Block", "Invar Block", "Brass Block"
+		"Platinum/Shiny Block", "Invar Block", "Brass Block", "Coal coke block", "", "", "", "", ""
 	};
 
 	public StorageItemModBlock(int id) {
