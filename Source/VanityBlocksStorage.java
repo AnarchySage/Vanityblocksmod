@@ -84,12 +84,12 @@ public class VanityBlocksStorage {
 
 	@PreInit
 	public void preInit(FMLPreInitializationEvent event) {
-		// nothing required here
-		 // set up default properties		
-//		Configuration config = new Configuration(event.getSuggestedConfigurationFile());
+		Storageprops.initProps();
 /*##### Vannila ##### */
 		GameRegistry.registerBlock(StorageBlock, vanityblocksstorage.StorageItemBlock.class, "Vannila Storage Block");
 		LanguageRegistry.addName(new ItemStack(StorageBlock, 1, 0), "Coal block");
+		LanguageRegistry.addName(new ItemStack(StorageBlock, 1, 1), "Charcoal block");
+
 /* ########### Modded #### */ 
 		GameRegistry.registerBlock(StorageBlockMod, vanityblocksstorage.StorageItemModBlock.class, "Modded Storage Block");
 		LanguageRegistry.addName(new ItemStack(StorageBlockMod, 1, 0), "Tin Block");
@@ -109,9 +109,14 @@ public class VanityBlocksStorage {
 		GameRegistry.addRecipe(new ItemStack(StorageBlock, 1, 0), "xxx", "xxx", "xxx", 'x', Item.coal);
 		GameRegistry.addShapelessRecipe(new ItemStack(Item.coal, 9), new ItemStack(StorageBlock,1,0));
 		}
+		if (Storageprops.enablecharcoal) {
+		GameRegistry.addRecipe(new ItemStack(StorageBlock, 1, 1), "xxx", "xxx", "xxx", 'x', Item.coal,1);
+		GameRegistry.addShapelessRecipe(new ItemStack(Item.coal, 9, 1), new ItemStack(StorageBlock,1,1));
+		}
 		/* ############### Modded Storage blocks ############ */
 		if (Storageprops.enabletin) {
-		GameRegistry.addRecipe(new ItemStack(StorageBlockMod, 1, 0), "xxx", "xxx", "xxx", 'x', "ingotTin");	
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(StorageBlockMod, 1, 0), "xxx", "xxx", "xxx", 'x', "ingotTin"));	
+		if(!OreDictionary.getOres("ingotTin").isEmpty()) GameRegistry.addShapelessRecipe(OreDictionary.getOres("ingotTin").get(0), new ItemStack(StorageBlockMod, 1, 0));
 		}
 		
 	}
