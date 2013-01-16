@@ -1,5 +1,5 @@
 
-package vanityblocksstorage;
+package vanityblocks;
 
 import cpw.mods.fml.common.registry.LanguageRegistry;
 

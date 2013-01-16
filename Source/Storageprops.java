@@ -1,6 +1,7 @@
-package vanityblocksstorage;
+package vanityblocks;
 
 import java.io.File;
+
 import net.minecraftforge.common.Configuration;
 
 
@@ -13,8 +14,11 @@ public class Storageprops {
 		String category = "Block id's";		
 		storageblockconfig = config.get(category,"Vannila Storage Blocks",3050).getInt();
 		storageblockmodconfig = config.get(category,"Modded Storage Blocks",3051).getInt();
+		vanityentityconfig = config.get(category, "Vanity Blocks Tile Entity(such as melting core",3052).getInt();
+		vanitydesignconfig = config.get(category,"Vanity design blocks",3053).getInt();
 
-		String category1 = "Storage blocks option";
+
+		String category1 = "Blocks Enable or disable";
 //		storageblocking = config.get(category1,"Storage blocks enabled?", true).getBoolean(true);
 		enablecoal = config.get(category1,"coalblock.enable", true).getBoolean(true);
 		enablecharcoal = config.get(category1,"charcoalblock.enable", true).getBoolean(true);
@@ -23,6 +27,7 @@ public class Storageprops {
     	enableslime = config.get(category1,"slimeblock.enable", true).getBoolean(true);
     	enablewheatbale = config.get(category1, "wheatbale.enable", true).getBoolean(true);
     	enablesugar = config.get(category1, "sugarblock.enable", true).getBoolean(true);
+    	enableredstone = config.get(category1, "redstoneblock.enable", true).getBoolean(true);
     	enablecocoa = config.get(category1, "cocoablock.enable", true).getBoolean(true);
 		enabletin = config.get(category1,"tinblock.enable", true).getBoolean(true);
 		enablecopper = config.get(category1,"copperblock.enable", true).getBoolean(true);
@@ -35,14 +40,16 @@ public class Storageprops {
 		enableplatinum = config.get(category1,"platinum/shinyblock.enable", true).getBoolean(true);
 		enableinvar = config.get(category1,"invarblock.enable", true).getBoolean(true);
 		enablebrass = config.get(category1,"brassblock.enable", true).getBoolean(true);
-		
+		enablemeltingcore = config.get(category1, "meltingcore.enable", true).getBoolean(true);
+		enablelavalamp = config.get(category1,"lavalamp.enable", true).getBoolean(true);
+
 		String category2 = "Other mod compatibility";
 		enablerailcraftuse = config.get(category2,"Use railcraft stuff?", true).getBoolean(true);
 		enablecoalcoke = config.get(category2,"coalcokeblock.enable", true).getBoolean(true);
-//		String category2 = "Recipe enable or disable";
-//		dragoneggrecipe = config.get(category2,"Crafting Dragon Egg", true).getBoolean(true);
-//		arrowtofeather = config.get(category2,"Arrow to feather", true).getBoolean(true);
-//		cobwebcrafting = config.get(category2,"Crafting cobwebs", true).getBoolean(true);
+		String category3 = "Recipe enable or disable";
+		dragoneggrecipe = config.get(category3,"Crafting Dragon Egg", true).getBoolean(true);
+		arrowtofeather = config.get(category3,"Arrow to feather", true).getBoolean(true);
+		cobwebcrafting = config.get(category3,"Crafting cobwebs", true).getBoolean(true);
 		
 //		String category3 = "Compatibility with other mods";
 //		Blockcoalcoke.enable = config.get(category3,"Coal coke block", true).getBoolean(true);
@@ -55,6 +62,8 @@ public class Storageprops {
 	}
 	public static int storageblockconfig;
 	public static int storageblockmodconfig;
+	public static int vanityentityconfig;
+	public static int vanitydesignconfig;
 	public static boolean enableredstone;
 	public static boolean enablecoal;
 	public static boolean enablecharcoal;
@@ -73,6 +82,11 @@ public class Storageprops {
 	public static boolean enableplatinum;
 	public static boolean enableinvar;
 	public static boolean enablebrass;
+	public static boolean enablemeltingcore;
+	public static boolean enablelavalamp;
+	public static boolean dragoneggrecipe;
+	public static boolean arrowtofeather;
+	public static boolean cobwebcrafting;
 	public static boolean enablerailcraftuse;
 	public static boolean enablecoalcoke;
 	public static boolean storageblocking;

@@ -1,4 +1,4 @@
-package vanityblocksstorage;
+package vanityblocks;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;

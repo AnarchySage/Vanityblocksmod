@@ -1,4 +1,4 @@
-package vanityblocksstorage;
+package vanityblocks;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -33,7 +33,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 //import railcraft.common.api.core.items.ItemRegistry;
 //import railcraft.common.api.crafting.ICokeOvenCraftingManager;
 
-@Mod(modid="VanityBlocks-Storage", name="Anarchys Vanity Blocks-Storage", version= DefaultProps.VERSION)
+@Mod(modid="VanityBlocks-Storage", name="Anarchys Vanity Blocks-Storage", version= DefaultProps.VERSIONStorage)
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 
 /* 				
@@ -52,17 +52,17 @@ ArrayList<Integer> a = new ArrayList<Integer>();
 
 public class VanityBlocksStorage {
 
-	@Instance("VanityBlocksStorage")
+	@Instance("VanityBlocks-Storage")
 	public static VanityBlocksStorage instance;
 
-	@SidedProxy(clientSide = "vanityblocksstorage.ProxyClient", serverSide = "vanityblocksstorage.Proxy")
+	@SidedProxy(clientSide = "vanityblocks.ProxyClient", serverSide = "vanityblocks.Proxy")
 	public static Proxy proxy;
 	
 	public static int storageblockconfig;
 	public static int storageblockmodconfig;
 	public static boolean storageblockint;
-	public static int StorageBlock;
-	public static int StorageBlockMod;
+	public static Block StorageBlock;
+	public static Block StorageBlockMod;
 	public static int StorageBlockId;
 	public static int StorageBlockModId;
 	
@@ -70,15 +70,14 @@ public class VanityBlocksStorage {
 	public static Block coalblock;
 
 
-//	private boolean storageblocking;
 
 	@PreInit
 	public void preInit(FMLPreInitializationEvent event) {
 		Storageprops.initProps();
 		StorageBlockId = Storageprops.storageblockconfig;
-		Block StorageBlock = new StorageBlock(StorageBlockId);
+		StorageBlock = new StorageBlock(StorageBlockId);
 		StorageBlockModId = Storageprops.storageblockmodconfig;
-		Block StorageBlockMod = new StorageBlockMod(StorageBlockModId);
+		StorageBlockMod = new StorageBlockMod(StorageBlockModId);
 		
 		String[] vannilastorageBlockNames = { 
 			"Redstone Block", "Coal Block", "Charcoal Block", "Enderpearl Block", "Slime Block",
@@ -90,17 +89,18 @@ public class VanityBlocksStorage {
 			"Platinum/Shiny Block", "Invar Block", "Brass Block", "Coal coke Block"
 		};
 /*##### Vannila ##### */
-		GameRegistry.registerBlock(StorageBlock, vanityblocksstorage.StorageItemBlock.class, "Vannila Storage Block");
+		GameRegistry.registerBlock(StorageBlock, vanityblocks.StorageItemBlock.class, "Vannila Storage Block");
 		LanguageRegistry.addName(new ItemStack(StorageBlock, 1, 0), "Coal block");
 		LanguageRegistry.addName(new ItemStack(StorageBlock, 1, 1), "Charcoal block");
 		LanguageRegistry.addName(new ItemStack(StorageBlock, 1, 2), "Ender pearl block");
 		LanguageRegistry.addName(new ItemStack(StorageBlock, 1, 3), "Slime block");
 		LanguageRegistry.addName(new ItemStack(StorageBlock, 1, 4), "Bale of wheat");
 		LanguageRegistry.addName(new ItemStack(StorageBlock, 1, 5), "Sugar Block");
-		LanguageRegistry.addName(new ItemStack(StorageBlock, 1, 6), "Cocoa chunk");
+		LanguageRegistry.addName(new ItemStack(StorageBlock, 1, 6), "Cocoa chunk");	
+		LanguageRegistry.addName(new ItemStack(StorageBlock, 1, 7), "Redstone Block");
 
 /* ########### Modded #### */ 
-		GameRegistry.registerBlock(StorageBlockMod, vanityblocksstorage.StorageItemModBlock.class, "Modded Storage Block");
+		GameRegistry.registerBlock(StorageBlockMod, vanityblocks.StorageItemModBlock.class, "Modded Storage Block");
 		LanguageRegistry.addName(new ItemStack(StorageBlockMod, 1, 0), "Tin Block");
 		LanguageRegistry.addName(new ItemStack(StorageBlockMod, 1, 1), "Coppper Block");
 		LanguageRegistry.addName(new ItemStack(StorageBlockMod, 1, 2), "Silver Block");
@@ -112,12 +112,11 @@ public class VanityBlocksStorage {
 		LanguageRegistry.addName(new ItemStack(StorageBlockMod, 1, 8), "Invar Block");
 		LanguageRegistry.addName(new ItemStack(StorageBlockMod, 1, 9), "Coal Coke Block");
 		LanguageRegistry.addName(new ItemStack(StorageBlockMod, 1, 10), "Brass Block");
-
 	}
 
 	@Init
 	public void load(FMLInitializationEvent event) {
-		//        	proxy.registerRenderInformation();
+      	proxy.registerRenderInformation();
 		proxy.addNames();
 		addRecipes();
 	}
@@ -152,6 +151,13 @@ public class VanityBlocksStorage {
 		if (Storageprops.enablecocoa) {
 		GameRegistry.addRecipe(new ItemStack(StorageBlock, 1, 6), "xxx", "xxx", "xxx", 'x', new ItemStack(Item.dyePowder,1,3));
 		GameRegistry.addShapelessRecipe(new ItemStack(Item.dyePowder, 9, 3), new ItemStack(StorageBlock,1,6));
+		}
+		if (Storageprops.enableredstone) {
+		GameRegistry.addRecipe(new ItemStack(StorageBlock, 1, 7), "xxx", "xxx", "xxx", 'x', new ItemStack(Item.redstone));
+		GameRegistry.addShapelessRecipe(new ItemStack(Item.redstone, 9), new ItemStack(StorageBlock,1,7));		
+		}
+		if (Storageprops.enablecoal && Storageprops.enablecharcoal) {
+			GameRegistry.registerFuelHandler(new VanityFuelHandler());
 		}
 		/* ############### Modded Storage blocks ############ */
 		if (Storageprops.enabletin) {
