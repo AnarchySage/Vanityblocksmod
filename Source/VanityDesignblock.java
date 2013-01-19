@@ -3,17 +3,18 @@ package vanityblocks;
 
 import java.util.List;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class VanityDesignblock extends Block {
 	public VanityDesignblock (int id) {
-		super(id, Material.ground);
+		super(id, Material.rock);
 //		setBlockName("storageblock");
 		setCreativeTab(CreativeTabs.tabBlock);
 	}
@@ -29,6 +30,14 @@ public class VanityDesignblock extends Block {
 	}
 	private boolean isActive(int blockMetadata) {
 		return true;
+	}
+	@Override
+	public float getBlockHardness (World par1World, int par2, int par3, int par4)
+	{
+//		return !isActive(par1World.getBlockMetadata(par2, par3, par4)) ? 0 : 3;
+		int metadata = par1World.getBlockMetadata(par2, par3, par4);
+		if (metadata == 0) return 1.5f;
+		return 2f;
 	}
 	@Override
 	public int getBlockTextureFromSideAndMetadata (int side, int metadata) {

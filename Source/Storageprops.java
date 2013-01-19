@@ -50,7 +50,6 @@ public class Storageprops {
 		dragoneggrecipe = config.get(category3,"Crafting Dragon Egg", true).getBoolean(true);
 		arrowtofeather = config.get(category3,"Arrow to feather", true).getBoolean(true);
 		cobwebcrafting = config.get(category3,"Crafting cobwebs", true).getBoolean(true);
-		
 //		String category3 = "Compatibility with other mods";
 //		Blockcoalcoke.enable = config.get(category3,"Coal coke block", true).getBoolean(true);
 		//         int randomItemID = config.getItem("Redstone Block", 20000).getInt();

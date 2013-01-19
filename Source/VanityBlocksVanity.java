@@ -1,10 +1,8 @@
 package vanityblocks;
 
-import java.io.File;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.common.Configuration;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.Instance;
@@ -90,9 +88,6 @@ public class VanityBlocksVanity {
     	if (Storageprops.cobwebcrafting) {
     	GameRegistry.addRecipe(new ItemStack(Block.web), new Object [] {"x x", " x ", "x x", 'x', string});
     	}
-		// **** Put this in a different forgemod. Use the mcmod.info to declare two separate mods. *** 
-		//GameRegistry.addRecipe(skeleskull, new Object [] {"xxx", "xxx", "xxx", 'x', Item.bone});
-
 	}
 	
 	@PostInit
