@@ -24,6 +24,6 @@ public class Blockcoal extends net.minecraft.block.Block {
 
 	//@Override
 	public String getTextureFile () {
-		return "/VanityBlocksStorage/storage.png";
+		return "/vanityblocks/blockleg.png";
 	}
 }

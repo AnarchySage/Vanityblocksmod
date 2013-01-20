@@ -3,27 +3,25 @@ package vanityblocks;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 
-public class Blockcharcoal extends net.minecraft.block.Block {
+public class Blocklavalamp extends net.minecraft.block.Block {
 
 	public static boolean enable;
 
-
-	public Blockcharcoal (int id, int texture) {
-		super(id, Material.rock);
-		//setLightValue(1.0F);
+	public Blocklavalamp (int id, int texture) {
+		super(id, Material.glass);
+		setLightValue(1.0F);
         setCreativeTab(CreativeTabs.tabDecorations);
-        blockIndexInTexture = 3;
-        setHardness(3.0F);
+		setHardness(0.3F);
         // setResistance(3.0F);
         //setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.75F, 1.0F);
         //setLightOpacity(0);
         //setCreativeTab(net.minecraft.creativetab.CreativeTabs.tabDecorations);
         //this.setCreativeTab(CreativeTabs.tabBlock);
 	}
-
-
+	
 	//@Override
 	public String getTextureFile () {
 		return "/vanityblocks/blockleg.png";
 	}
+
 }

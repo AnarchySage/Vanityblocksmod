@@ -7,18 +7,14 @@ public class VanityFuelHandler implements IFuelHandler {
 	@Override
 	public int getBurnTime(ItemStack fuel) {
 //		int var1 = fuel.itemID;
-		int var = StorageBlock(0);
-		if (var){
+		if (fuel.itemID == VanityBlocksStorage.StorageBlock.blockID){
+		if (fuel.getItemDamage() == (0)){
+					return 14400;
+		}
+		if (fuel.getItemDamage() == (1)){
 			return 14400;
 		}
-//		if(var1 == ("VanityBlocksStorage.StorageBlock"){
-//			return 14400;
-//		}else if(var1 == VanityBlocksStorage.coalblock.blockID){
-//			return 14400;
-//		}else if (var2 == VanityBlocksStorage.coalcokeblock.blockID){
-//			return 57600;
-//		}else{
-//		{
+		}
 			return 0;
 		}
 	}

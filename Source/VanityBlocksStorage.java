@@ -1,6 +1,5 @@
 package vanityblocks;
 
-import railcraft.common.api.crafting.RailcraftCraftingManager;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -8,6 +7,7 @@ import net.minecraftforge.liquids.LiquidDictionary;
 import net.minecraftforge.liquids.LiquidStack;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
+import railcraft.common.api.crafting.RailcraftCraftingManager;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
@@ -289,10 +289,10 @@ public class VanityBlocksStorage {
             			GameRegistry.addShapelessRecipe(result, new ItemStack(StorageBlockMod, 1, 9));
             			}
             		LiquidStack liquid = LiquidDictionary.getLiquid("Creosote Oil", 4500);
-            		ItemStack coalblock = new ItemStack(StorageBlockMod,1,0);
-            		ItemStack coalcokeblock = new ItemStack(StorageBlockMod,1,9);
+    //        		ItemStack coalblock = new ItemStack(StorageBlockMod,1,0);
+    //        		ItemStack coalcokeblock = new ItemStack(StorageBlockMod,1,9);
     //    		if (liquid != null && Storageprops.enablecoal != null && blCoalcoke != null)
-        		RailcraftCraftingManager.cokeOven.addRecipe(coalblock, coalcokeblock, liquid, 32400);
+    //    		RailcraftCraftingManager.cokeOven.addRecipe(coalblock, coalcokeblock, liquid, 32400);
                 
             }
             }

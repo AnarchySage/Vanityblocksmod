@@ -14,8 +14,8 @@ public class Storageprops {
 		String category = "Block id's";		
 		storageblockconfig = config.get(category,"Vannila Storage Blocks",3050).getInt();
 		storageblockmodconfig = config.get(category,"Modded Storage Blocks",3051).getInt();
-		vanityentityconfig = config.get(category, "Vanity Blocks Tile Entity(such as melting core",3052).getInt();
-		vanitydesignconfig = config.get(category,"Vanity design blocks",3053).getInt();
+		vanityentityconfig = config.get(category, "Vanity Blocks Tile Entity(such as melting core",3054).getInt();
+		vanitydesignconfig = config.get(category,"Vanity design blocks",3055).getInt();
 
 
 		String category1 = "Blocks Enable or disable";
