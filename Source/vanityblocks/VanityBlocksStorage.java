@@ -3,6 +3,8 @@ package vanityblocks;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.WeightedRandomChestContent;
+import net.minecraftforge.common.ChestGenHooks;
 import net.minecraftforge.liquids.LiquidDictionary;
 import net.minecraftforge.liquids.LiquidStack;
 import net.minecraftforge.oredict.OreDictionary;
@@ -39,6 +41,8 @@ Well... I kinda like the idea of building a house out of bones. Or to add some a
 make fish block, reed block, maybe smooth version of end stone-vanity,double stone slab crafting - vanity
 maybe arrow bundle, yay first item idea XD, liquid water thats colored use mdiyos mod as a guide,
 Villager that trades modded items
+Vanity - Chiseled sandstone blocks
+Add new module, integration, dusts and such for gregtech, osminuim block for ue.
  */
 
 
@@ -68,7 +72,7 @@ public class VanityBlocksStorage {
 		StorageBlockMod = new StorageBlockMod(StorageBlockModId);
 		
 		String[] vannilastorageBlockNames = { 
-			"Redstone Block", "Coal Block", "Charcoal Block", "Enderpearl Block", "Slime Block",
+			"Sugar Cane Block", "Coal Block", "Charcoal Block", "Enderpearl Block", "Slime Block",
 			"Bale of Wheat", "Sugar Block", "Cocoa Block", "Blaze Block", "Leather Block", "Bone Block"
 		};
 		String[] modstorageBlockNames = { 
@@ -85,7 +89,7 @@ public class VanityBlocksStorage {
 		LanguageRegistry.addName(new ItemStack(StorageBlock, 1, 4), "Bale of wheat");
 		LanguageRegistry.addName(new ItemStack(StorageBlock, 1, 5), "Sugar Block");
 		LanguageRegistry.addName(new ItemStack(StorageBlock, 1, 6), "Cocoa chunk");	
-		LanguageRegistry.addName(new ItemStack(StorageBlock, 1, 7), "Redstone Block");
+		LanguageRegistry.addName(new ItemStack(StorageBlock, 1, 7), "Sugar Cane Block");
 		LanguageRegistry.addName(new ItemStack(StorageBlock, 1, 8), "Blaze Block");
 		LanguageRegistry.addName(new ItemStack(StorageBlock, 1, 9), "Leather Block");
 		LanguageRegistry.addName(new ItemStack(StorageBlock, 1, 10), "Bone Block");
@@ -98,7 +102,7 @@ public class VanityBlocksStorage {
 		OreDictionary.registerOre("blockWheat", new ItemStack(StorageBlock,1,4));
 		OreDictionary.registerOre("blockSugar", new ItemStack(StorageBlock,1,5));
 		OreDictionary.registerOre("blockCocoa", new ItemStack(StorageBlock,1,6));
-		OreDictionary.registerOre("blockRedstone", new ItemStack(StorageBlock,1,7));
+		OreDictionary.registerOre("blockSugarCane", new ItemStack(StorageBlock,1,7));
 		OreDictionary.registerOre("blockBlazerod", new ItemStack(StorageBlock,1,8));
 		OreDictionary.registerOre("blockLeather", new ItemStack(StorageBlock,1,9));
 		OreDictionary.registerOre("blockBone", new ItemStack(StorageBlock,1,10));
@@ -136,10 +140,12 @@ public class VanityBlocksStorage {
       	proxy.registerRenderInformation();
 		proxy.addNames();
 		addRecipes();
+		Dungeonlootspawning.chestHooks();
 	}
 	
 	public void addRecipes() 
 	{
+		System.out.println("VanityBlocks Storage loaded");
 		/*############### Vannila Storage blocking ####### */
 		if (Storageprops.enablecoal) {
 		GameRegistry.addRecipe(new ItemStack(StorageBlock, 1, 0), "xxx", "xxx", "xxx", 'x', Item.coal);
@@ -169,9 +175,9 @@ public class VanityBlocksStorage {
 		GameRegistry.addRecipe(new ItemStack(StorageBlock, 1, 6), "xxx", "xxx", "xxx", 'x', new ItemStack(Item.dyePowder,1,3));
 		GameRegistry.addShapelessRecipe(new ItemStack(Item.dyePowder, 9, 3), new ItemStack(StorageBlock,1,6));
 		}
-		if (Storageprops.enableredstone) {
-//		GameRegistry.addRecipe(new ItemStack(StorageBlock, 1, 7), "xxx", "xxx", "xxx", 'x', new ItemStack(Item.redstone));
-		GameRegistry.addShapelessRecipe(new ItemStack(Item.redstone, 9), new ItemStack(StorageBlock,1,7));		
+		if (Storageprops.enablesugarcane) {
+		GameRegistry.addRecipe(new ItemStack(StorageBlock, 1, 7), "xxx", "xxx", "xxx", 'x', new ItemStack(Item.reed));
+		GameRegistry.addShapelessRecipe(new ItemStack(Item.reed, 9), new ItemStack(StorageBlock,1,7));		
 		}
 		if (Storageprops.enablecoal && Storageprops.enablecharcoal) {
 			GameRegistry.registerFuelHandler(new VanityFuelHandler());

@@ -27,7 +27,7 @@ public class Storageprops {
     	enableslime = config.get(category1,"slimeblock.enable", true).getBoolean(true);
     	enablewheatbale = config.get(category1, "wheatbale.enable", true).getBoolean(true);
     	enablesugar = config.get(category1, "sugarblock.enable", true).getBoolean(true);
-    	enableredstone = config.get(category1, "redstoneblock.enable", true).getBoolean(true);
+    	enablesugarcane = config.get(category1, "sugarcaneblock.enable", true).getBoolean(true);
     	enablecocoa = config.get(category1, "cocoablock.enable", true).getBoolean(true);
     	enableblaze = config.get(category1, "blazeblock.enable", true).getBoolean(true);
     	enableleather = config.get(category1, "leatherblock.enable", true).getBoolean(true);
@@ -53,6 +53,11 @@ public class Storageprops {
 		arrowtofeather = config.get(category3,"Arrow to feather", true).getBoolean(true);
 		fleshtoleather = config.get(category3,"Zombie flesh cooks into leather", true).getBoolean(true);
 		quartzblocktoquartz = config.get(category3, "Quartz block decraft to nether quartz", true).getBoolean(true);
+		
+		String category4= "Random things";
+		dungeonlootenablevannila= config.get(category4,"Allow vannila storage blocks to spawn in dungeon loot?", true).getBoolean(true);
+		dungeonlootenablemod= config.get(category4,"Allow modded storage blocks to spawn in dungeon loot?", true).getBoolean(true);
+
 		//		String category3 = "Compatibility with other mods";
 //		Blockcoalcoke.enable = config.get(category3,"Coal coke block", true).getBoolean(true);
 		//         int randomItemID = config.getItem("Redstone Block", 20000).getInt();
@@ -66,7 +71,7 @@ public class Storageprops {
 	public static int storageblockmodconfig;
 	public static int vanityentityconfig;
 	public static int vanitydesignconfig;
-	public static boolean enableredstone;
+	public static boolean enablesugarcane;
 	public static boolean enablecoal;
 	public static boolean enablecharcoal;
 	public static boolean enableenderpearl;
@@ -96,4 +101,6 @@ public class Storageprops {
 	public static boolean enablerailcraftuse;
 	public static boolean enablecoalcoke;
 	public static boolean storageblocking;
+	public static boolean dungeonlootenablevannila;
+	public static boolean dungeonlootenablemod;
 }

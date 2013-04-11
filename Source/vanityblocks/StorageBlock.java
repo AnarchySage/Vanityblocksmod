@@ -55,7 +55,7 @@ public class StorageBlock extends Block {
 		if (metadata == 4) return .8f;
 		if (metadata == 5) return .8f;
 		if (metadata == 6) return .8f;
-		if (metadata == 7) return 1.8f;
+		if (metadata == 7) return .8f;
 		if (metadata == 8) return 1.8f;
 		if (metadata == 9) return .8f;
 		if (metadata == 10) return .8f;
@@ -74,7 +74,7 @@ public class StorageBlock extends Block {
 			iconBuffer[5] = par1IconRegister.registerIcon("vanityblocks:blazeblock"); 
 			iconBuffer[6] = par1IconRegister.registerIcon("vanityblocks:sugarblock"); 
 			iconBuffer[7] = par1IconRegister.registerIcon("vanityblocks:cocoablock"); 
-			iconBuffer[8] = par1IconRegister.registerIcon("vanityblocks:redstoneblock");
+			iconBuffer[8] = par1IconRegister.registerIcon("vanityblocks:sugarcaneblock");
 			iconBuffer[9] = par1IconRegister.registerIcon("vanityblocks:wheattopblock");
 			iconBuffer[10] = par1IconRegister.registerIcon("vanityblocks:wheatsideblock");
 			iconBuffer[11] = par1IconRegister.registerIcon("vanityblocks:leatherblock");
