@@ -38,11 +38,11 @@ GameRegistry.addShapelessRecipe(new ItemStack(VanityBlocksStorage.StorageBlock, 
 Hold f3 and hit h for item id's
 user suggestion
 Well... I kinda like the idea of building a house out of bones. Or to add some atmosphere to your Netherportal. Maybe it damages on contact, reason being the pointy ends of the bones you've broken or because of mystical death voodoo.
-make fish block, reed block, maybe smooth version of end stone-vanity,double stone slab crafting - vanity
+make fish block, maybe smooth version of end stone-vanity,double stone slab crafting - vanity
 maybe arrow bundle, yay first item idea XD, liquid water thats colored use mdiyos mod as a guide,
 Villager that trades modded items
-Vanity - Chiseled sandstone blocks
-Add new module, integration, dusts and such for gregtech, osminuim block for ue.
+Vanity - Chiseled sandstone blocks, chairs? coral blocks/generation, redstone lamps diff colored, curtains maybe?
+Add new module, integration, dusts and such for gregtech, 
  */
 
 
@@ -78,7 +78,7 @@ public class VanityBlocksStorage {
 		String[] modstorageBlockNames = { 
 			"Tin Block", "Copper Block", "Silver Block",
 			"Lead Block", "Nikolite Block", "Nickel/Ferrous Block", "Electrum Block",
-			"Platinum/Shiny Block", "Invar Block", "Brass Block", "Coal coke Block"
+			"Platinum/Shiny Block", "Invar Block", "Brass Block", "Coal Coke Block", "Osmium Block"
 		};
 /*##### Vannila ##### */
 		GameRegistry.registerBlock(StorageBlock, vanityblocks.StorageItemBlock.class, "Vannila Storage Block");
@@ -120,6 +120,7 @@ public class VanityBlocksStorage {
 		LanguageRegistry.addName(new ItemStack(StorageBlockMod, 1, 8), "Invar Block");
 		LanguageRegistry.addName(new ItemStack(StorageBlockMod, 1, 9), "Coal Coke Block");
 		LanguageRegistry.addName(new ItemStack(StorageBlockMod, 1, 10), "Brass Block");
+		LanguageRegistry.addName(new ItemStack(StorageBlockMod, 1, 11), "Osmium Block");
 		
 /* ############ Adds modblocks to Ore Dictionary	 ####### */
 		OreDictionary.registerOre("blockTin", new ItemStack(StorageBlockMod,1,0));
@@ -133,6 +134,7 @@ public class VanityBlocksStorage {
 		OreDictionary.registerOre("blockInvar", new ItemStack(StorageBlockMod,1,8));
 		OreDictionary.registerOre("blockCoalcoke", new ItemStack(StorageBlockMod,1,9));
 		OreDictionary.registerOre("blockBrass", new ItemStack(StorageBlockMod,1,10));
+		OreDictionary.registerOre("blockOsmium", new ItemStack(StorageBlockMod,1,11));
 	}
 
 	@Init
@@ -320,10 +322,19 @@ public class VanityBlocksStorage {
 		GameRegistry.addShapelessRecipe(result, new ItemStack(StorageBlockMod, 1, 10));
 		}
 		}
+		if (Storageprops.enableosmium) {
+		if (!OreDictionary.getOres("ingotOsmium").isEmpty()) {		
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(StorageBlockMod, 1, 11), "xxx", "xxx", "xxx", 'x', "ingotOsmium"));	
+			ItemStack osmiumingot;
+		    osmiumingot = OreDictionary.getOres("ingotOsmium").get(0);
+		    ItemStack result = osmiumingot.copy();
+		    result.stackSize = 9;
+			GameRegistry.addShapelessRecipe(result, new ItemStack(StorageBlockMod, 1, 11));
+			}
+			}
 		//if (Loader.isModLoaded("Railcraft")) {
-        	if (Storageprops.enablerailcraftuse) {
+        if (Storageprops.enablecoalcoke) {
             try {
-            if (Storageprops.enablecoalcoke) {
             		    if (!OreDictionary.getOres("fuelCoke").isEmpty()) {		
             			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(StorageBlockMod, 1, 9), "xxx", "xxx", "xxx", 'x', "fuelCoke"));	
             			ItemStack fuelcoke;
@@ -339,12 +350,10 @@ public class VanityBlocksStorage {
     //    		RailcraftCraftingManager.cokeOven.addRecipe(coalblock, coalcokeblock, liquid, 32400);
            
             }
-            }
              catch (Exception e) {
                 // pokemon!
             }
         }
-      //  }
 }
 	@PostInit
 	public void postInit(FMLPostInitializationEvent event) {

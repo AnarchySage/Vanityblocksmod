@@ -64,6 +64,6 @@ import net.minecraft.tileentity.TileEntity;
 		@Override
 		public boolean isStackValidForSlot(int i, ItemStack itemstack) {
 			// TODO Auto-generated method stub
-			return false;
+			return true;
 		}
 	}

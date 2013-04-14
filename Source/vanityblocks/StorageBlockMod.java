@@ -23,7 +23,7 @@ public class StorageBlockMod extends Block {
 	@Override
 	public void registerIcons(IconRegister par1IconRegister)
 		{
-		iconBuffer = new Icon[12]; 
+		iconBuffer = new Icon[13]; 
 		        
 		iconBuffer[1] = par1IconRegister.registerIcon("vanityblocks:tinblock"); 
 		iconBuffer[2] = par1IconRegister.registerIcon("vanityblocks:copperblock"); 
@@ -36,6 +36,7 @@ public class StorageBlockMod extends Block {
 		iconBuffer[9] = par1IconRegister.registerIcon("vanityblocks:invarblock");
 		iconBuffer[10] = par1IconRegister.registerIcon("vanityblocks:coalcokeblock"); 
 		iconBuffer[11] = par1IconRegister.registerIcon("vanityblocks:brassblock");
+		iconBuffer[12] = par1IconRegister.registerIcon("vanityblocks:osmiumblock");
 		}
 	@Override
 	public Icon getBlockTextureFromSideAndMetadata (int side, int metadata) {
@@ -72,6 +73,9 @@ public class StorageBlockMod extends Block {
 		if (metadata == 10){
 			return iconBuffer[11];
 		}
+		if (metadata == 11){
+			return iconBuffer[12];
+		}
 		return blockIcon;
 		}
 //	public int getBlockTextureFromSideAndMetadata (int side, int metadata) {
@@ -92,7 +96,7 @@ public class StorageBlockMod extends Block {
 	
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(int par1, CreativeTabs tab, List subItems) {
-		for (int ix = 0; ix < 11; ix++) {
+		for (int ix = 0; ix < 12; ix++) {
 			//10 for current
 			subItems.add(new ItemStack(this, 1, ix));
 		}

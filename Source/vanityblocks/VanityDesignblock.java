@@ -47,7 +47,7 @@ public class VanityDesignblock extends Block {
 	    {
 	        iconBuffer = new Icon[2]; 
 	        
-	        iconBuffer[1] = par1IconRegister.registerIcon("vanityblocks:lavalamp"); 
+	        iconBuffer[1] = par1IconRegister.registerIcon("vanityblocks:lavaanim"); 
 	    }
 	@Override
 	public Icon getBlockTextureFromSideAndMetadata (int side, int metadata) {

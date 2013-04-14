@@ -65,7 +65,7 @@ public class StorageBlock extends Block {
    @Override
    public void registerIcons(IconRegister par1IconRegister)
 	    {
-	        iconBuffer = new Icon[13]; 
+	        iconBuffer = new Icon[16]; 
 	        
 	        iconBuffer[1] = par1IconRegister.registerIcon("vanityblocks:coalblock");
 			iconBuffer[2] = par1IconRegister.registerIcon("vanityblocks:charcoalblock"); 
@@ -73,12 +73,16 @@ public class StorageBlock extends Block {
 			iconBuffer[4] = par1IconRegister.registerIcon("vanityblocks:slimeblock"); 
 			iconBuffer[5] = par1IconRegister.registerIcon("vanityblocks:blazeblock"); 
 			iconBuffer[6] = par1IconRegister.registerIcon("vanityblocks:sugarblock"); 
-			iconBuffer[7] = par1IconRegister.registerIcon("vanityblocks:cocoablock"); 
+			iconBuffer[7] = par1IconRegister.registerIcon("vanityblocks:cocoablock1"); 
 			iconBuffer[8] = par1IconRegister.registerIcon("vanityblocks:sugarcaneblock");
 			iconBuffer[9] = par1IconRegister.registerIcon("vanityblocks:wheattopblock");
 			iconBuffer[10] = par1IconRegister.registerIcon("vanityblocks:wheatsideblock");
 			iconBuffer[11] = par1IconRegister.registerIcon("vanityblocks:leatherblock");
 			iconBuffer[12] = par1IconRegister.registerIcon("vanityblocks:boneblock");
+			iconBuffer[13] = par1IconRegister.registerIcon("vanityblocks:boneblock1");
+			iconBuffer[14] = par1IconRegister.registerIcon("vanityblocks:reedtop");
+			iconBuffer[15] = par1IconRegister.registerIcon("vanityblocks:reedside");
+
 	    }
 	@Override
 	public Icon getBlockTextureFromSideAndMetadata (int side, int metadata) {
@@ -112,7 +116,15 @@ public class StorageBlock extends Block {
 			return iconBuffer[7];
 		}
 		if (metadata == 7){
-			return iconBuffer[8];
+//			return iconBuffer[8];
+			switch (side) {
+			case 0:
+				return iconBuffer[14];
+			case 1:
+				return iconBuffer[14];
+			default:
+				return iconBuffer[15];
+			}
 		}
 		if (metadata == 8){
 			return iconBuffer[5];
@@ -121,7 +133,7 @@ public class StorageBlock extends Block {
 			return iconBuffer[11];
 		}
 		if (metadata == 10){
-			return iconBuffer[12];
+			return iconBuffer[13];
 		}
 		return blockIcon;
 	}
