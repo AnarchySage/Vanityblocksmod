@@ -60,7 +60,7 @@ public class VanityBlocksVanity {
 		GameRegistry.registerBlock(VanityDesignworldblock, vanityblocks.VanitydesignworldItemBlock.class, "Vanity Blocks World blocks");
 		LanguageRegistry.addName(new ItemStack(VanityDesignworldblock, 1, 0), "Marble");
 		LanguageRegistry.addName(new ItemStack(VanityDesignworldblock, 1, 1), "Marble Brick");
-		LanguageRegistry.addName(new ItemStack(VanityDesignworldblock, 1, 1), "Chiseled Marble");
+		LanguageRegistry.addName(new ItemStack(VanityDesignworldblock, 1, 2), "Chiseled Marble");
 		LanguageRegistry.addName(new ItemStack(VanityDesignworldblock, 1, 3), "Ashford Black Marble");
 		LanguageRegistry.addName(new ItemStack(VanityDesignworldblock, 1, 4), "Ashford Black Marble Brick");
 		LanguageRegistry.addName(new ItemStack(VanityDesignworldblock, 1, 5), "Chiseled Ashford Black Marble");
@@ -82,6 +82,12 @@ public class VanityBlocksVanity {
         if (Storageprops.generatemarble) {
         GameRegistry.addRecipe(new ItemStack(VanityDesignworldblock, 4, 1), "xx", "xx",  'x', new ItemStack(VanityDesignworldblock,0,0));
         GameRegistry.addShapelessRecipe(new ItemStack(VanityDesignworldblock, 1, 0), new ItemStack(VanityDesignworldblock,0,1));
+        GameRegistry.addRecipe(new ItemStack(VanityDesignworldblock, 4, 2), "xx", "xx",  'x', new ItemStack(VanityDesignworldblock,0,1));
+        }
+        if (Storageprops.generateblackmarble) {
+        GameRegistry.addRecipe(new ItemStack(VanityDesignworldblock, 4, 4), "xx", "xx",  'x', new ItemStack(VanityDesignworldblock,0,3));
+        GameRegistry.addShapelessRecipe(new ItemStack(VanityDesignworldblock, 1, 3), new ItemStack(VanityDesignworldblock,0,4));
+        GameRegistry.addRecipe(new ItemStack(VanityDesignworldblock, 4, 5), "xx", "xx",  'x', new ItemStack(VanityDesignworldblock,0,4));
         }
     	if (Storageprops.arrowtofeather) {
 		GameRegistry.addShapelessRecipe(new ItemStack(Item.feather,1), new ItemStack(Item.arrow,1));

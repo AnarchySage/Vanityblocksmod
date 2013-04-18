@@ -26,13 +26,13 @@ public class VanityDesignworldblock extends Block {
 //       default: return 0;
 //    	}
 //    }
-//	public int getLightValue (IBlockAccess world, int x, int y, int z)
-//	{
-//		return !isActive(world.getBlockMetadata(x, y, z)) ? 0 : 15;
-//	}
-//	private boolean isActive(int blockMetadata) {
-//		return true;
-//	}
+	public int getLightValue (IBlockAccess world, int x, int y, int z)
+	{
+		return !isActive(world.getBlockMetadata(x, y, z)) ? 0 : 15;
+	}
+	private boolean isActive(int blockMetadata) {
+		return true;
+	}
 	@Override
 	public float getBlockHardness (World par1World, int par2, int par3, int par4)
 	{
@@ -83,7 +83,7 @@ public class VanityDesignworldblock extends Block {
 	
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(int par1, CreativeTabs tab, List subItems) {
-		for (int ix = 0; ix < 7; ix++) {
+		for (int ix = 0; ix < 6; ix++) {
 			subItems.add(new ItemStack(this, 1, ix));
 		}
 	}

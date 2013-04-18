@@ -14,16 +14,12 @@ import cpw.mods.fml.common.IWorldGenerator;
 
 public class Worldgen implements IWorldGenerator
 {
-    private int numberOfBlocks;
-    private int basaltBlockId;
-
 		public Worldgen(int par1)
 		{
 			//cobalt = new ManhattanOreGenerator(TContent.oreSlag.blockID, 1, 2, 4, 100, true, false, Block.netherrack.blockID);
 			//ardite = new ManhattanOreGenerator(TContent.oreSlag.blockID, 2, 2, 4, 100, true, false, Block.netherrack.blockID);
 			marble = new WorldGenMinable(VanityBlocksVanity.VanityDesignworldblock.blockID, 0, (Storageprops.marblevein), Block.stone.blockID);
-	        this.basaltBlockId = (VanityBlocksVanity.VanityDesignworldblock.blockID);
-	        this.numberOfBlocks = par1;
+			blackmarble = new WorldGenMinable(VanityBlocksVanity.VanityDesignworldblock.blockID, 3, (Storageprops.blackmarblevein), Block.stone.blockID);
 		}
 		
 		public void generate (Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider)
@@ -32,7 +28,8 @@ public class Worldgen implements IWorldGenerator
 			if (world.provider.dimensionId == 0)
 //				generateNether(random, chunkX*16, chunkZ*16, world);
 //			else
-				generateSurface(random, chunkX*16, chunkZ*16, world);
+			generateSurface(random, chunkX*16, chunkZ*16, world);
+			generateblackmarble(random, chunkX*16, chunkZ*16, world);
 			}
 		}
 		
@@ -50,6 +47,21 @@ public class Worldgen implements IWorldGenerator
 				}
 			}
 		}
+		void generateblackmarble(Random random, int xChunk, int zChunk, World world)
+		{
+			int heightBand;
+			int xPos, yPos, zPos;
+			if (Storageprops.generateblackmarble)
+			{
+				for (int q = 0; q < (Storageprops.blackmarblerarity); q++)
+				{
+					xPos = xChunk + random.nextInt(16); yPos = (Storageprops.blackmarbleheight) + random.nextInt(Storageprops.blackmarblerange); zPos = zChunk + random.nextInt(16);
+
+					blackmarble.generate(world, random, xPos, yPos, zPos);
+				}
+			}
+		}
+		
 	/*		void generateSurfacebasalt(Random random, int xChunk, int zChunk, World world)
 			{
 				int heightBand;
@@ -105,5 +117,6 @@ public class Worldgen implements IWorldGenerator
 		}
 		*/
 		WorldGenMinable marble;
+		WorldGenMinable blackmarble;
 	}
 // }

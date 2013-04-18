@@ -1,8 +1,10 @@
 package vanityblocks;
 
 import java.io.File;
+import java.util.Set;
 
 import net.minecraftforge.common.Configuration;
+import net.minecraftforge.common.Property;
 
 
 public class Storageprops {
@@ -59,15 +61,23 @@ public class Storageprops {
 		dungeonlootenablevannila= config.get(category4,"Allow vannila storage blocks to spawn in dungeon loot?", true).getBoolean(true);
 		dungeonlootenablemod= config.get(category4,"Allow modded storage blocks to spawn in dungeon loot?", true).getBoolean(true);
 		
-		String category5 = "World Generation";
-		String marblecomment = "Marble Generation";
+		String category5 = "World Generation - Marble";
 		generatemarble = config.get(category5,"Allow marble to generate in the world?", true).getBoolean(true);
 		marbleheight = config.get(category5,"Height-How low should the marble generate?",10).getInt();
 		marblerange = config.get(category5,"Range-What is the range from ^, such as, if height was 10, and range was 20, it would generate from 10-30.",40).getInt();
 		marblevein = config.get(category5,"VeinThickness- How big of a vien of marble should spawn,say you want 50 in a vein, do 25",20).getInt();
 		marblerarity = config.get(category5,"Rarity- How often should marble generate in the world, good value is below 20",20).getInt();
 		
-
+		String category6 = "World Generation - Black Marble";
+		generateblackmarble = config.get(category6,"Allow Ashford Black Marble to generate in the world?",true).getBoolean(true);
+		blackmarbleheight = config.get(category6,"Height-How low should the black marble generate?",10).getInt();
+		blackmarblerange = config.get(category6,"Range-What is the range from ^, such as, if height was 10, and range was 20, it would generate from 10-30.",40).getInt();
+		blackmarblevein = config.get(category6,"VeinThickness- How big of a vien of black marble should spawn,say you want 50 in a vein, do 25",20).getInt();
+		blackmarblerarity = config.get(category6,"Rarity- How often should black marble generate in the world, good value is below 20",20).getInt();
+		
+//		String category7 = "Texture swapping";
+//		Property blackmarbletextures = config.get(category6,"Do you want to use my textures for black marble or alt textures? type true for mine, false for alt",true);
+//		blackmarbletextures.comment = "Type true for main textures, false for alt textures";
 		//		String category3 = "Compatibility with other mods";
 //		Blockcoalcoke.enable = config.get(category3,"Coal coke block", true).getBoolean(true);
 		//         int randomItemID = config.getItem("Redstone Block", 20000).getInt();
@@ -77,6 +87,7 @@ public class Storageprops {
 
 		config.save();
 	}
+
 	public static int storageblockconfig;
 	public static int storageblockmodconfig;
 	public static int vanityentityconfig;
@@ -119,5 +130,9 @@ public class Storageprops {
 	public static int marblerange;
 	public static int marblevein;
 	public static int marblerarity;
-	public static boolean generatebasalt;
+	public static boolean generateblackmarble;
+	public static int blackmarbleheight;
+	public static int blackmarblerange;
+	public static int blackmarblevein;
+	public static int blackmarblerarity;
 }
