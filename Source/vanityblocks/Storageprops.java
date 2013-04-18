@@ -16,6 +16,7 @@ public class Storageprops {
 		storageblockmodconfig = config.get(category,"Modded Storage Blocks",3051).getInt();
 		vanityentityconfig = config.get(category, "Vanity Blocks Tile Entity(such as melting core)",3054).getInt();
 		vanitydesignconfig = config.get(category,"Vanity design blocks",3055).getInt();
+		vanitydesignworldconfig = config.get(category,"Vanity Blocks World Generation blocks",3058).getInt();
 
 
 		String category1 = "Blocks Enable or disable";
@@ -54,9 +55,18 @@ public class Storageprops {
 		fleshtoleather = config.get(category3,"Zombie flesh cooks into leather", true).getBoolean(true);
 		quartzblocktoquartz = config.get(category3, "Quartz block decraft to nether quartz", true).getBoolean(true);
 		
-		String category4= "Random things";
+		String category4 = "Random things";
 		dungeonlootenablevannila= config.get(category4,"Allow vannila storage blocks to spawn in dungeon loot?", true).getBoolean(true);
 		dungeonlootenablemod= config.get(category4,"Allow modded storage blocks to spawn in dungeon loot?", true).getBoolean(true);
+		
+		String category5 = "World Generation";
+		String marblecomment = "Marble Generation";
+		generatemarble = config.get(category5,"Allow marble to generate in the world?", true).getBoolean(true);
+		marbleheight = config.get(category5,"Height-How low should the marble generate?",10).getInt();
+		marblerange = config.get(category5,"Range-What is the range from ^, such as, if height was 10, and range was 20, it would generate from 10-30.",40).getInt();
+		marblevein = config.get(category5,"VeinThickness- How big of a vien of marble should spawn,say you want 50 in a vein, do 25",20).getInt();
+		marblerarity = config.get(category5,"Rarity- How often should marble generate in the world, good value is below 20",20).getInt();
+		
 
 		//		String category3 = "Compatibility with other mods";
 //		Blockcoalcoke.enable = config.get(category3,"Coal coke block", true).getBoolean(true);
@@ -71,6 +81,7 @@ public class Storageprops {
 	public static int storageblockmodconfig;
 	public static int vanityentityconfig;
 	public static int vanitydesignconfig;
+	public static int vanitydesignworldconfig;
 	public static boolean enablesugarcane;
 	public static boolean enablecoal;
 	public static boolean enablecharcoal;
@@ -103,4 +114,10 @@ public class Storageprops {
 	public static boolean storageblocking;
 	public static boolean dungeonlootenablevannila;
 	public static boolean dungeonlootenablemod;
+	public static boolean generatemarble;
+	public static int marbleheight;
+	public static int marblerange;
+	public static int marblevein;
+	public static int marblerarity;
+	public static boolean generatebasalt;
 }

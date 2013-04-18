@@ -37,12 +37,14 @@ GameRegistry.addShapelessRecipe(new ItemStack(VanityBlocksStorage.StorageBlock, 
 ^how to legacy
 Hold f3 and hit h for item id's
 user suggestion
-Well... I kinda like the idea of building a house out of bones. Or to add some atmosphere to your Netherportal. Maybe it damages on contact, reason being the pointy ends of the bones you've broken or because of mystical death voodoo.
 make fish block, maybe smooth version of end stone-vanity,double stone slab crafting - vanity
-maybe arrow bundle, yay first item idea XD, liquid water thats colored use mdiyos mod as a guide,
+maybe arrow bundle, yay first item idea XD, liquid water thats colored -waiting on forge api for it
 Villager that trades modded items
-Vanity - Chiseled sandstone blocks, chairs? coral blocks/generation, redstone lamps diff colored, curtains maybe?
+Vanity - Chiseled sandstone blocks, chairs? coral blocks/generation, redstone lamps diff colored, curtains maybe?, inverted redstone lamps, colored sand/glass
 Add new module, integration, dusts and such for gregtech, 
+
+To add info to the bottom of blocks = https://github.com/mDiyo/Natura/blob/master/mods/natura/blocks/CloudItem.java
+
  */
 
 
@@ -143,6 +145,7 @@ public class VanityBlocksStorage {
 		proxy.addNames();
 		addRecipes();
 		Dungeonlootspawning.chestHooks();
+		GameRegistry.registerWorldGenerator(new Worldgen(0));
 	}
 	
 	public void addRecipes() 

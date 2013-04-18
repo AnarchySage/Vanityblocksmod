@@ -32,6 +32,8 @@ public class VanityBlocksVanity {
 	public static int vanitydesignconfig;
 	public static Block VanityDesignblock;
 	public static int VanityDesignId;
+	public static int VanityDesignworldId;
+	public static Block VanityDesignworldblock;
 
 
 	//        public static Logger log = Logger.getLogger("Vanityblocks");
@@ -41,13 +43,27 @@ public class VanityBlocksVanity {
 		Storageprops.initProps();
 		VanityDesignId = Storageprops.vanitydesignconfig;
 		VanityDesignblock = new VanityDesignblock(VanityDesignId);
+		VanityDesignworldId = Storageprops.vanitydesignworldconfig;
+		VanityDesignworldblock = new VanityDesignworldblock(VanityDesignworldId);
 		
 		String[] vanitydesignBlockNames = {
 				"Lava Lamp"
 		};		
-		/* ######### Block registration and naming #### */
+		String [] vanitydesignWorldblockNames = {
+				"Marble", "Marble Brick", "Chiseled Marble", "Ashford Black Marble", "Ashford Black Marble Brick", "Chiseled Ashford Black Marble"
+		};
+		/* ######### Block registration and naming for vanity #### */
 		GameRegistry.registerBlock(VanityDesignblock, vanityblocks.VanitydesignItemBlock.class, "Vanity Blocks Design blocks");
 		LanguageRegistry.addName(new ItemStack(VanityDesignblock, 1, 0), "Lava Lamp");
+		
+		/* ######### Block registration and naming for world gen #### */
+		GameRegistry.registerBlock(VanityDesignworldblock, vanityblocks.VanitydesignworldItemBlock.class, "Vanity Blocks World blocks");
+		LanguageRegistry.addName(new ItemStack(VanityDesignworldblock, 1, 0), "Marble");
+		LanguageRegistry.addName(new ItemStack(VanityDesignworldblock, 1, 1), "Marble Brick");
+		LanguageRegistry.addName(new ItemStack(VanityDesignworldblock, 1, 1), "Chiseled Marble");
+		LanguageRegistry.addName(new ItemStack(VanityDesignworldblock, 1, 3), "Ashford Black Marble");
+		LanguageRegistry.addName(new ItemStack(VanityDesignworldblock, 1, 4), "Ashford Black Marble Brick");
+		LanguageRegistry.addName(new ItemStack(VanityDesignworldblock, 1, 5), "Chiseled Ashford Black Marble");
 	}
 	@Init
 	public void load(FMLInitializationEvent event) {
@@ -60,24 +76,12 @@ public class VanityBlocksVanity {
 	{
 		ItemStack glassstack = new ItemStack(Block.glass);
 		ItemStack lavabukkit = new ItemStack(Item.bucketLava);
-		ItemStack string = new ItemStack(Item.silk);
-		ItemStack wheat = new ItemStack(Item.wheat);
-		ItemStack redstone = new ItemStack(Item.redstone);
-		ItemStack coal = new ItemStack(Item.coal);
-		ItemStack charcoal = new ItemStack(Item.coal,1,1);
-		ItemStack enderpearl = new ItemStack(Item.enderPearl);
-		ItemStack slime = new ItemStack(Item.slimeBall);
-		ItemStack egg = new ItemStack(Item.egg);
-		ItemStack blazerod = new ItemStack(Item.blazeRod);
-		ItemStack obsidian = new ItemStack(Block.obsidian);
-		ItemStack skeleskull = new ItemStack(Item.skull);
-		ItemStack zombieskull = new ItemStack(Item.skull,1,2);
-		ItemStack stevehead = new ItemStack(Item.skull,1,3);
-		ItemStack creeperhead = new ItemStack(Item.skull,1,4);
-		ItemStack rottenflesh = new ItemStack(Item.rottenFlesh);
-		
         if (Storageprops.enablelavalamp) {
     	GameRegistry.addRecipe(new ItemStack(VanityDesignblock, 1, 0), " x ", "xyx", " x ", 'x', glassstack, 'y', lavabukkit);
+        }
+        if (Storageprops.generatemarble) {
+        GameRegistry.addRecipe(new ItemStack(VanityDesignworldblock, 4, 1), "xx", "xx",  'x', new ItemStack(VanityDesignworldblock,0,0));
+        GameRegistry.addShapelessRecipe(new ItemStack(VanityDesignworldblock, 1, 0), new ItemStack(VanityDesignworldblock,0,1));
         }
     	if (Storageprops.arrowtofeather) {
 		GameRegistry.addShapelessRecipe(new ItemStack(Item.feather,1), new ItemStack(Item.arrow,1));
