@@ -18,7 +18,9 @@ public class Vanitytileblock extends BlockContainer {
 	public Vanitytileblock (int id) {
 		super(id, Material.rock);
 //		setBlockName("storageblock");
-		setCreativeTab(CreativeTabs.tabBlock);
+//		setCreativeTab(CreativeTabs.tabBlock);
+		setCreativeTab(vanityblocks.VanityBlocksStorage.tabCustom);
+
 	}
     private Icon[] iconBuffer;
 	@Override
@@ -29,7 +31,7 @@ public class Vanitytileblock extends BlockContainer {
 		iconBuffer[1] = par1IconRegister.registerIcon("vanityblocks:meltingcore"); 
 		}
 	@Override
-	public Icon getBlockTextureFromSideAndMetadata (int side, int metadata) {
+	public Icon getIcon (int side, int metadata) {
 		if (metadata == 0){
 			return iconBuffer[1];
 		}

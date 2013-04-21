@@ -1,6 +1,7 @@
 package vanityblocks;
 
 import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.WeightedRandomChestContent;
@@ -42,7 +43,7 @@ maybe arrow bundle, yay first item idea XD, liquid water thats colored -waiting 
 Villager that trades modded items
 Vanity - Chiseled sandstone blocks, chairs? coral blocks/generation, redstone lamps diff colored, curtains maybe?, inverted redstone lamps, colored sand/glass
 Add new module, integration, dusts and such for gregtech, 
-
+spling wants enchant for bow that teleports the mob, and potion of swimming
 To add info to the bottom of blocks = https://github.com/mDiyo/Natura/blob/master/mods/natura/blocks/CloudItem.java
 
  */
@@ -79,8 +80,8 @@ public class VanityBlocksStorage {
 		};
 		String[] modstorageBlockNames = { 
 			"Tin Block", "Copper Block", "Silver Block",
-			"Lead Block", "Nikolite Block", "Nickel/Ferrous Block", "Electrum Block",
-			"Platinum/Shiny Block", "Invar Block", "Brass Block", "Coal Coke Block", "Osmium Block"
+			"Lead Block", "Nikolite Block", "Nickel Block", "Electrum Block",
+			"Platinum Block", "Invar Block", "Brass Block", "Coal Coke Block", "Osmium Block"
 		};
 /*##### Vannila ##### */
 		GameRegistry.registerBlock(StorageBlock, vanityblocks.StorageItemBlock.class, "Vannila Storage Block");
@@ -116,9 +117,9 @@ public class VanityBlocksStorage {
 		LanguageRegistry.addName(new ItemStack(StorageBlockMod, 1, 2), "Silver Block");
 		LanguageRegistry.addName(new ItemStack(StorageBlockMod, 1, 3), "Lead Block");
 		LanguageRegistry.addName(new ItemStack(StorageBlockMod, 1, 4), "Nikolite Block");
-		LanguageRegistry.addName(new ItemStack(StorageBlockMod, 1, 5), "Nickel/Ferrous Block");
+		LanguageRegistry.addName(new ItemStack(StorageBlockMod, 1, 5), "Nickel Block");
 		LanguageRegistry.addName(new ItemStack(StorageBlockMod, 1, 6), "Electrum Block");
-		LanguageRegistry.addName(new ItemStack(StorageBlockMod, 1, 7), "Platinum/Shiny Block");
+		LanguageRegistry.addName(new ItemStack(StorageBlockMod, 1, 7), "Platinum Block");
 		LanguageRegistry.addName(new ItemStack(StorageBlockMod, 1, 8), "Invar Block");
 		LanguageRegistry.addName(new ItemStack(StorageBlockMod, 1, 9), "Coal Coke Block");
 		LanguageRegistry.addName(new ItemStack(StorageBlockMod, 1, 10), "Brass Block");
@@ -146,8 +147,14 @@ public class VanityBlocksStorage {
 		addRecipes();
 		Dungeonlootspawning.chestHooks();
 		GameRegistry.registerWorldGenerator(new Worldgen(0));
+//		VanityblocksTab.init(VanityBlocksVanity.VanityDesignblock, 1, 0);
+		LanguageRegistry.instance().addStringLocalization("itemGroup.vanityblocks", "en_US", "Anarchys Vanity Blocks");
 	}
-	
+    public static CreativeTabs tabCustom = new CreativeTabs("vanityblocks") {
+        public ItemStack getIconItemStack() {
+                return new ItemStack(VanityBlocksVanity.VanityDesignblock, 1, 0);
+        }
+};	
 	public void addRecipes() 
 	{
 		System.out.println("VanityBlocks Storage loaded");

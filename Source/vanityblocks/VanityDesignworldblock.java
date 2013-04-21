@@ -18,21 +18,17 @@ public class VanityDesignworldblock extends Block {
 	public VanityDesignworldblock (int id) {
 		super(id, Material.rock);
 //		setBlockName("storageblock");
-		setCreativeTab(CreativeTabs.tabBlock);
+//		setCreativeTab(CreativeTabs.tabBlock);
+		setCreativeTab(vanityblocks.VanityBlocksStorage.tabCustom);
+
 	}
-//    public float getLightValue(int md) {
-//    	switch(md) {
-//    	case 0: return 15F;
-//       default: return 0;
-//    	}
-//    }
-	public int getLightValue (IBlockAccess world, int x, int y, int z)
-	{
-		return !isActive(world.getBlockMetadata(x, y, z)) ? 0 : 15;
-	}
-	private boolean isActive(int blockMetadata) {
-		return true;
-	}
+//	public int getLightValue (IBlockAccess world, int x, int y, int z)
+//	{
+//		return !isActive(world.getBlockMetadata(x, y, z)) ? 0 : 15;
+//	}
+//	private boolean isActive(int blockMetadata) {
+//		return true;
+//	}
 	@Override
 	public float getBlockHardness (World par1World, int par2, int par3, int par4)
 	{
@@ -45,17 +41,21 @@ public class VanityDesignworldblock extends Block {
    @Override
    public void registerIcons(IconRegister par1IconRegister)
 	    {
-	        iconBuffer = new Icon[7]; 
+	        iconBuffer = new Icon[11]; 
 	        
 	        iconBuffer[1] = par1IconRegister.registerIcon("vanityblocks:marble"); 
 	        iconBuffer[2] = par1IconRegister.registerIcon("vanityblocks:marblebrick");
 	        iconBuffer[3] = par1IconRegister.registerIcon("vanityblocks:marblechisel");
-	        iconBuffer[4] = par1IconRegister.registerIcon("vanityblocks:blackmarble");
-	        iconBuffer[5] = par1IconRegister.registerIcon("vanityblocks:blackmarblebrick");
-	        iconBuffer[6] = par1IconRegister.registerIcon("vanityblocks:blackmarblechisel");
+	        iconBuffer[4] = par1IconRegister.registerIcon("vanityblocks:marbleslab");
+	        iconBuffer[5] = par1IconRegister.registerIcon("vanityblocks:marblestair");
+	        iconBuffer[6] = par1IconRegister.registerIcon("vanityblocks:blackmarble");
+	        iconBuffer[7] = par1IconRegister.registerIcon("vanityblocks:blackmarblebrick");
+	        iconBuffer[8] = par1IconRegister.registerIcon("vanityblocks:blackmarblechisel");
+	        iconBuffer[9] = par1IconRegister.registerIcon("vanityblocks:blackmarbleslab");
+	        iconBuffer[10] = par1IconRegister.registerIcon("vanityblocks:blackmarblestair");
 	    }
 	@Override
-	public Icon getBlockTextureFromSideAndMetadata (int side, int metadata) {
+	public Icon getIcon (int side, int metadata) {
 		if (metadata == 0){
 			return iconBuffer[1];
 		}
@@ -74,16 +74,27 @@ public class VanityDesignworldblock extends Block {
 		if (metadata == 5) {
 			return iconBuffer[6];
 		}
+		if (metadata == 6) {
+			return iconBuffer[7];
+		}
+		if (metadata == 7) {
+			return iconBuffer[8];
+		}
+		if (metadata == 8) {
+			return iconBuffer[9];
+		}
+		if (metadata == 9) {
+			return iconBuffer[10];
+		}
 		return blockIcon;
 	}
 	@Override
 	public int damageDropped (int metadata) {
 		return metadata;
 	}
-	
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(int par1, CreativeTabs tab, List subItems) {
-		for (int ix = 0; ix < 6; ix++) {
+		for (int ix = 0; ix < 10; ix++) {
 			subItems.add(new ItemStack(this, 1, ix));
 		}
 	}

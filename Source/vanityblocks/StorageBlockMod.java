@@ -17,7 +17,9 @@ public class StorageBlockMod extends Block {
 	public StorageBlockMod (int id) {
 		super(id, Material.rock);
 //        setHardness(3.0F);
-		setCreativeTab(CreativeTabs.tabBlock);
+//		setCreativeTab(CreativeTabs.tabBlock);
+		setCreativeTab(vanityblocks.VanityBlocksStorage.tabCustom);
+
 	}
     private Icon[] iconBuffer;
 	@Override
@@ -39,7 +41,7 @@ public class StorageBlockMod extends Block {
 		iconBuffer[12] = par1IconRegister.registerIcon("vanityblocks:osmiumblock");
 		}
 	@Override
-	public Icon getBlockTextureFromSideAndMetadata (int side, int metadata) {
+	public Icon getIcon (int side, int metadata) {
 		if (metadata == 0){
 			return iconBuffer[1];
 		}
@@ -97,7 +99,7 @@ public class StorageBlockMod extends Block {
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(int par1, CreativeTabs tab, List subItems) {
 		for (int ix = 0; ix < 12; ix++) {
-			//10 for current
+			//12 for current
 			subItems.add(new ItemStack(this, 1, ix));
 		}
 	}

@@ -50,7 +50,8 @@ public class VanityBlocksVanity {
 				"Lava Lamp"
 		};		
 		String [] vanitydesignWorldblockNames = {
-				"Marble", "Marble Brick", "Chiseled Marble", "Ashford Black Marble", "Ashford Black Marble Brick", "Chiseled Ashford Black Marble"
+				"Marble", "Marble Brick", "Chiseled Marble", "Marble Slab", "Marble Stair",
+				"Ashford Black Marble", "Ashford Black Marble Brick", "Chiseled Ashford Black Marble", "Ashford Black Marble Slab", "Ashford Black Marble Stair"
 		};
 		/* ######### Block registration and naming for vanity #### */
 		GameRegistry.registerBlock(VanityDesignblock, vanityblocks.VanitydesignItemBlock.class, "Vanity Blocks Design blocks");
@@ -61,9 +62,13 @@ public class VanityBlocksVanity {
 		LanguageRegistry.addName(new ItemStack(VanityDesignworldblock, 1, 0), "Marble");
 		LanguageRegistry.addName(new ItemStack(VanityDesignworldblock, 1, 1), "Marble Brick");
 		LanguageRegistry.addName(new ItemStack(VanityDesignworldblock, 1, 2), "Chiseled Marble");
-		LanguageRegistry.addName(new ItemStack(VanityDesignworldblock, 1, 3), "Ashford Black Marble");
-		LanguageRegistry.addName(new ItemStack(VanityDesignworldblock, 1, 4), "Ashford Black Marble Brick");
-		LanguageRegistry.addName(new ItemStack(VanityDesignworldblock, 1, 5), "Chiseled Ashford Black Marble");
+		LanguageRegistry.addName(new ItemStack(VanityDesignworldblock, 1, 3), "Marble Slab");
+		LanguageRegistry.addName(new ItemStack(VanityDesignworldblock, 1, 4), "Marble Stair");
+		LanguageRegistry.addName(new ItemStack(VanityDesignworldblock, 1, 5), "Ashford Black Marble");
+		LanguageRegistry.addName(new ItemStack(VanityDesignworldblock, 1, 6), "Ashford Black Marble Brick");
+		LanguageRegistry.addName(new ItemStack(VanityDesignworldblock, 1, 7), "Chiseled Ashford Black Marble");
+		LanguageRegistry.addName(new ItemStack(VanityDesignworldblock, 1, 8), "Ashford Black Marble Slab");
+		LanguageRegistry.addName(new ItemStack(VanityDesignworldblock, 1, 9), "Ashford Black Marble Stair");
 	}
 	@Init
 	public void load(FMLInitializationEvent event) {
@@ -74,10 +79,10 @@ public class VanityBlocksVanity {
 	}
 	public void addRecipes()
 	{
-		ItemStack glassstack = new ItemStack(Block.glass);
+		ItemStack glasspane = new ItemStack(Block.thinGlass);
 		ItemStack lavabukkit = new ItemStack(Item.bucketLava);
         if (Storageprops.enablelavalamp) {
-    	GameRegistry.addRecipe(new ItemStack(VanityDesignblock, 1, 0), " x ", "xyx", " x ", 'x', glassstack, 'y', lavabukkit);
+    	GameRegistry.addRecipe(new ItemStack(VanityDesignblock, 4, 0), "zxz", "xyx", "zxz", 'x', glasspane, 'y', lavabukkit , 'z', Block.stone);
         }
         if (Storageprops.generatemarble) {
         GameRegistry.addRecipe(new ItemStack(VanityDesignworldblock, 4, 1), "xx", "xx",  'x', new ItemStack(VanityDesignworldblock,0,0));
@@ -85,9 +90,9 @@ public class VanityBlocksVanity {
         GameRegistry.addRecipe(new ItemStack(VanityDesignworldblock, 4, 2), "xx", "xx",  'x', new ItemStack(VanityDesignworldblock,0,1));
         }
         if (Storageprops.generateblackmarble) {
-        GameRegistry.addRecipe(new ItemStack(VanityDesignworldblock, 4, 4), "xx", "xx",  'x', new ItemStack(VanityDesignworldblock,0,3));
-        GameRegistry.addShapelessRecipe(new ItemStack(VanityDesignworldblock, 1, 3), new ItemStack(VanityDesignworldblock,0,4));
-        GameRegistry.addRecipe(new ItemStack(VanityDesignworldblock, 4, 5), "xx", "xx",  'x', new ItemStack(VanityDesignworldblock,0,4));
+        GameRegistry.addRecipe(new ItemStack(VanityDesignworldblock, 4, 6), "xx", "xx",  'x', new ItemStack(VanityDesignworldblock,0,5));
+        GameRegistry.addShapelessRecipe(new ItemStack(VanityDesignworldblock, 1, 5), new ItemStack(VanityDesignworldblock,0,6));
+        GameRegistry.addRecipe(new ItemStack(VanityDesignworldblock, 4, 7), "xx", "xx",  'x', new ItemStack(VanityDesignworldblock,0,6));
         }
     	if (Storageprops.arrowtofeather) {
 		GameRegistry.addShapelessRecipe(new ItemStack(Item.feather,1), new ItemStack(Item.arrow,1));
@@ -96,8 +101,13 @@ public class VanityBlocksVanity {
     	GameRegistry.addSmelting(Item.rottenFlesh.itemID, new ItemStack(Item.leather, 1), 0.5F);
     	}
     	if (Storageprops.quartzblocktoquartz) {
-    	GameRegistry.addShapelessRecipe(new ItemStack(Item.field_94583_ca, 4), new ItemStack(Block.blockNetherQuartz));
-    	// Change field_94583_ca to netherquartz when they rename it
+    	GameRegistry.addShapelessRecipe(new ItemStack(Item.netherQuartz, 4), new ItemStack(Block.blockNetherQuartz));
+    	}
+    	if (Storageprops.greendye) {
+ //           GameRegistry.addRecipe(new ItemStack(Item.dyePowder,1,2), "xy", 'x', new ItemStack(Item.dyePowder,1,4), 'y', new ItemStack(Item.dyePowder,1,11));
+ //          GameRegistry.addRecipe(new ItemStack(Item.dyePowder,1,2), "x", "y", 'x', new ItemStack(Item.dyePowder,1,4), 'y', new ItemStack(Item.dyePowder,1,11));
+ //           GameRegistry.addRecipe(new ItemStack(Item.dyePowder,1,2), "y", "x", 'x', new ItemStack(Item.dyePowder,1,4), 'y', new ItemStack(Item.dyePowder,1,11));
+            GameRegistry.addShapelessRecipe(new ItemStack(Item.dyePowder,1,2), new ItemStack(Item.dyePowder,1,4), new ItemStack(Item.dyePowder,1,11));
     	}
 	}
 	

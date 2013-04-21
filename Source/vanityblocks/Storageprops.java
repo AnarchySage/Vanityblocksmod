@@ -56,6 +56,7 @@ public class Storageprops {
 		arrowtofeather = config.get(category3,"Arrow to feather", true).getBoolean(true);
 		fleshtoleather = config.get(category3,"Zombie flesh cooks into leather", true).getBoolean(true);
 		quartzblocktoquartz = config.get(category3, "Quartz block decraft to nether quartz", true).getBoolean(true);
+		greendye = config.get(category3, "Make green dye from blue and yellow dye?",true).getBoolean(true);
 		
 		String category4 = "Random things";
 		dungeonlootenablevannila= config.get(category4,"Allow vannila storage blocks to spawn in dungeon loot?", true).getBoolean(true);
@@ -63,17 +64,17 @@ public class Storageprops {
 		
 		String category5 = "World Generation - Marble";
 		generatemarble = config.get(category5,"Allow marble to generate in the world?", true).getBoolean(true);
-		marbleheight = config.get(category5,"Height-How low should the marble generate?",10).getInt();
-		marblerange = config.get(category5,"Range-What is the range from ^, such as, if height was 10, and range was 20, it would generate from 10-30.",40).getInt();
-		marblevein = config.get(category5,"VeinThickness- How big of a vien of marble should spawn,say you want 50 in a vein, do 25",20).getInt();
-		marblerarity = config.get(category5,"Rarity- How often should marble generate in the world, good value is below 20",20).getInt();
+		marbleheight = config.get(category5,"Height-How low should the marble generate?",32).getInt();
+		marblerange = config.get(category5,"Range-What is the range from ^, such as, if height was 10, and range was 20, it would generate from 10-30.",60).getInt();
+		marblevein = config.get(category5,"VeinThickness- How big of a vien of marble should spawn,say you want 50 in a vein, do 25",24).getInt();
+		marblerarity = config.get(category5,"Rarity- How often should marble generate in a chunk, good value is below 5",1).getInt();
 		
 		String category6 = "World Generation - Black Marble";
 		generateblackmarble = config.get(category6,"Allow Ashford Black Marble to generate in the world?",true).getBoolean(true);
 		blackmarbleheight = config.get(category6,"Height-How low should the black marble generate?",10).getInt();
-		blackmarblerange = config.get(category6,"Range-What is the range from ^, such as, if height was 10, and range was 20, it would generate from 10-30.",40).getInt();
-		blackmarblevein = config.get(category6,"VeinThickness- How big of a vien of black marble should spawn,say you want 50 in a vein, do 25",20).getInt();
-		blackmarblerarity = config.get(category6,"Rarity- How often should black marble generate in the world, good value is below 20",20).getInt();
+		blackmarblerange = config.get(category6,"Range-What is the range from ^, such as, if height was 10, and range was 20, it would generate from 10-30.",22).getInt();
+		blackmarblevein = config.get(category6,"VeinThickness- How big of a vien of black marble should spawn,say you want 50 in a vein, do 25",24).getInt();
+		blackmarblerarity = config.get(category6,"Rarity- How often should black marble generate in a chunk, good value is below 5",1).getInt();
 		
 //		String category7 = "Texture swapping";
 //		Property blackmarbletextures = config.get(category6,"Do you want to use my textures for black marble or alt textures? type true for mine, false for alt",true);
@@ -121,6 +122,7 @@ public class Storageprops {
 	public static boolean arrowtofeather;
 	public static boolean fleshtoleather;
 	public static boolean quartzblocktoquartz;
+	public static boolean greendye;
 	public static boolean enablecoalcoke;
 	public static boolean storageblocking;
 	public static boolean dungeonlootenablevannila;

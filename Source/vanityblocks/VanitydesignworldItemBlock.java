@@ -1,13 +1,19 @@
 package vanityblocks;
 
+import java.util.List;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
 public class VanitydesignworldItemBlock extends ItemBlock {
 	
 	private final static String[] subNames = {
-		"Marble", "Marble Brick", "Chiseled Marble", "Ashford Black Marble", "Ashford Black Marble Brick", "Chiseled Ashford Black Marble", "", "",
-		"", "", "", "", "", "", "", "", "", "", ""
+		"Marble", "Marble Brick", "Chiseled Marble", "Marble Slab", "Marble Stair", 
+		"Ashford Black Marble", "Ashford Black Marble Brick", "Chiseled Ashford Black Marble", "Ashford Black Marble Slab", "Ashford Black Marble Stair",
+		"", "", "", "", "", "", "", "", ""
 	};
 
 	public VanitydesignworldItemBlock(int id) {
@@ -30,4 +36,36 @@ public class VanitydesignworldItemBlock extends ItemBlock {
 		return subNames[itemstack.getItemDamage()];
 		//getItemName() + "." + 
     }
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void addInformation (ItemStack stack, EntityPlayer player, List list, boolean par4)
+		{
+	    	switch (stack.getItemDamage())
+	    	{
+	    	case 0: 
+	    		break;
+	    	case 1:
+	    		break;
+	    	case 2:
+	    		break;
+	    	case 3:
+	    		list.add("Ignore for now, placeholder.");
+	    		break;
+	    	case 4:
+	    		list.add("Ignore for now, placeholder.");
+	    		break;
+	    	case 5:
+	    		break;
+	    	case 6:
+	    		break;
+	    	case 7:
+	    		break;
+	    	case 8:
+	    		list.add("Ignore for now, placeholder.");
+	    		break;
+	    	case 9:
+	    		list.add("Ignore for now, placeholder.");
+	    		break;
+	    	}
+		} 
 }

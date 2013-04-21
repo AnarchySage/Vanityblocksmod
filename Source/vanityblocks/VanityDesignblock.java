@@ -18,7 +18,8 @@ public class VanityDesignblock extends Block {
 	public VanityDesignblock (int id) {
 		super(id, Material.rock);
 //		setBlockName("storageblock");
-		setCreativeTab(CreativeTabs.tabBlock);
+//		setCreativeTab(CreativeTabs.tabBlock);
+		setCreativeTab(vanityblocks.VanityBlocksStorage.tabCustom);
 	}
 //    public float getLightValue(int md) {
 //    	switch(md) {
@@ -50,7 +51,7 @@ public class VanityDesignblock extends Block {
 	        iconBuffer[1] = par1IconRegister.registerIcon("vanityblocks:lavaanim"); 
 	    }
 	@Override
-	public Icon getBlockTextureFromSideAndMetadata (int side, int metadata) {
+	public Icon getIcon (int side, int metadata) {
 		if (metadata == 0){
 			return iconBuffer[1];
 		}

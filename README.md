@@ -12,7 +12,7 @@ If you wish to commit a change, feel free to, ill check it out.
 
 Thanks
 
-
+Check it out here... http://www.minecraftforum.net/topic/1631527-151-forge-ssmp-vanity-blocks-mod-v32/
 
 
 Thanks to KingLemming for his help and teaching me.

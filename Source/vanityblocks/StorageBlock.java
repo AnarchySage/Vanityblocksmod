@@ -21,7 +21,8 @@ public class StorageBlock extends Block {
 	public StorageBlock (int id) {
 		super(id, Material.rock);
 //		setBlockName("storageblock");
-		setCreativeTab(CreativeTabs.tabBlock);
+//		setCreativeTab(CreativeTabs.tabBlock);
+		setCreativeTab(vanityblocks.VanityBlocksStorage.tabCustom);
 		}
 	@Override
 	public boolean isFireSource(World world, int x, int y, int z, int metadata, ForgeDirection side)
@@ -65,7 +66,7 @@ public class StorageBlock extends Block {
    @Override
    public void registerIcons(IconRegister par1IconRegister)
 	    {
-	        iconBuffer = new Icon[16]; 
+	        iconBuffer = new Icon[15]; 
 	        
 	        iconBuffer[1] = par1IconRegister.registerIcon("vanityblocks:coalblock");
 			iconBuffer[2] = par1IconRegister.registerIcon("vanityblocks:charcoalblock"); 
@@ -73,19 +74,20 @@ public class StorageBlock extends Block {
 			iconBuffer[4] = par1IconRegister.registerIcon("vanityblocks:slimeblock"); 
 			iconBuffer[5] = par1IconRegister.registerIcon("vanityblocks:blazeblock"); 
 			iconBuffer[6] = par1IconRegister.registerIcon("vanityblocks:sugarblock"); 
-			iconBuffer[7] = par1IconRegister.registerIcon("vanityblocks:cocoablock1"); 
+			iconBuffer[7] = par1IconRegister.registerIcon("vanityblocks:cocoablock"); 
 			iconBuffer[8] = par1IconRegister.registerIcon("vanityblocks:sugarcaneblock");
 			iconBuffer[9] = par1IconRegister.registerIcon("vanityblocks:wheattopblock");
 			iconBuffer[10] = par1IconRegister.registerIcon("vanityblocks:wheatsideblock");
 			iconBuffer[11] = par1IconRegister.registerIcon("vanityblocks:leatherblock");
 			iconBuffer[12] = par1IconRegister.registerIcon("vanityblocks:boneblock");
-			iconBuffer[13] = par1IconRegister.registerIcon("vanityblocks:boneblock1");
-			iconBuffer[14] = par1IconRegister.registerIcon("vanityblocks:reedtop");
-			iconBuffer[15] = par1IconRegister.registerIcon("vanityblocks:reedside");
+			iconBuffer[13] = par1IconRegister.registerIcon("vanityblocks:reedtop");
+			iconBuffer[14] = par1IconRegister.registerIcon("vanityblocks:reedside");
 
 	    }
 	@Override
-	public Icon getBlockTextureFromSideAndMetadata (int side, int metadata) {
+//	public Icon getBlockTextureFromSideAndMetadata (int side, int metadata) {
+	public Icon getIcon (int side, int metadata) {
+
 		if (metadata == 0){
 			return iconBuffer[1];
 		}
@@ -119,11 +121,11 @@ public class StorageBlock extends Block {
 //			return iconBuffer[8];
 			switch (side) {
 			case 0:
-				return iconBuffer[14];
+				return iconBuffer[13];
 			case 1:
-				return iconBuffer[14];
+				return iconBuffer[13];
 			default:
-				return iconBuffer[15];
+				return iconBuffer[14];
 			}
 		}
 		if (metadata == 8){
@@ -133,7 +135,7 @@ public class StorageBlock extends Block {
 			return iconBuffer[11];
 		}
 		if (metadata == 10){
-			return iconBuffer[13];
+			return iconBuffer[12];
 		}
 		return blockIcon;
 	}

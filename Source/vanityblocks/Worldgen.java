@@ -19,7 +19,7 @@ public class Worldgen implements IWorldGenerator
 			//cobalt = new ManhattanOreGenerator(TContent.oreSlag.blockID, 1, 2, 4, 100, true, false, Block.netherrack.blockID);
 			//ardite = new ManhattanOreGenerator(TContent.oreSlag.blockID, 2, 2, 4, 100, true, false, Block.netherrack.blockID);
 			marble = new WorldGenMinable(VanityBlocksVanity.VanityDesignworldblock.blockID, 0, (Storageprops.marblevein), Block.stone.blockID);
-			blackmarble = new WorldGenMinable(VanityBlocksVanity.VanityDesignworldblock.blockID, 3, (Storageprops.blackmarblevein), Block.stone.blockID);
+			blackmarble = new WorldGenMinable(VanityBlocksVanity.VanityDesignworldblock.blockID, 5, (Storageprops.blackmarblevein), Block.stone.blockID);
 		}
 		
 		public void generate (Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider)
@@ -77,9 +77,9 @@ public class Worldgen implements IWorldGenerator
 				}
 /*			if (Storageprops.generateTin)
 			{
-				for (int q = 0; q < PHConstruct.tinDensity; q++)
+				for (int q = 0; q < Storageprops.tinDensity; q++)
 				{
-					xPos = xChunk + random.nextInt(16); yPos = PHConstruct.tinHeight + random.nextInt(PHConstruct.tinRange); zPos = zChunk + random.nextInt(16);
+					xPos = xChunk + random.nextInt(16); yPos = PHConstruct.tinHeight + random.nextInt(Storageprops.tinRange); zPos = zChunk + random.nextInt(16);
 					tin.generate(world, random, xPos, yPos, zPos);
 				}
 			} */
@@ -88,7 +88,7 @@ public class Worldgen implements IWorldGenerator
 /*		void generateNether(Random random, int xChunk, int zChunk, World world)
 		{
 			int xPos, yPos, zPos;
-			for (int i = 0; i < PHConstruct.netherDensity; i++)
+			for (int i = 0; i < Storageprops.netherDensity; i++)
 			{
 				if (Storageprops.generateCobalt)
 				{
@@ -101,7 +101,7 @@ public class Worldgen implements IWorldGenerator
 					ardite.generate(world, random, xPos, yPos, zPos);
 				}
 			}
-			for (int i = 0; i < PHConstruct.netherDensity; i++)
+			for (int i = 0; i < Storageprops.netherDensity; i++)
 			{
 				if (Storageprops.generateCobalt)
 				{
