@@ -7,9 +7,9 @@ public class VanityFuelHandler implements IFuelHandler {
 	@Override
 	public int getBurnTime(ItemStack fuel) {
 //		int var1 = fuel.itemID;
-		if (fuel.itemID == VanityBlocksStorage.StorageBlock.blockID){
+		if (fuel.itemID == BlockRegistration.StorageBlock.blockID){
 		if (fuel.getItemDamage() == (0)){
-					return 14400;
+			return 14400;
 		}
 		if (fuel.getItemDamage() == (1)){
 			return 14400;
@@ -18,8 +18,8 @@ public class VanityFuelHandler implements IFuelHandler {
 			return 21600;
 		}
 		}
-			return 0;
-		}
+		return 0;
+	}
 	}
 /*
 You might have noticed items return nothing. This is pretty simple to fix, you just need to change the return statement of the body of the If Statements. Note that this is tick for which the fuel lasts. To obtain how much you need in here, multiply the seconds you want by 20. So if I want books to last for 15 seconds, I would change the return after the Item.book.shiftedIndex to be 300. If I want my fuel item to last for 10 minutes (seriously) I would put 12000. To help you, here's a chart containing the values of vanilla items:
