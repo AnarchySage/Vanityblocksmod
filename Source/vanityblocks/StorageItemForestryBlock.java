@@ -9,15 +9,15 @@ import net.minecraft.util.Icon;
 
 import java.util.List;
 
-public class StorageItemModBlock extends ItemBlock {
+public class StorageItemForestryBlock extends ItemBlock {
 	
 	private final static String[] subNames = {
-		"Tin Block", "Copper Block", "Silver Block",
-		"Lead Block", "Nikolite Block", "Nickel Block", "Electrum Block",
-		"Platinum Block", "Invar Block", "Brass Block", "Coal Coke block", "Osmium Block", "Rubber Block", "", "", ""
+		"Apatite Block", "Honey Block", "Honeydew Block",
+		"Peat Block", "", "", "",
+		"", "", "", "", "", "", "", "", ""
 	};
 
-	public StorageItemModBlock(int id) {
+	public StorageItemForestryBlock(int id) {
 		super(id);
 		setHasSubtypes(true);
 //		setItemName("storageblockmod");
@@ -51,26 +51,24 @@ public class StorageItemModBlock extends ItemBlock {
     	case 4:
     		break;
     	case 5:
-    		list.add("Some mods call it Ferrous");
+//    		list.add("Some mods call it Ferrous");
     		break;
     	case 6:
     		break;
     	case 7:
-    		list.add("Some mods call it Shiny");
     		break;
     	case 8:
     		break;
     	case 9:
-    		list.add("From Railcraft");
     		break;
     	case 10:
     		break;
     	case 11:
-    		list.add("From a mod called Universal Electricity");
     		break;
-    	case 12:
+ /*   	case 12:
+    		list.add("Some mods call it Shiny");
     		break;
- /*   	case 13:
+    	case 13:
     		list.add("Some mods call it Shiny");
     		break;
     	case 14:

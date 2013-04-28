@@ -60,13 +60,14 @@ public class StorageBlock extends Block {
 		if (metadata == 8) return 1.8f;
 		if (metadata == 9) return .8f;
 		if (metadata == 10) return .8f;
+		if (metadata == 11) return .8f;
 		return 2f;
 	}
     private Icon[] iconBuffer;
    @Override
    public void registerIcons(IconRegister par1IconRegister)
 	    {
-	        iconBuffer = new Icon[15]; 
+	        iconBuffer = new Icon[16]; 
 	        
 	        iconBuffer[1] = par1IconRegister.registerIcon("vanityblocks:coalblock");
 			iconBuffer[2] = par1IconRegister.registerIcon("vanityblocks:charcoalblock"); 
@@ -82,7 +83,7 @@ public class StorageBlock extends Block {
 			iconBuffer[12] = par1IconRegister.registerIcon("vanityblocks:boneblock");
 			iconBuffer[13] = par1IconRegister.registerIcon("vanityblocks:reedtop");
 			iconBuffer[14] = par1IconRegister.registerIcon("vanityblocks:reedside");
-
+			iconBuffer[15] = par1IconRegister.registerIcon("vanityblocks:claybrick");
 	    }
 	@Override
 //	public Icon getBlockTextureFromSideAndMetadata (int side, int metadata) {
@@ -137,6 +138,9 @@ public class StorageBlock extends Block {
 		if (metadata == 10){
 			return iconBuffer[12];
 		}
+		if (metadata == 11) {
+			return iconBuffer[15];
+		}
 		return blockIcon;
 	}
 	@Override
@@ -145,7 +149,7 @@ public class StorageBlock extends Block {
 	}
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(int par1, CreativeTabs tab, List subItems) {
-		for (int ix = 0; ix < 11; ix++) {
+		for (int ix = 0; ix < 12; ix++) {
 			subItems.add(new ItemStack(this, 1, ix));
 		}
 	}

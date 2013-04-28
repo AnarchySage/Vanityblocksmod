@@ -109,6 +109,10 @@ public class VanityBlocksVanity {
  //           GameRegistry.addRecipe(new ItemStack(Item.dyePowder,1,2), "y", "x", 'x', new ItemStack(Item.dyePowder,1,4), 'y', new ItemStack(Item.dyePowder,1,11));
             GameRegistry.addShapelessRecipe(new ItemStack(Item.dyePowder,1,2), new ItemStack(Item.dyePowder,1,4), new ItemStack(Item.dyePowder,1,11));
     	}
+    	if (Storageprops.wooltostring) {
+    		GameRegistry.addShapelessRecipe(new ItemStack(Item.silk,4), new ItemStack(Block.cloth, 1, Short.MAX_VALUE));
+    		//Short.Maxvalue is required to use any meta in the block
+    	}
 	}
 	
 	@PostInit

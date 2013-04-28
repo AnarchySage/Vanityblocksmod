@@ -46,13 +46,13 @@ public class VanityDesignworldblock extends Block {
 	        iconBuffer[1] = par1IconRegister.registerIcon("vanityblocks:marble"); 
 	        iconBuffer[2] = par1IconRegister.registerIcon("vanityblocks:marblebrick");
 	        iconBuffer[3] = par1IconRegister.registerIcon("vanityblocks:marblechisel");
-	        iconBuffer[4] = par1IconRegister.registerIcon("vanityblocks:marbleslab");
-	        iconBuffer[5] = par1IconRegister.registerIcon("vanityblocks:marblestair");
+	        iconBuffer[4] = par1IconRegister.registerIcon("vanityblocks:temp");
+	        iconBuffer[5] = par1IconRegister.registerIcon("vanityblocks:temp");
 	        iconBuffer[6] = par1IconRegister.registerIcon("vanityblocks:blackmarble");
 	        iconBuffer[7] = par1IconRegister.registerIcon("vanityblocks:blackmarblebrick");
 	        iconBuffer[8] = par1IconRegister.registerIcon("vanityblocks:blackmarblechisel");
-	        iconBuffer[9] = par1IconRegister.registerIcon("vanityblocks:blackmarbleslab");
-	        iconBuffer[10] = par1IconRegister.registerIcon("vanityblocks:blackmarblestair");
+	        iconBuffer[9] = par1IconRegister.registerIcon("vanityblocks:blacktemp");
+	        iconBuffer[10] = par1IconRegister.registerIcon("vanityblocks:blacktemp");
 	    }
 	@Override
 	public Icon getIcon (int side, int metadata) {
