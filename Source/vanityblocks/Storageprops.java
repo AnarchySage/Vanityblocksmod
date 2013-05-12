@@ -14,12 +14,12 @@ public class Storageprops {
 
 		config.load();
 		String category = "Block id's";		
-		storageblockconfig = config.get(category,"Vannila Storage Blocks",3050).getInt();
-		storageblockmodconfig = config.get(category,"Modded Storage Blocks",3051).getInt();
-		forestryblockconfig = config.get(category,"Forestry Storage Blocks",3053).getInt();
-		vanitydesignconfig = config.get(category,"Vanity design blocks",3055).getInt();
-		vanitydesignworldconfig = config.get(category,"Vanity Blocks World Generation blocks",3058).getInt();
-		vanityentityconfig = config.get(category, "Vanity Blocks Tile Entity(such as melting core)",3060).getInt();
+		storageblockconfig = config.getBlock(category,"Vannila Storage Blocks",3050).getInt(3050);
+		storageblockmodconfig = config.getBlock(category,"Modded Storage Blocks",3051).getInt(3051);
+		forestryblockconfig = config.getBlock(category,"Forestry Storage Blocks",3053).getInt(3053);
+		vanitydesignconfig = config.getBlock(category,"Vanity design blocks",3055).getInt(3055);
+		vanitydesignworldconfig = config.getBlock(category,"Vanity Blocks World Generation blocks",3058).getInt(3058);
+		vanityentityconfig = config.getBlock(category, "Vanity Blocks Tile Entity(such as melting core)",3060).getInt(3058);
 
 
 		String category1 = "Blocks Enable or disable";
@@ -65,10 +65,12 @@ public class Storageprops {
 		quartzblocktoquartz = config.get(category3, "Quartz block decraft to nether quartz", true).getBoolean(true);
 		greendye = config.get(category3, "Make green dye from blue and yellow dye?", true).getBoolean(true);
 		wooltostring = config.get(category3, "Allow wool to decraft to string?", true).getBoolean(true);
+		magmacreamtoslime = config.get(category3, "Allow Magma cream to slimeball recipe?", true).getBoolean(true);
 		
 		String category4 = "Random things";
 		dungeonlootenablevannila= config.get(category4,"Allow vannila storage blocks to spawn in dungeon loot?", true).getBoolean(true);
 		dungeonlootenablemod= config.get(category4,"Allow modded storage blocks to spawn in dungeon loot?", true).getBoolean(true);
+		furnacemelts = config.get(category4,"Allow furnace melting of stuff like iron doors?",true).getBoolean(true);
 		
 		String category5 = "World Generation - Marble";
 		generatemarble = config.get(category5,"Allow marble to generate in the world?", true).getBoolean(true);
@@ -86,7 +88,7 @@ public class Storageprops {
 		
 		String category7 = "World Generation - Underwater Ruins";
 		generateruin = config.get(category7,"Allow Underwater Ruins to generate?", true).getBoolean(true);
-		ruinrarity = config.get(category7, "One in how many chance of the ruins to generate. Such as 20 will make it a 1 in 20, play in ssp to find a good value",20).getInt();
+		ruinchance = config.get(category7, "One in how many chance of the ruins to generate. Such as 20 will make it a 1 in 20, play in ssp to find a good value(i suggest 75+)",75).getInt();
 //		String category7 = "Texture swapping";
 //		Property blackmarbletextures = config.get(category6,"Do you want to use my textures for black marble or alt textures? type true for mine, false for alt",true);
 //		blackmarbletextures.comment = "Type true for main textures, false for alt textures";
@@ -142,10 +144,12 @@ public class Storageprops {
 	public static boolean quartzblocktoquartz;
 	public static boolean greendye;
 	public static boolean wooltostring;
+	public static boolean magmacreamtoslime;
 	public static boolean enablecoalcoke;
 	public static boolean storageblocking;
 	public static boolean dungeonlootenablevannila;
 	public static boolean dungeonlootenablemod;
+	public static boolean furnacemelts;
 	public static boolean generatemarble;
 	public static int marbleheight;
 	public static int marblerange;
@@ -157,5 +161,5 @@ public class Storageprops {
 	public static int blackmarblevein;
 	public static int blackmarblerarity;
 	public static boolean generateruin;
-	public static int ruinrarity;
+	public static int ruinchance;
 }

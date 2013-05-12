@@ -16,7 +16,7 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-@Mod(modid="VanityBlocks-Vanity", name="Anarchys Vanity Blocks-Vanity", version= DefaultProps.VERSIONVanity)
+@Mod(modid="VanityBlocks-Vanity", name="Anarchys Vanity Blocks-Vanity", version= DefaultProps.VERSION)
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 
 
@@ -112,6 +112,9 @@ public class VanityBlocksVanity {
     	if (Storageprops.wooltostring) {
     		GameRegistry.addShapelessRecipe(new ItemStack(Item.silk,4), new ItemStack(Block.cloth, 1, Short.MAX_VALUE));
     		//Short.Maxvalue is required to use any meta in the block
+    	}
+    	if (Storageprops.magmacreamtoslime) {
+    		GameRegistry.addShapelessRecipe(new ItemStack(Item.slimeBall,1),new ItemStack(Item.magmaCream,1));
     	}
 	}
 	

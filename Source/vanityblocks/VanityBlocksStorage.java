@@ -1,5 +1,8 @@
 package vanityblocks;
 
+import vanityblocks.FuelHandler.VanityForestryFuelHandler;
+import vanityblocks.FuelHandler.VanitymodFuelHandler;
+import vanityblocks.FuelHandler.VanityvanFuelHandler;
 import vanityblocks.WorldGen.AVillageTrades;
 import vanityblocks.WorldGen.MarbleGen;
 import vanityblocks.WorldGen.UnderWaterRuinHandler;
@@ -32,7 +35,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 //import railcraft.common.api.crafting.ICokeOvenCraftingManager;
 import cpw.mods.fml.common.registry.VillagerRegistry;
 
-@Mod(modid="VanityBlocks-Storage", name="Anarchys Vanity Blocks-Storage", version= DefaultProps.VERSIONStorage)
+@Mod(modid="VanityBlocks-Storage", name="Anarchys Vanity Blocks-Storage", version= DefaultProps.VERSION)
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 
 /* 				
@@ -66,7 +69,7 @@ public class VanityBlocksStorage {
 	@SidedProxy(clientSide = "vanityblocks.ProxyClient", serverSide = "vanityblocks.Proxy")
 	public static Proxy proxy;
 	
-	public static int storageblockconfig;
+/*	public static int storageblockconfig;
 	public static int storageblockmodconfig;
 	public static boolean storageblockint;
 	public static Block StorageBlock;
@@ -74,7 +77,7 @@ public class VanityBlocksStorage {
 	public static Block ForestryBlock;
 	public static int StorageBlockId;
 	public static int StorageBlockModId;
-	public static int ForestryBlockId;
+	public static int ForestryBlockId; */
 
 	@PreInit
 	public void preInit(FMLPreInitializationEvent event) {
@@ -84,14 +87,14 @@ public class VanityBlocksStorage {
 
 	@Init
 	public void load(FMLInitializationEvent event) {
-      	proxy.registerRenderInformation();
+     	proxy.registerRenderInformation();
 		proxy.addNames();
 		BlockRegistration.addVanillaRecipes();
-		BlockRegistration.addModRecipes();
-		BlockRegistration.addForestryRecipes();
+		FurnaceMelting.addFurnaceMelts();
 		Dungeonlootspawning.chestHooks();
 		GameRegistry.registerWorldGenerator(new MarbleGen(0));
 		GameRegistry.registerWorldGenerator(new UnderWaterRuinHandler());
+		GameRegistry.registerFuelHandler(new VanityvanFuelHandler());
 		// ### Villager/village Related
 //		AVillageTrades trades = new AVillageTrades();
 //		VillagerRegistry.instance().registerVillagerType(56789, "/mods/vanityblocks/textures/mob/villager.png");
@@ -103,13 +106,14 @@ public class VanityBlocksStorage {
     public static CreativeTabs tabCustom = new CreativeTabs("vanityblocks") {
         public ItemStack getIconItemStack() {
                 return new ItemStack(VanityBlocksVanity.VanityDesignblock, 1, 0);
-        }
+        } 
 };	
 	@PostInit
 	public void postInit(FMLPostInitializationEvent event) {
-		// If you want, you can move everything down here.
-		// Alternately, you can declare in the mcmod.info that you
-		// must be loaded after IC2, Redpower, Buildcraft, etc, etc, etc.
-		// Either way will work.
+		BlockRegistration.addModRecipes();
+		BlockRegistration.addForestryRecipes();
+		Dungeonlootspawning.chestHooks();
+		GameRegistry.registerFuelHandler(new VanityForestryFuelHandler());
+		GameRegistry.registerFuelHandler(new VanitymodFuelHandler());
 	}
 }

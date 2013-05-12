@@ -22,7 +22,7 @@ public class UnderWaterRuinHandler implements IWorldGenerator {
 	private void generateSurface(World world, Random rand, int y, int z) {
 		// for (int i = 0; i < Storageprops.ruinrarity; i++)
 		if (world.getWorldChunkManager().getBiomeGenAt(y, z).biomeName.equals("Ocean")) {
-		if(rand.nextInt(75)==1) {
+		if(rand.nextInt(Storageprops.ruinchance)==1) {
 		//rand.nextInt(10)==1 the 10 stands for a 1 in 10 chance
 			int RandPosX = y + rand.nextInt(16);
 			int RandPosZ = z + rand.nextInt(16);

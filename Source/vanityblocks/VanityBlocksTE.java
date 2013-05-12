@@ -18,7 +18,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 //import railcraft.common.api.core.items.ItemRegistry;
 //import railcraft.common.api.crafting.ICokeOvenCraftingManager;
 
-@Mod(modid="VanityBlocks-Te", name="Anarchys Vanity Blocks-Te", version= DefaultProps.VERSIONTE)
+@Mod(modid="VanityBlocks-Te", name="Anarchys Vanity Blocks-Te", version= DefaultProps.VERSION)
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 
 

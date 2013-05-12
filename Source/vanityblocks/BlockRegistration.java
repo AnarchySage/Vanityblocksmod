@@ -49,21 +49,6 @@ public class BlockRegistration {
 	LanguageRegistry.addName(new ItemStack(StorageBlock, 1, 9), "Leather Block");
 	LanguageRegistry.addName(new ItemStack(StorageBlock, 1, 10), "Bone Block");
 	LanguageRegistry.addName(new ItemStack(StorageBlock, 1, 11), "Clay Brick");
-	
-/*############# Adds vannila blocks to Ore Dictionary ###### */
-	OreDictionary.registerOre("blockCoal", new ItemStack(StorageBlock,1,0));
-	OreDictionary.registerOre("blockCharcoal", new ItemStack(StorageBlock,1,1));
-	OreDictionary.registerOre("blockEnderpearl", new ItemStack(StorageBlock,1,2));
-	OreDictionary.registerOre("blockSlime", new ItemStack(StorageBlock,1,3));
-	OreDictionary.registerOre("blockWheat", new ItemStack(StorageBlock,1,4));
-	OreDictionary.registerOre("blockSugar", new ItemStack(StorageBlock,1,5));
-	OreDictionary.registerOre("blockCocoa", new ItemStack(StorageBlock,1,6));
-	OreDictionary.registerOre("blockSugarCane", new ItemStack(StorageBlock,1,7));
-	OreDictionary.registerOre("blockBlazerod", new ItemStack(StorageBlock,1,8));
-	OreDictionary.registerOre("blockLeather", new ItemStack(StorageBlock,1,9));
-	OreDictionary.registerOre("blockBone", new ItemStack(StorageBlock,1,10));
-	OreDictionary.registerOre("blockClayBrick", new ItemStack(StorageBlock,1,11));
-
 /* ########### Modded #### */ 
 	GameRegistry.registerBlock(StorageBlockMod, vanityblocks.StorageItemModBlock.class, "Modded Storage Block");
 	LanguageRegistry.addName(new ItemStack(StorageBlockMod, 1, 0), "Tin Block");
@@ -79,50 +64,6 @@ public class BlockRegistration {
 	LanguageRegistry.addName(new ItemStack(StorageBlockMod, 1, 10), "Brass Block");
 	LanguageRegistry.addName(new ItemStack(StorageBlockMod, 1, 11), "Osmium Block");
 	LanguageRegistry.addName(new ItemStack(StorageBlockMod, 1, 12), "Rubber Block");
-
-/* ############ Adds modblocks to Ore Dictionary	 ####### */
-	OreDictionary.registerOre("blockTin", new ItemStack(StorageBlockMod,1,0));
-	OreDictionary.registerOre("blockCopper", new ItemStack(StorageBlockMod,1,1));
-	OreDictionary.registerOre("blockSilver", new ItemStack(StorageBlockMod,1,2));
-	OreDictionary.registerOre("blockLead", new ItemStack(StorageBlockMod,1,3));
-	OreDictionary.registerOre("blockNikolite", new ItemStack(StorageBlockMod,1,4));
-	OreDictionary.registerOre("blockNickel", new ItemStack(StorageBlockMod,1,5));
-	OreDictionary.registerOre("blockElectrum", new ItemStack(StorageBlockMod,1,6));
-	OreDictionary.registerOre("blockPlatinum", new ItemStack(StorageBlockMod,1,7));
-	OreDictionary.registerOre("blockInvar", new ItemStack(StorageBlockMod,1,8));
-	OreDictionary.registerOre("blockCoalcoke", new ItemStack(StorageBlockMod,1,9));
-	OreDictionary.registerOre("blockBrass", new ItemStack(StorageBlockMod,1,10));
-	OreDictionary.registerOre("blockOsmium", new ItemStack(StorageBlockMod,1,11));
-	OreDictionary.registerOre("blockRubber", new ItemStack(StorageBlockMod,1,12));
-
-/* ########### Forestry Blocks #### */ 
-//	GameRegistry.registerBlock(ForestryBlock, vanityblocks.StorageItemForestryBlock.class, "ForestryStorage Block");
-//	LanguageRegistry.addName(new ItemStack(ForestryBlock, 1, 0), "Apatite Block");
-//	LanguageRegistry.addName(new ItemStack(ForestryBlock, 1, 1), "Honey Block");
-//	LanguageRegistry.addName(new ItemStack(ForestryBlock, 1, 2), "Honeydew Block");
-//	LanguageRegistry.addName(new ItemStack(ForestryBlock, 1, 3), "Peat Block");
-//	LanguageRegistry.addName(new ItemStack(ForestryBlock, 1, 4), "Nikolite Block");
-//	LanguageRegistry.addName(new ItemStack(ForestryBlock, 1, 5), "Nickel Block");
-//	LanguageRegistry.addName(new ItemStack(ForestryBlock, 1, 6), "Electrum Block");
-//	LanguageRegistry.addName(new ItemStack(ForestryBlock, 1, 7), "Platinum Block");
-//	LanguageRegistry.addName(new ItemStack(ForestryBlock, 1, 8), "Invar Block");
-//	LanguageRegistry.addName(new ItemStack(ForestryBlock, 1, 9), "Coal Coke Block");
-//	LanguageRegistry.addName(new ItemStack(ForestryBlock, 1, 10), "Brass Block");
-//	LanguageRegistry.addName(new ItemStack(ForestryBlock, 1, 11), "Osmium Block");
-	
-/* ############ Adds Forestry blocks to Ore Dictionary	 ####### */
-	OreDictionary.registerOre("blockApatite", new ItemStack(ForestryBlock,1,0));
-	OreDictionary.registerOre("blockHoney", new ItemStack(ForestryBlock,1,1));
-	OreDictionary.registerOre("blockHoneydew", new ItemStack(ForestryBlock,1,2));
-	OreDictionary.registerOre("blockPeat", new ItemStack(ForestryBlock,1,3));
-//	OreDictionary.registerOre("blockNikolite", new ItemStack(ForestryBlock,1,4));
-//	OreDictionary.registerOre("blockNickel", new ItemStack(ForestryBlock,1,5));
-//	OreDictionary.registerOre("blockElectrum", new ItemStack(ForestryBlock,1,6));
-//	OreDictionary.registerOre("blockPlatinum", new ItemStack(ForestryBlock,1,7));
-//	OreDictionary.registerOre("blockInvar", new ItemStack(ForestryBlock,1,8));
-//	OreDictionary.registerOre("blockCoalcoke", new ItemStack(ForestryBlock,1,9));
-//	OreDictionary.registerOre("blockBrass", new ItemStack(ForestryBlock,1,10));
-//	OreDictionary.registerOre("blockOsmium", new ItemStack(ForestryBlock,1,11));	
 }
 public static void addVanillaRecipes() 
 	{
@@ -131,61 +72,70 @@ public static void addVanillaRecipes()
 		if (Storageprops.enablecoal) {
 		GameRegistry.addRecipe(new ItemStack(StorageBlock, 1, 0), "xxx", "xxx", "xxx", 'x', Item.coal);
 		GameRegistry.addShapelessRecipe(new ItemStack(Item.coal, 9), new ItemStack(StorageBlock,1,0));
+		OreDictionary.registerOre("blockCoal", new ItemStack(StorageBlock,1,0));		
 		}
 		if (Storageprops.enablecharcoal) {
 		GameRegistry.addRecipe(new ItemStack(StorageBlock, 1, 1), "xxx", "xxx", "xxx", 'x', new ItemStack(Item.coal,1,1));
 		GameRegistry.addShapelessRecipe(new ItemStack(Item.coal, 9, 1), new ItemStack(StorageBlock,1,1));
+		OreDictionary.registerOre("blockCharcoal", new ItemStack(StorageBlock,1,1));
 		}
 		if (Storageprops.enableenderpearl) {
 		GameRegistry.addRecipe(new ItemStack(StorageBlock, 1, 2), "xxx", "xxx", "xxx", 'x', new ItemStack(Item.enderPearl));
 		GameRegistry.addShapelessRecipe(new ItemStack(Item.enderPearl, 9), new ItemStack(StorageBlock,1,2));
+		OreDictionary.registerOre("blockEnderpearl", new ItemStack(StorageBlock,1,2));
 		}
 		if (Storageprops.enableslime) {
 		GameRegistry.addRecipe(new ItemStack(StorageBlock, 1, 3), "xxx", "xxx", "xxx", 'x', new ItemStack(Item.slimeBall));
 		GameRegistry.addShapelessRecipe(new ItemStack(Item.slimeBall, 9), new ItemStack(StorageBlock,1,3));
+		OreDictionary.registerOre("blockSlime", new ItemStack(StorageBlock,1,3));
 		}
 		if (Storageprops.enablewheatbale) {
 		GameRegistry.addRecipe(new ItemStack(StorageBlock, 1, 4), "xxx", "xxx", "xxx", 'x', new ItemStack(Item.wheat));
 		GameRegistry.addShapelessRecipe(new ItemStack(Item.wheat, 9), new ItemStack(StorageBlock,1,4));
+		OreDictionary.registerOre("blockWheat", new ItemStack(StorageBlock,1,4));
 		}
 		if (Storageprops.enablesugar) {
 		GameRegistry.addRecipe(new ItemStack(StorageBlock, 1, 5), "xxx", "xxx", "xxx", 'x', new ItemStack(Item.sugar));
 		GameRegistry.addShapelessRecipe(new ItemStack(Item.sugar, 9), new ItemStack(StorageBlock,1,5));
+		OreDictionary.registerOre("blockSugar", new ItemStack(StorageBlock,1,5));
 		}
 		if (Storageprops.enablecocoa) {
 		GameRegistry.addRecipe(new ItemStack(StorageBlock, 1, 6), "xxx", "xxx", "xxx", 'x', new ItemStack(Item.dyePowder,1,3));
 		GameRegistry.addShapelessRecipe(new ItemStack(Item.dyePowder, 9, 3), new ItemStack(StorageBlock,1,6));
+		OreDictionary.registerOre("blockCocoa", new ItemStack(StorageBlock,1,6));
 		}
 		if (Storageprops.enablesugarcane) {
 		GameRegistry.addRecipe(new ItemStack(StorageBlock, 1, 7), "xxx", "xxx", "xxx", 'x', new ItemStack(Item.reed));
 		GameRegistry.addShapelessRecipe(new ItemStack(Item.reed, 9), new ItemStack(StorageBlock,1,7));		
-		}
-		if (Storageprops.enablecoal && Storageprops.enablecharcoal) {
-			GameRegistry.registerFuelHandler(new VanityFuelHandler());
+		OreDictionary.registerOre("blockSugarCane", new ItemStack(StorageBlock,1,7));
 		}
         if (Storageprops.enableenderpearl) {
-        	if (Storageprops.dragoneggrecipe) {
-    		GameRegistry.addRecipe(new ItemStack(Block.dragonEgg,1), new Object [] {"xxx", "xyx", "xxx", 'x', new ItemStack(StorageBlock,1,2), 'y', Item.egg});
+        if (Storageprops.dragoneggrecipe) {
+    	GameRegistry.addRecipe(new ItemStack(Block.dragonEgg,1), new Object [] {"xxx", "xyx", "xxx", 'x', new ItemStack(StorageBlock,1,2), 'y', Item.egg});
         }
         }
         if (Storageprops.enableblaze) {
-    		GameRegistry.addRecipe(new ItemStack(StorageBlock, 1, 8), new Object [] {"xxx", "xxx", "xxx", 'x', new ItemStack(Item.blazeRod)});
-    		GameRegistry.addShapelessRecipe(new ItemStack(Item.blazeRod, 9), new ItemStack(StorageBlock,1,8));		
-       }
+    	GameRegistry.addRecipe(new ItemStack(StorageBlock, 1, 8), new Object [] {"xxx", "xxx", "xxx", 'x', new ItemStack(Item.blazeRod)});
+    	GameRegistry.addShapelessRecipe(new ItemStack(Item.blazeRod, 9), new ItemStack(StorageBlock,1,8));		
+    	OreDictionary.registerOre("blockBlazerod", new ItemStack(StorageBlock,1,8));
+        }
         if (Storageprops.enableleather) {
-    		GameRegistry.addRecipe(new ItemStack(StorageBlock, 1, 9), new Object [] {"xxx", "xxx", "xxx", 'x', new ItemStack(Item.leather)});
-    		GameRegistry.addShapelessRecipe(new ItemStack(Item.leather, 9), new ItemStack(StorageBlock,1,9));		
-       }
+    	GameRegistry.addRecipe(new ItemStack(StorageBlock, 1, 9), new Object [] {"xxx", "xxx", "xxx", 'x', new ItemStack(Item.leather)});
+    	GameRegistry.addShapelessRecipe(new ItemStack(Item.leather, 9), new ItemStack(StorageBlock,1,9));		
+    	OreDictionary.registerOre("blockLeather", new ItemStack(StorageBlock,1,9));
+        }
         if (Storageprops.enablebone) {
-    		GameRegistry.addRecipe(new ItemStack(StorageBlock, 1, 10), new Object [] {"xxx", "xxx", "xxx", 'x', new ItemStack(Item.bone)});
-    		GameRegistry.addShapelessRecipe(new ItemStack(Item.bone, 9), new ItemStack(StorageBlock,1,10));		
-       }
+    	GameRegistry.addRecipe(new ItemStack(StorageBlock, 1, 10), new Object [] {"xxx", "xxx", "xxx", 'x', new ItemStack(Item.bone)});
+    	GameRegistry.addShapelessRecipe(new ItemStack(Item.bone, 9), new ItemStack(StorageBlock,1,10));		
+    	OreDictionary.registerOre("blockBone", new ItemStack(StorageBlock,1,10));
+        }
         if (Storageprops.enableclaybrick) {
-        	GameRegistry.addRecipe(new ItemStack(StorageBlock, 4, 11), new Object [] {"xx", "xx", 'x', new ItemStack(Block.blockClay)});
-        	GameRegistry.addShapelessRecipe(new ItemStack(Block.blockClay), new ItemStack(StorageBlock,1,11));
-        	GameRegistry.addShapelessRecipe(new ItemStack(Item.clay,4), new ItemStack(Block.blockClay));
-        	GameRegistry.addRecipe(new ItemStack(Item.clay,16), new Object [] {"xx", "xx", 'x', new ItemStack(StorageBlock, 1, 11)});
-       }
+        GameRegistry.addRecipe(new ItemStack(StorageBlock, 4, 11), new Object [] {"xx", "xx", 'x', new ItemStack(Block.blockClay)});
+        GameRegistry.addShapelessRecipe(new ItemStack(Block.blockClay), new ItemStack(StorageBlock,1,11));
+        GameRegistry.addShapelessRecipe(new ItemStack(Item.clay,4), new ItemStack(Block.blockClay));
+        GameRegistry.addRecipe(new ItemStack(Item.clay,16), new Object [] {"xx", "xx", 'x', new ItemStack(StorageBlock, 1, 11)});
+    	OreDictionary.registerOre("blockClayBrick", new ItemStack(StorageBlock,1,11));
+        }
 	}
 public static void addModRecipes() {
 		/* ############### Modded Storage blocks ############ */
@@ -197,7 +147,8 @@ public static void addModRecipes() {
 	    ItemStack result = tiningot.copy();
 	    result.stackSize = 9;
 		GameRegistry.addShapelessRecipe(result, new ItemStack(StorageBlockMod, 1, 0));
-		}
+		OreDictionary.registerOre("blockTin", new ItemStack(StorageBlockMod,1,0));
+        }
 	    }
 		if (Storageprops.enablecopper) {
 	    if (!OreDictionary.getOres("ingotCopper").isEmpty()) {		
@@ -207,6 +158,7 @@ public static void addModRecipes() {
 	    ItemStack result = copperingot.copy();
 	    result.stackSize = 9;
 		GameRegistry.addShapelessRecipe(result, new ItemStack(StorageBlockMod, 1, 1));
+		OreDictionary.registerOre("blockCopper", new ItemStack(StorageBlockMod,1,1));
 	    }
 		}
 		if (Storageprops.enablesilver) {
@@ -217,7 +169,8 @@ public static void addModRecipes() {
 	    ItemStack result = silveringot.copy();
 	    result.stackSize = 9;
 		GameRegistry.addShapelessRecipe(result, new ItemStack(StorageBlockMod, 1, 2));
-		}
+		OreDictionary.registerOre("blockSilver", new ItemStack(StorageBlockMod,1,2));
+	    }
 		}
 		if (Storageprops.enablelead) {
 	    if (!OreDictionary.getOres("ingotLead").isEmpty()) {
@@ -227,7 +180,8 @@ public static void addModRecipes() {
 	    ItemStack result = leadingot.copy();
 	    result.stackSize = 9;
 		GameRegistry.addShapelessRecipe(result, new ItemStack(StorageBlockMod, 1, 3));
-		}
+		OreDictionary.registerOre("blockLead", new ItemStack(StorageBlockMod,1,3));
+	    }
 		}
 		if (Storageprops.enablenikolite) {
 	    if (!OreDictionary.getOres("dustNikolite").isEmpty()) {		
@@ -237,7 +191,8 @@ public static void addModRecipes() {
 	    ItemStack result = nikolite.copy();
 	    result.stackSize = 9;
 		GameRegistry.addShapelessRecipe(result, new ItemStack(StorageBlockMod, 1, 4));		
-		}
+		OreDictionary.registerOre("blockNikolite", new ItemStack(StorageBlockMod,1,4));
+	    }
 		}
 		if (Storageprops.enablenickel) {
 	    if (!OreDictionary.getOres("ingotNickel").isEmpty()) {
@@ -247,7 +202,8 @@ public static void addModRecipes() {
 	    ItemStack result = nickelingot.copy();
 	    result.stackSize = 9;
 		GameRegistry.addShapelessRecipe(result, new ItemStack(StorageBlockMod, 1, 5));
-		}
+		OreDictionary.registerOre("blockNickel", new ItemStack(StorageBlockMod,1,5));
+	    }
 		}
 		if (Storageprops.enableelectrum) {
 	    if (!OreDictionary.getOres("ingotElectrum").isEmpty()) {
@@ -257,6 +213,7 @@ public static void addModRecipes() {
 	    ItemStack result = electrumingot.copy();
 	    result.stackSize = 9;
 		GameRegistry.addShapelessRecipe(result, new ItemStack(StorageBlockMod, 1, 6));
+		OreDictionary.registerOre("blockElectrum", new ItemStack(StorageBlockMod,1,6));
 		}
 		}
 		if (Storageprops.enableplatinum) {
@@ -267,7 +224,8 @@ public static void addModRecipes() {
 	    ItemStack result = platinumingot.copy();
 	    result.stackSize = 9;
 		GameRegistry.addShapelessRecipe(result, new ItemStack(StorageBlockMod, 1, 7));
-		}
+		OreDictionary.registerOre("blockPlatinum", new ItemStack(StorageBlockMod,1,7));
+	    }
 		}
 		if (Storageprops.enableinvar) {
 	    if (!OreDictionary.getOres("ingotInvar").isEmpty()) {		
@@ -277,7 +235,8 @@ public static void addModRecipes() {
 	    ItemStack result = invaringot.copy();
 	    result.stackSize = 9;
 		GameRegistry.addShapelessRecipe(result, new ItemStack(StorageBlockMod, 1, 8));
-		}
+		OreDictionary.registerOre("blockInvar", new ItemStack(StorageBlockMod,1,8));
+	    }
 		}
 		if (Storageprops.enablebrass) {
 	    if (!OreDictionary.getOres("ingotBrass").isEmpty()) {		
@@ -287,7 +246,8 @@ public static void addModRecipes() {
 	    ItemStack result = brassingot.copy();
 	    result.stackSize = 9;
 		GameRegistry.addShapelessRecipe(result, new ItemStack(StorageBlockMod, 1, 10));
-		}
+		OreDictionary.registerOre("blockBrass", new ItemStack(StorageBlockMod,1,10));
+	    }
 		}
 		if (Storageprops.enableosmium) {
 		if (!OreDictionary.getOres("ingotOsmium").isEmpty()) {		
@@ -297,6 +257,7 @@ public static void addModRecipes() {
 		ItemStack result = osmiumingot.copy();
 		result.stackSize = 9;
 	    GameRegistry.addShapelessRecipe(result, new ItemStack(StorageBlockMod, 1, 11));
+		OreDictionary.registerOre("blockOsmium", new ItemStack(StorageBlockMod,1,11));
 		}
 		}
 		if (Storageprops.enablerubber) {
@@ -307,11 +268,12 @@ public static void addModRecipes() {
 		ItemStack result = rubberitem.copy();
 		result.stackSize = 9;
 	    GameRegistry.addShapelessRecipe(result, new ItemStack(StorageBlockMod, 1, 12));
+		OreDictionary.registerOre("blockRubber", new ItemStack(StorageBlockMod,1,12));
 		}
 		}
 //		if (Loader.isModLoaded("Railcraft")) {
         if (Storageprops.enablecoalcoke) {
-            try {
+//            try {
             		    if (!OreDictionary.getOres("fuelCoke").isEmpty()) {		
             			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(StorageBlockMod, 1, 9), "xxx", "xxx", "xxx", 'x', "fuelCoke"));	
             			ItemStack fuelcoke;
@@ -319,22 +281,24 @@ public static void addModRecipes() {
             		    ItemStack result = fuelcoke.copy();
             		    result.stackSize = 9;
             			GameRegistry.addShapelessRecipe(result, new ItemStack(StorageBlockMod, 1, 9));
+            			OreDictionary.registerOre("blockCoalcoke", new ItemStack(StorageBlockMod,1,9));
             			}
-            		LiquidStack liquid = LiquidDictionary.getLiquid("Creosote Oil", 4500);
+    //        		LiquidStack liquid = LiquidDictionary.getLiquid("Creosote Oil", 4500);
     //        		ItemStack coalblock = new ItemStack(StorageBlockMod,1,0);
     //        		ItemStack coalcokeblock = new ItemStack(StorageBlockMod,1,9);
     //    		if (liquid != null && Storageprops.enablecoal != null && blCoalcoke != null)
     //    		RailcraftCraftingManager.cokeOven.addRecipe(coalblock, coalcokeblock, liquid, 32400);
            
             }
-             catch (Exception e) {
-                // pokemon!
-            }
-     }
+//             catch (Exception e) {
+//                // pokemon!
+ //           }
+//     }
+//}
 }
 public static void addForestryRecipes() {
 //	if (Loader.isModLoaded("Forestry")) {
-		try {
+//		try {
 		GameRegistry.registerBlock(ForestryBlock, vanityblocks.StorageItemForestryBlock.class, "ForestryStorage Block");
 		LanguageRegistry.addName(new ItemStack(ForestryBlock, 1, 0), "Apatite Block");
 		LanguageRegistry.addName(new ItemStack(ForestryBlock, 1, 1), "Honey Block");
@@ -348,6 +312,7 @@ public static void addForestryRecipes() {
 	    ItemStack result = gemapatite.copy();
 	    result.stackSize = 9;
 		GameRegistry.addShapelessRecipe(result, new ItemStack(ForestryBlock,1,0));
+		OreDictionary.registerOre("blockApatite", new ItemStack(ForestryBlock,1,0));
 		}
 		}
 		if (Storageprops.enablehoneydrop) {
@@ -358,6 +323,7 @@ public static void addForestryRecipes() {
 		ItemStack result = honeydrop.copy();
 		result.stackSize = 9;
 		GameRegistry.addShapelessRecipe(result, new ItemStack(ForestryBlock,1,1));
+		OreDictionary.registerOre("blockHoney", new ItemStack(ForestryBlock,1,1));
 		}
 		}
 		if (Storageprops.enablehoneydew) {
@@ -368,6 +334,7 @@ public static void addForestryRecipes() {
 		ItemStack result = honeydewdrop.copy();
 		result.stackSize = 9;
 		GameRegistry.addShapelessRecipe(result, new ItemStack(ForestryBlock,1,2));
+		OreDictionary.registerOre("blockHoneydew", new ItemStack(ForestryBlock,1,2));
 		}
 		}
 		if (Storageprops.enablepeat) {
@@ -379,12 +346,12 @@ public static void addForestryRecipes() {
 		ItemStack result = brickPeat.copy();
 		result.stackSize = 9;
 		GameRegistry.addShapelessRecipe(result, new ItemStack(ForestryBlock,1,3));
+		OreDictionary.registerOre("blockPeat", new ItemStack(ForestryBlock,1,3));		
 		}
 		}
-		}
-    catch (Exception e) {
+ //   catch (Exception e) {
        // pokemon!
-   }
+//   }
 //}
 }
 public static Block StorageBlock;
