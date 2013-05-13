@@ -55,9 +55,12 @@ public class Storageprops {
 		enablehoneydrop = config.get(category2,"Enable Honeydrop Block from Forestry?", true).getBoolean(true);
 		enablehoneydew = config.get(category2,"Enable Honeydew Block from Forestry?", true).getBoolean(true);
 		enablepeat = config.get(category2,"Enable Peat Block from Forestry?", true).getBoolean(true);
-		enableinvar = config.get(category1,"Enable Invar Block from Thermal Expansion?", true).getBoolean(true);
-		enablenikolite = config.get(category1,"Enable Nikolite Block from Redpower?", true).getBoolean(true);
-
+		enableinvar = config.get(category2,"Enable Invar Block from Thermal Expansion?", true).getBoolean(true);
+		enablenikolite = config.get(category2,"Enable Nikolite Block from Redpower?", true).getBoolean(true);
+		Property gregtechcomp = config.get(category2,"If you have gregtech and recipes arent deblocking(after changing gregtechs config)?",true);
+		gregtechcomp.comment = "Please note, this will only work if you set gregtechs config to this... http://pastebin.com/92FmiGHm  Type true if no gregtech, false if gregtech is added(THIS IS only relevant in gregtechs case). Do this below)";
+		gregtechcompat = config.get(category2, "Set the true/false here as well for the gregtech option ^", true).getBoolean(true);
+		
 		String category3 = "Recipe enable or disable";
 		dragoneggrecipe = config.get(category3,"Crafting Dragon Egg(Requires Ender Pearl Block enabled)", true).getBoolean(true);
 		arrowtofeather = config.get(category3,"Arrow to feather", true).getBoolean(true);
@@ -92,9 +95,6 @@ public class Storageprops {
 //		String category7 = "Texture swapping";
 //		Property blackmarbletextures = config.get(category6,"Do you want to use my textures for black marble or alt textures? type true for mine, false for alt",true);
 //		blackmarbletextures.comment = "Type true for main textures, false for alt textures";
-		//		String category3 = "Compatibility with other mods";
-//		Blockcoalcoke.enable = config.get(category3,"Coal coke block", true).getBoolean(true);
-		//         int randomItemID = config.getItem("Redstone Block", 20000).getInt();
 
 		// Since this flag is a boolean, we can read it into the variable directly from the config.
 //		Configflags = config.get(Configuration.CATEGORY_GENERAL, "SomeConfigFlag", false).getBoolean(false);
@@ -136,6 +136,7 @@ public class Storageprops {
 	public static boolean enablehoneydew;
 	public static boolean enablepeat;
 	public static boolean enableclaybrick;
+	public static boolean gregtechcompat;
 	public static boolean enablemeltingcore;
 	public static boolean enablelavalamp;
 	public static boolean dragoneggrecipe;
