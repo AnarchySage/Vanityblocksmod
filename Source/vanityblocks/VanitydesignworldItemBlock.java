@@ -9,63 +9,41 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
 public class VanitydesignworldItemBlock extends ItemBlock {
-	
-	private final static String[] subNames = {
-		"Marble", "Marble Brick", "Chiseled Marble", "Marble Slab", "Marble Stair", 
-		"Ashford Black Marble", "Ashford Black Marble Brick", "Chiseled Ashford Black Marble", "Ashford Black Marble Slab", "Ashford Black Marble Stair",
-		"", "", "", "", "", "", "", "", ""
-	};
+
+	private final static String[] subNames = { "Marble", "Marble Brick",
+			"Chiseled Marble", "Marble Pillar", "Marble Tile",
+			"Ashford Black Marble", "Ashford Black Marble Brick",
+			"Chiseled Ashford Black Marble", "Ashford Black Marble Pillar",
+			"Ashford Black Marble Tile", "", "", "", };
 
 	public VanitydesignworldItemBlock(int id) {
 		super(id);
 		setHasSubtypes(true);
-//		setItemName("vanitydesignblocks");
+		// setItemName("vanitydesignblocks");
 	}
-	
+
 	@Override
-    public int getMetadata(int i)
-    {
-        return i;
-    }
-	
+	public int getMetadata(int i) {
+		return i;
+	}
+
 	@Override
-//	public String getItemNameIS(ItemStack itemstack) {
-//		return getItemName() + "." + subNames[itemstack.getItemDamage()];
-//	}
-    public String getUnlocalizedName(ItemStack itemstack) {
+	// public String getItemNameIS(ItemStack itemstack) {
+	// return getItemName() + "." + subNames[itemstack.getItemDamage()];
+	// }
+	public String getUnlocalizedName(ItemStack itemstack) {
 		return subNames[itemstack.getItemDamage()];
-		//getItemName() + "." + 
-    }
-	@Override
-	@SideOnly(Side.CLIENT)
-	public void addInformation (ItemStack stack, EntityPlayer player, List list, boolean par4)
-		{
-	    	switch (stack.getItemDamage())
-	    	{
-	    	case 0: 
-	    		break;
-	    	case 1:
-	    		break;
-	    	case 2:
-	    		break;
-	    	case 3:
-	    		list.add("Ignore for now, placeholder.");
-	    		break;
-	    	case 4:
-	    		list.add("Ignore for now, placeholder.");
-	    		break;
-	    	case 5:
-	    		break;
-	    	case 6:
-	    		break;
-	    	case 7:
-	    		break;
-	    	case 8:
-	    		list.add("Ignore for now, placeholder.");
-	    		break;
-	    	case 9:
-	    		list.add("Ignore for now, placeholder.");
-	    		break;
-	    	}
-		} 
+		// getItemName() + "." +
+	}
+
+	/*
+	 * @Override
+	 * 
+	 * @SideOnly(Side.CLIENT) public void addInformation (ItemStack stack,
+	 * EntityPlayer player, List list, boolean par4) { switch
+	 * (stack.getItemDamage()) { case 0: break; case 1: break; case 2: break;
+	 * case 3: // list.add("Ignore for now, placeholder."); break; case 4: //
+	 * list.add("Ignore for now, placeholder."); break; case 5: break; case 6:
+	 * break; } }
+	 */
 }

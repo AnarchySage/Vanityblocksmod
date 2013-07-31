@@ -1,0 +1,44 @@
+1.6
+V4.0:Updated to 1.6.X 
+---Condensed down three modules to single mod. Moved some files around. Changed some metadatas. Removed duplicate blocks- coal, wheat, coal coke, osmium(main mods added them). 
+---Added the bouncing effect to entities on slime blocks(mobs/players/blocks/items). Added Liquid destroying capabilities to Melting Core. 
+---Added slabs for the marble types(what a pain).Added Rupee as a side part(Currency for servers, disable with the config).Fixed recipe with dragon egg. Added a flint and a coal item for storage.
+---Added recipe to break saddle down to leather. Added Marble and ashford marble walls.Added arrow storage item. Added ability to bypass some mod nerf recipes, check config to enable(disabled by default).
+---Added marble pillars and tiles. Added clay brick, Old Lapis texture block, and a White soul sand.
+Todo: 
+Maybe add a plant that grows ?
+Added steps of the marble blocks.
+Add more brick blocks? Lapis, emerald, move clay brick,ice brick,lapis block/brick(using old texture(1.6lameness))
+Possibly add hot chocolate crate if i make it stack to 1
+add item for waterbreathing effect: maybe worldgen of seaweed, plant growing rice, and combine with fish for the effect
+Maybe a block with status effects? like slow, heal etc
+Add a mushroom biome underground in mushroom biome similiar to terraria
+add config for dungeon loot raritys/fix
+Add compatibility for exbl/bop? To or not to keep the ruins?
+Add a Mossy tree/mossy planks?
+Add another structure like a fall out shelter?
+1.5.1
+V:3.2.4: Added config option to change if blocks are ore dictioned(only relevant if gregtech is added)
+V:3.2.3: Added Furnace recipes to get iron/gold back from doors, armor etc(must not be damaged). Added magma cream to slime ball recipe. Added rarity config option for the underwater ruins(it works like a 1 in? chance, such as setting it to 100, its a 1 in 100 chance per chunk). Added the coal coke and peat blocks to Fuel handlers correctly. Updated to 1.5.2, also used srg_names, so it may work on new versions(not a garrentee). Fixed a structure generation problem with ruins that went 1 block down incorrectly. Changed the dungeon loot spawns to only spawn what is enabled(example, if enderpearl blocks are disabled, they wont spawn in dungeons, etc).
+V:3.2.2: Added World Gen for Underwater Ruins, currently using dungeon loot. Added Apatite, honey, honeydew and peat blocks from forestry(should only show up when forestry is loaded(temp textures are temp)). Added a rubber block from ic2/universal electricity/mfr. Changed default id of the Tile entitys(ease of later). Added Recipe to convert wool to string(4 string from 1 wool(any color)). And thats about it.
+V:3.2.1: Added White Marble and Ashford Black marble blocks, bricks, chiseled blocks.The world gen for it(which is configurable via options(ask if you have questions)), There is 4 blocks currently unused for when i can get stairs/slabs working. Added in past version(not sure which XD), ability to decraft down your quartz blocks to the nether quartz item. Also added the ability to make green dye from Lapis lazuli blue dye and dandelion yellow dye. And i think thats about it.
+V:3.2: Added Block spawns to bonus chest(world starting chest), dungeons, strongholds, desert temples, jungle temples, added sugar cane block, added osmium block(from universal electricity addon(mekanism)),new animated texture for lavalamp and a bug fix.
+V:3.1: Added Blaze blocks(which act as a glowstone light level block as well as a storage(will make fuel in next update)and burn infinitely like netherrack does in the world, Leather blocks, which stores 9 leather, and Bone blocks, 9 bones. Atm you need to mine all these blocks with a pickaxe, no way for me to seperate them to use other tools without more block id's :/
+V:3.0: Updated to 1.5.1, removed legacy support. Please deblock all your redstone blocks(from my mod) and craft into vannila ones, thanks(will remove them later)
+
+
+1.4.7
+V:2.1: Added legacy support, meaning, all old blocks are named Blockhere - Legacy. Put them in crafting table to get new ones.
+V2.0: Basically updated to metadata, using 4 id's now, ^ PLEASE UNBLOCK ALL YOUR STORAGE BLOCKS. Unfortuneally youll need to nei spawn back in your melting cores and lavalamps, sorry. (atm you cant use coal blocks in coke oven, still trying to fix it)
+Now: if you dont wish to unblock them(and store them), download the 1.3.5 version and the 2.0, (backup your world), and deblock all your blocks and reblock them(the 1.3.5 disables recipes for making the non metadata ones)
+
+V1.4.1: Fixed a naming bug where you would loose all your blocks(only loose your lavalamps atm)
+V1.4: Added Brass blocks, new textures, seperated mod into modules and working on adding meta data atm. Install steps have changed, for the combo, download it and put the zips in the /mods/ folder
+V1.3.1: Made coal blocks able to smelt inside Railcraft's coke oven for coal coke blocks(1:1 ratio and 4.5k units of creosote oil).
+V1.3: Added coal coke blocks, requires use railcraft stuff and coal coke block set to true in the config, they burn for coalcoke x9
+V1.2.3: Fixed code typo(no download, kept going to .4
+V1.2.2: Added Furnace fuel values to coal and charcoal blocks, requires both to be enabled for either to burn. Burn time of 9 coal.
+V1.2.1: Fixed insta breaking of blocks, forgot to set hardness.
+V1.2: Added Te specific ingot blocks(electrum, platinum, invar, and ferrous)
+V1.1: Added Melting core. Voidding block(pump items/blocks into it to destroy them).
+V1.0: Main Release

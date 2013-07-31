@@ -3,31 +3,28 @@ package vanityblocks;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class vanitytileItemBlock extends ItemBlock {
-	
-	private final static String[] subNames = {
-		"Melting Core", "", "", "", "",
-		"", "", "", "", "", "", "", "", "", "", ""
-	};
+public class VanitytileItemBlock extends ItemBlock {
 
-	public vanitytileItemBlock(int id) {
+	private final static String[] subNames = { "Melting Core", "", "", "", "",
+			"", "", "", "", "", "", "", "", "", "", "" };
+
+	public VanitytileItemBlock(int id) {
 		super(id);
 		setHasSubtypes(true);
-//		setItemName("storageblock");
+		// setItemName("storageblock");
 	}
-	
+
 	@Override
-    public int getMetadata(int i)
-    {
-        return i;
-    }
-	
+	public int getMetadata(int i) {
+		return i;
+	}
+
 	@Override
-//	public String getItemNameIS(ItemStack itemstack) {
-//		return getItemName() + "." + subNames[itemstack.getItemDamage()];
-//	}
-    public String getUnlocalizedName(ItemStack itemstack) {
+	// public String getItemNameIS(ItemStack itemstack) {
+	// return getItemName() + "." + subNames[itemstack.getItemDamage()];
+	// }
+	public String getUnlocalizedName(ItemStack itemstack) {
 		return subNames[itemstack.getItemDamage()];
-		//getItemName() + "." + 
-    }
+		// getItemName() + "." +
+	}
 }

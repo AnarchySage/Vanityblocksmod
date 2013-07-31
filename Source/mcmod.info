@@ -1,0 +1,19 @@
+[
+{
+  "modid": "VanityBlocks",
+  "name": "AnarchySages's Vanity Blocks",
+  "description": "Adds some storage and vanity blocks, as well as an optimized trash disposal for item transport mods.",
+  "version": "4.0",
+  "credits": "Anarchy",
+  "logoFile": "",
+  "mcversion": "1.6.x",
+  "url": "http://www.minecraftforum.net/topic/1631527-146-forge-vanity-blocks-mod-v12/",
+  "updateUrl": "",
+  "authors": [ "Anarchy" ],
+  "parent":"",
+  "screenshots": [],
+  "dependencies": [
+     "MinecraftForge"
+  ]
+}
+]

@@ -1,6 +1,5 @@
 package vanityblocks;
 
-
 import java.util.List;
 
 import net.minecraft.block.BlockContainer;
@@ -15,50 +14,57 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class Vanitytileblock extends BlockContainer {
-	public Vanitytileblock (int id) {
+	public Vanitytileblock(int id) {
 		super(id, Material.rock);
-//		setBlockName("storageblock");
-//		setCreativeTab(CreativeTabs.tabBlock);
-		setCreativeTab(vanityblocks.VanityBlocksStorage.tabCustom);
+		// setBlockName("storageblock");
+		// setCreativeTab(CreativeTabs.tabBlock);
+		setCreativeTab(vanityblocks.VanityBlocks.tabCustom);
 
 	}
-    private Icon[] iconBuffer;
+
+	private Icon[] iconBuffer;
+
 	@Override
-	public void registerIcons(IconRegister par1IconRegister)
-		{
-		iconBuffer = new Icon[2]; 
-		        
-		iconBuffer[1] = par1IconRegister.registerIcon("vanityblocks:meltingcore"); 
-		}
+	public void registerIcons(IconRegister par1IconRegister) {
+		iconBuffer = new Icon[2];
+
+		iconBuffer[1] = par1IconRegister
+				.registerIcon("vanityblocks:meltingcore");
+	}
+
 	@Override
-	public Icon getIcon (int side, int metadata) {
-		if (metadata == 0){
+	public Icon getIcon(int side, int metadata) {
+		if (metadata == 0) {
 			return iconBuffer[1];
 		}
 		return blockIcon;
-		}	
-//	@Override
-//	public int getBlockTextureFromSideAndMetadata (int side, int metadata) {
-//		return metadata + 0;
-//	}
-	public float getBlockHardness (World par1World, int par2, int par3, int par4)
-	{
-//		return !isActive(par1World.getBlockMetadata(par2, par3, par4)) ? 0 : 3;
+	}
+
+	// @Override
+	// public int getBlockTextureFromSideAndMetadata (int side, int metadata) {
+	// return metadata + 0;
+	// }
+	public float getBlockHardness(World par1World, int par2, int par3, int par4) {
+		// return !isActive(par1World.getBlockMetadata(par2, par3, par4)) ? 0 :
+		// 3;
 		int metadata = par1World.getBlockMetadata(par2, par3, par4);
-		if (metadata == 0) return 2f;
+		if (metadata == 0)
+			return 2f;
 		return 2f;
 	}
+
 	@Override
-	public int damageDropped (int metadata) {
+	public int damageDropped(int metadata) {
 		return metadata;
 	}
-	
+
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(int par1, CreativeTabs tab, List subItems) {
 		for (int ix = 0; ix < 1; ix++) {
 			subItems.add(new ItemStack(this, 1, ix));
 		}
 	}
+
 	public TileEntity createNewTileEntity(World var1) {
 		return new TileMeltingcore();
 	}
