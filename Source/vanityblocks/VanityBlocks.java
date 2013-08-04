@@ -60,7 +60,7 @@ public class VanityBlocks {
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		Storageprops.initProps();
+		Storageprops.initProps(event.getModConfigurationDirectory());
 	}
 
 	@EventHandler

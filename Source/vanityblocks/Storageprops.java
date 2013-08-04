@@ -7,8 +7,9 @@ import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.Property;
 
 public class Storageprops {
-	public static void initProps() {
+	public static void initProps(File configBase) {
 		Configuration config = new Configuration(new File(
+				configBase,
 				DefaultProps.FILE_CONFIG));
 
 		config.load();
