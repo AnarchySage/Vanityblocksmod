@@ -22,8 +22,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class StorageBlock extends Block {
 	public StorageBlock(int id) {
 		super(id, Material.rock);
-		// setBlockName("storageblock");
-		// setCreativeTab(CreativeTabs.tabBlock);
+		setResistance(10.0F);
 		setCreativeTab(vanityblocks.VanityBlocks.tabCustom);
 	}
 

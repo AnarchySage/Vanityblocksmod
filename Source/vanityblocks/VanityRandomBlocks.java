@@ -17,6 +17,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class VanityRandomBlocks extends Block {
 	public VanityRandomBlocks(int id) {
 		super(id, Material.rock);
+		setHardness(3.0F);
+		setResistance(5.0F);
 		setCreativeTab(vanityblocks.VanityBlocks.tabCustom);
 	}
 
@@ -45,7 +47,7 @@ public class VanityRandomBlocks extends Block {
 		if (metadata == 0) {
 			return 1f;
 		}
-		if (metadata == 1){
+		if (metadata == 1) {
 			return 1f;
 		}
 		return 3f;
@@ -55,14 +57,17 @@ public class VanityRandomBlocks extends Block {
 
 	@Override
 	public void registerIcons(IconRegister par1IconRegister) {
-		iconBuffer = new Icon[3];
+		iconBuffer = new Icon[5];
 
 		iconBuffer[0] = par1IconRegister.registerIcon("vanityblocks:claybrick");
 		iconBuffer[1] = par1IconRegister
-				.registerIcon("vanityblocks:oldlapisblock");
-		iconBuffer[2] = par1IconRegister
 				.registerIcon("vanityblocks:whitesoulsand");
-
+		iconBuffer[2] = par1IconRegister
+				.registerIcon("vanityblocks:oldlapisblock");
+		iconBuffer[3] = par1IconRegister
+				.registerIcon("vanityblocks:oldlapisbrick");
+		iconBuffer[4] = par1IconRegister
+				.registerIcon("vanityblocks:lapisbrick");
 	}
 
 	@Override
@@ -76,6 +81,12 @@ public class VanityRandomBlocks extends Block {
 		if (metadata == 2) {
 			return iconBuffer[2];
 		}
+		if (metadata == 3) {
+			return iconBuffer[3];
+		}
+		if (metadata == 4) {
+			return iconBuffer[4];
+		}
 		return blockIcon;
 	}
 
@@ -86,7 +97,7 @@ public class VanityRandomBlocks extends Block {
 
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(int par1, CreativeTabs tab, List subItems) {
-		for (int ix = 0; ix < 4; ix++) {
+		for (int ix = 0; ix < 5; ix++) {
 			subItems.add(new ItemStack(this, 1, ix));
 		}
 	}

@@ -7,11 +7,21 @@ import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.Property;
 
 public class Storageprops {
-	public static void initProps() {
-		Configuration config = new Configuration(new File(
+	public static void initProps(File configBase) {
+		Configuration config = new Configuration(new File(configBase,
 				DefaultProps.FILE_CONFIG));
 
 		config.load();
+
+		String enabled = "0:What to enable/disable";
+		enablestorageblocks = config
+				.get(enabled, "Enable Storageblocks?", true).getBoolean(true);
+		enablerupees = config.get(enabled, "Enabled the Rupees?", true)
+				.getBoolean(true);
+		enableclaymugstuff = config.get(enabled,
+				"Enable the Mug stuff(like hot chocolate)", true).getBoolean(
+				true);
+
 		String blocks = "Block id's";
 		storageblockconfig = config.getBlock(blocks, "Vannila Storage Blocks",
 				3050).getInt(3050);
@@ -36,8 +46,6 @@ public class Storageprops {
 		String items = "Item id's";
 		// config.getItem("Patterns and Misc", "Tinker's Manual",
 		// 14018).getInt(14018); use a second "" to add it to a sub category
-		enablerupees = config.get(items, "Enabled the Rupees?", true)
-				.getBoolean(true);
 		greenrupee1 = config.getItem(items, "Green Rupee - 1 Rupees", 19000)
 				.getInt(19000);
 		bluerupee5 = config.getItem(items, "Blue Rupee - 5 Rupees", 19001)
@@ -73,9 +81,6 @@ public class Storageprops {
 				.getInt(19012);
 
 		String generalfooditems = "General Food Item Config";
-		enableclaymugstuff = config.get(generalfooditems,
-				"Enable the Mug stuff(like hot chocolate)", true).getBoolean(
-				true);
 		mugunfired = config.get(generalfooditems, "Unfired Mug Id", 19020)
 				.getInt(19020);
 		emptymug = config.get(generalfooditems, "Empty Mug Id", 19021).getInt(
@@ -99,8 +104,6 @@ public class Storageprops {
 				"Sweetend Hot Chocolate with milk Id", 19029).getInt(19029);
 
 		String category1 = "Blocks Enable or disable";
-		enablestorageblocks = config.get(category1, "Enable Storageblocks?",
-				true).getBoolean(true);
 		enablecharcoal = config.get(category1,
 				"Enable CharCoal Block crafting?", true).getBoolean(true);
 		enableenderpearl = config.get(category1,
@@ -138,6 +141,7 @@ public class Storageprops {
 				true);
 		enablelavalamp = config.get(category1, "Enable Lavalamp crafting?",
 				true).getBoolean(true);
+
 		String category2 = "Specific Blocks mod compatibility";
 		enablebrass = config.get(category2,
 				"Enable Brass Block from various mods?", true).getBoolean(true);

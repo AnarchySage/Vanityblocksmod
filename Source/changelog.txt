@@ -1,10 +1,7 @@
 1.6
+V4.0.1: Fixed a config issue breaking McUpdater. Made blaze rod storage and coal storage items burnable for the item x 9 ticks. Removed recipe to make coal storage item for 1.6's coal block(will remove fully soon). Added a version checker(will check to see if version is old, if so, says so). Added Old Lapis block with brick texture, new lapis with brick texture(id had to shift, sorry).
 V4.0:Updated to 1.6.X 
----Condensed down three modules to single mod. Moved some files around. Changed some metadatas. Removed duplicate blocks- coal, wheat, coal coke, osmium(main mods added them). 
----Added the bouncing effect to entities on slime blocks(mobs/players/blocks/items). Added Liquid destroying capabilities to Melting Core. 
----Added slabs for the marble types(what a pain).Added Rupee as a side part(Currency for servers, disable with the config).Fixed recipe with dragon egg. Added a flint and a coal item for storage.
----Added recipe to break saddle down to leather. Added Marble and ashford marble walls.Added arrow storage item. Added ability to bypass some mod nerf recipes, check config to enable(disabled by default).
----Added marble pillars and tiles. Added clay brick, Old Lapis texture block, and a White soul sand.
+Condensed down three modules to single mod. Moved some files around. Changed some metadatas. Removed duplicate blocks- coal, wheat, coal coke, osmium(main mods added them). Added the bouncing effect to entities on slime blocks(mobs/players/blocks/items). Added Liquid destroying capabilities to Melting Core. Added slabs for the marble types(what a pain).Added Rupee as a side part(Currency for servers, disable with the config).Fixed recipe with dragon egg. Added a flint and a coal item for storage. Added recipe to break saddle down to leather. Added Marble and ashford marble walls.Added arrow storage item. Added ability to bypass some mod nerf recipes, check config to enable(disabled by default). Added marble pillars and tiles. Added clay brick, Old Lapis texture block, and a White soul sand.
 Todo: 
 Maybe add a plant that grows ?
 Added steps of the marble blocks.

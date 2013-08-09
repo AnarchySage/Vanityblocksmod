@@ -26,6 +26,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class Marbleslab extends Block {
 	public Marbleslab(int id) {
 		super(id, Material.rock);
+		setHardness(2.0F);
+		setResistance(10.0F);
 		setCreativeTab(vanityblocks.VanityBlocks.tabCustom);
 		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.5F, 1.0F);
 	}

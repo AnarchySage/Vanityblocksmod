@@ -395,7 +395,6 @@ public class StorageBlocksRegistration {
 				}
 			}
 		}
-		// if (Loader.isModLoaded("Railcraft")) {
 	}
 
 	public static void addForestryRecipes() {

@@ -16,8 +16,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class Vanitytileblock extends BlockContainer {
 	public Vanitytileblock(int id) {
 		super(id, Material.rock);
-		// setBlockName("storageblock");
-		// setCreativeTab(CreativeTabs.tabBlock);
+		setResistance(10.0F);
 		setCreativeTab(vanityblocks.VanityBlocks.tabCustom);
 
 	}

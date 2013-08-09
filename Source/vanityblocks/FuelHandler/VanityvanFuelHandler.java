@@ -1,6 +1,7 @@
 package vanityblocks.FuelHandler;
 
 import vanityblocks.Registrations.StorageBlocksRegistration;
+import vanityblocks.Registrations.GeneralItemRegistration;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.IFuelHandler;
 
@@ -15,6 +16,12 @@ public class VanityvanFuelHandler implements IFuelHandler {
 			// if (fuel.getItemDamage() == (6)){
 			// return 21600;
 			// }
+		}
+		if (fuel.itemID == GeneralItemRegistration.blazestorageitem.itemID){
+			return 21600;
+		}
+		if (fuel.itemID == GeneralItemRegistration.coalstorageitem.itemID) {
+			return 12800;
 		}
 		return 0;
 	}

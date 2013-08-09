@@ -19,6 +19,8 @@ public class StorageBlockMod extends Block {
 		super(id, Material.rock);
 		// setHardness(3.0F);
 		// setCreativeTab(CreativeTabs.tabBlock);
+		setHardness(3.0F);
+		setResistance(10.0F);
 		setCreativeTab(vanityblocks.VanityBlocks.tabCustom);
 
 	}

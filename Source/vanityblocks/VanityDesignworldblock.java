@@ -16,7 +16,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class VanityDesignworldblock extends Block {
 	public VanityDesignworldblock(int id) {
 		super(id, Material.rock);
-		setHardness(2f);
+		setHardness(3.0F);
+		setResistance(10.0F);
 		setCreativeTab(vanityblocks.VanityBlocks.tabCustom);
 
 	}

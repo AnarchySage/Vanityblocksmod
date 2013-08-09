@@ -28,13 +28,15 @@ public class RandomBlockRegistrations {
 		LanguageRegistry.addName(new ItemStack(RandomBlocks, 1, 0),
 				"Clay Brick");
 		LanguageRegistry.addName(new ItemStack(RandomBlocks, 1, 1),
-				"Lapis Block - Old");
-		LanguageRegistry.addName(new ItemStack(RandomBlocks, 1, 2),
 				"White Soul Sand");
+		LanguageRegistry.addName(new ItemStack(RandomBlocks, 1, 2),
+				"Lapis Block - Old");
+		LanguageRegistry.addName(new ItemStack(RandomBlocks, 1, 3),
+				"Lapis Brick - Old");
 	}
 
 	public static void addRecipes() {
-		System.out.println("Block Registration loaded");
+		System.out.println("Random Block Registration loaded");
 		if (Storageprops.enableclaybrick) {
 			GameRegistry.addRecipe(new ItemStack(RandomBlocks, 4, 0),
 					new Object[] { "xx", "xx", 'x',
@@ -50,17 +52,27 @@ public class RandomBlockRegistrations {
 						RandomBlocks, 1, 0));
 			}
 		}
-		if (Storageprops.enableoldlapisblock) {
-			GameRegistry.addRecipe(new ItemStack(RandomBlocks, 1, 1),
-					new Object[] { "xx", "xx", 'x',
-							new ItemStack(Item.dyePowder, 1, 4) });		
-			GameRegistry.addShapelessRecipe(new ItemStack(Item.dyePowder, 4, 4),
-					new ItemStack(RandomBlocks, 1, 1));	
-		}
 		if (Storageprops.enablewhitesoulsand) {
-			GameRegistry.addShapelessRecipe(new ItemStack(RandomBlocks, 1, 2),
-					new ItemStack(Block.slowSand, 1), new ItemStack(Item.sugar, 1));	
+			GameRegistry.addShapelessRecipe(new ItemStack(RandomBlocks, 1, 1),
+					new ItemStack(Block.slowSand, 1), new ItemStack(Item.sugar,
+							1));
 		}
+		if (Storageprops.enableoldlapisblock) {
+			GameRegistry.addRecipe(new ItemStack(RandomBlocks, 1, 2),
+					new Object[] { "xx", "xx", 'x',
+							new ItemStack(Item.dyePowder, 1, 4) });
+			GameRegistry.addShapelessRecipe(
+					new ItemStack(Item.dyePowder, 4, 4), new ItemStack(
+							RandomBlocks, 1, 2));
+			// ^old lapis block, \/ old lapis brick 
+			GameRegistry.addRecipe(new ItemStack(RandomBlocks, 4, 3),
+					new Object[] { "xx", "xx", 'x',
+							new ItemStack(RandomBlocks, 1, 2) });
+			GameRegistry.addShapelessRecipe(
+					new ItemStack(RandomBlocks, 1, 2), new ItemStack(
+							RandomBlocks, 1, 3));
+		}
+
 	}
 
 	public static Block RandomBlocks;

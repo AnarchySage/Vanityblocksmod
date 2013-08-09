@@ -69,8 +69,8 @@ public class GeneralItemRegistration {
 			// ItemStack(greenrupee1));
 		}
 		if (Storageprops.enablecoalstorageitem) {
-			GameRegistry.addRecipe(new ItemStack(coalstorageitem, 1), "xxx",
-					"x x", "xxx", 'x', new ItemStack(Item.coal, 1));
+			// GameRegistry.addRecipe(new ItemStack(coalstorageitem, 1), "xxx",
+			// "x x", "xxx", 'x', new ItemStack(Item.coal, 1));
 			GameRegistry.addShapelessRecipe(new ItemStack(Item.coal, 8),
 					new ItemStack(coalstorageitem));
 		}
