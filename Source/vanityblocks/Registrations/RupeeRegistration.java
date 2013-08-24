@@ -58,8 +58,6 @@ public class RupeeRegistration {
 
 		if (Storageprops.enablerupees) {
 			// ############# to make the Blue Rupees
-			// GameRegistry.addRecipe(new ItemStack(bluerupee5,1), "xxx", "xx ",
-			// "   ", 'x', new ItemStack(greenrupee1,1));
 			GameRegistry.addShapelessRecipe(new ItemStack(greenrupee1, 5),
 					new ItemStack(bluerupee5));
 			GameRegistry.addShapelessRecipe(new ItemStack(bluerupee5),
@@ -68,8 +66,6 @@ public class RupeeRegistration {
 					new ItemStack(greenrupee1));
 
 			// ########## To make the Red Rupees
-			// GameRegistry.addRecipe(new ItemStack(redrupee20,1), "xx", "xx",
-			// 'x', new ItemStack(bluerupee5,1));
 			GameRegistry.addShapelessRecipe(new ItemStack(redrupee20),
 					new ItemStack(bluerupee5), new ItemStack(bluerupee5),
 					new ItemStack(bluerupee5), new ItemStack(bluerupee5));
@@ -77,9 +73,6 @@ public class RupeeRegistration {
 					new ItemStack(redrupee20));
 
 			// ######### To make the Big Green Rupee
-			// GameRegistry.addRecipe(new ItemStack(biggreenrupee50,1), "xy",
-			// "xy", 'x', new ItemStack(bluerupee5,1), 'y', new
-			// ItemStack(redrupee20,1));
 			GameRegistry.addShapelessRecipe(new ItemStack(biggreenrupee50),
 					new ItemStack(redrupee20), new ItemStack(redrupee20),
 					new ItemStack(bluerupee5), new ItemStack(bluerupee5));

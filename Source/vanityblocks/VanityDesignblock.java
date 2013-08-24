@@ -21,6 +21,7 @@ public class VanityDesignblock extends Block {
 		setResistance(10.0F);
 		setCreativeTab(vanityblocks.VanityBlocks.tabCustom);
 	}
+// To get past the light value on all blocks, change it so meta 0 is not a lighted block.
 	@Override
 	public int getLightValue(IBlockAccess world, int x, int y, int z) {
 		if (world.getBlockMetadata(x, y, z) == 0) {
@@ -38,20 +39,21 @@ public class VanityDesignblock extends Block {
 		}
 		return 2f;
 	}
-    @Override
-    public boolean renderAsNormalBlock() {
-        return false;
-    }
+
+	@Override
+	public boolean renderAsNormalBlock() {
+		return false;
+	}
+
 	private Icon[] iconBuffer;
 
 	@Override
 	public void registerIcons(IconRegister par1IconRegister) {
-		iconBuffer = new Icon[1];
+		iconBuffer = new Icon[2];
 
 		iconBuffer[0] = par1IconRegister
 				.registerIcon("vanityblocks:lavalampcolors/lavaanim");
-		// iconBuffer[1] =
-		// par1IconRegister.registerIcon("vanityblocks:lavalampcolors/lavaanimblue");
+		iconBuffer[1] = par1IconRegister.registerIcon("vanityblocks:stoneglow");
 
 	}
 
@@ -60,9 +62,9 @@ public class VanityDesignblock extends Block {
 		if (metadata == 0) {
 			return iconBuffer[0];
 		}
-		// if (metadata == 1) {
-		// return iconBuffer[1];
-		// }
+		if (metadata == 1) {
+			return iconBuffer[1];
+		}
 		return blockIcon;
 	}
 
@@ -73,7 +75,7 @@ public class VanityDesignblock extends Block {
 
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(int par1, CreativeTabs tab, List subItems) {
-		for (int ix = 0; ix < 1; ix++) {
+		for (int ix = 0; ix < 2; ix++) {
 			subItems.add(new ItemStack(this, 1, ix));
 		}
 	}

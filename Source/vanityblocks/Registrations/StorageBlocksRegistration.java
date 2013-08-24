@@ -51,14 +51,10 @@ public class StorageBlocksRegistration {
 				"Cocoa chunk");
 		LanguageRegistry.addName(new ItemStack(StorageBlock, 1, 5),
 				"Sugar Cane Block");
-		// LanguageRegistry.addName(new ItemStack(StorageBlock, 1, 6),
-		// "Blaze Block");
 		LanguageRegistry.addName(new ItemStack(StorageBlock, 1, 6),
 				"Leather Block");
 		LanguageRegistry.addName(new ItemStack(StorageBlock, 1, 7),
 				"Bone Block");
-		// LanguageRegistry.addName(new ItemStack(StorageBlock, 1, 8),
-		// "Clay Brick");
 		/* ########### Modded #### */
 		GameRegistry.registerBlock(StorageBlockMod,
 				vanityblocks.StorageItemModBlock.class, "Modded Storage Block");

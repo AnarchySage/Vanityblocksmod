@@ -19,6 +19,7 @@ import vanityblocks.Items.flintitem;
 import vanityblocks.Items.greenrupee;
 import vanityblocks.Items.redrupee;
 import vanityblocks.Items.blazestorageitem;
+import vanityblocks.Items.worldgenitem;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -27,6 +28,7 @@ public class GeneralItemRegistration {
 	public static Item coalstorageitem;
 	public static Item arrowstorageitem;
 	public static Item blazestorageitem;
+//	public static Item worldgenitem;
 
 	public static void generalitemregistration() {
 		if (Storageprops.enableflintitem) {
@@ -53,6 +55,8 @@ public class GeneralItemRegistration {
 					.setUnlocalizedName("BlazeStorageItem");
 			LanguageRegistry.addName(blazestorageitem, "Blaze Rod Bundle");
 		}
+//			worldgenitem = new worldgenitem(19500).setUnlocalizedName("worldgenitem");
+//			LanguageRegistry.addName(worldgenitem, "Worldgen Test Item");
 	}
 
 	public static void additemrecipes() {
@@ -63,10 +67,6 @@ public class GeneralItemRegistration {
 					"xxx", 'x', new ItemStack(Item.flint, 1));
 			GameRegistry.addShapelessRecipe(new ItemStack(Item.flint, 9),
 					new ItemStack(flintitem));
-			// GameRegistry.addShapelessRecipe(new ItemStack(bluerupee5), new
-			// ItemStack(greenrupee1), new ItemStack(greenrupee1), new
-			// ItemStack(greenrupee1), new ItemStack(greenrupee1), new
-			// ItemStack(greenrupee1));
 		}
 		if (Storageprops.enablecoalstorageitem) {
 			// GameRegistry.addRecipe(new ItemStack(coalstorageitem, 1), "xxx",

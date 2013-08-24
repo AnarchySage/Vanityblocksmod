@@ -27,8 +27,8 @@ public class VanityRandomBlocks extends Block {
 		if (Storageprops.enablewhitesoulsandspeed) {
 			double boost = 2.2D;
 			int metadata = world.getBlockMetadata(x, y, z);
-			if (metadata == 2)
-				boost = 5D;
+			if (metadata == 1)
+				boost = 4D;
 
 			double mX = Math.abs(entity.motionX);
 			double mZ = Math.abs(entity.motionZ);
@@ -52,12 +52,16 @@ public class VanityRandomBlocks extends Block {
 		}
 		return 3f;
 	}
-
+	@Override
+    public int getMobilityFlag()
+    {
+        return 0;
+    }
 	private Icon[] iconBuffer;
 
 	@Override
 	public void registerIcons(IconRegister par1IconRegister) {
-		iconBuffer = new Icon[5];
+		iconBuffer = new Icon[6];
 
 		iconBuffer[0] = par1IconRegister.registerIcon("vanityblocks:claybrick");
 		iconBuffer[1] = par1IconRegister
@@ -89,7 +93,6 @@ public class VanityRandomBlocks extends Block {
 		}
 		return blockIcon;
 	}
-
 	@Override
 	public int damageDropped(int metadata) {
 		return metadata;

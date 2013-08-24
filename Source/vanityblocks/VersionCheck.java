@@ -71,6 +71,7 @@ public class VersionCheck extends Thread
                             if (sideToCheck.equals(Side.CLIENT))
                             {
                                 FMLClientHandler.instance().getClient().thePlayer.addChatMessage("\u00a77New \u00a73VanityBlocks \u00a77version available! v" + String.valueOf(DefaultProps.remoteMajVer) + "." + String.valueOf(DefaultProps.remoteMinVer) + "." + String.valueOf(DefaultProps.remoteBuildVer) + " http://www.minecraftforum.net/topic/1631527-");
+                                FMLClientHandler.instance().getClient().thePlayer.addChatMessage("\u00a73VanityBlocks: \u00a77Please remember to post ideas, bugs and just general bump the thread. More attention/bumps makes me wanna continue :)");
                             }
                             else if (sideToCheck.equals(Side.SERVER))
                             {
