@@ -27,10 +27,10 @@ public class StructureTest extends WorldGenerator {
 	// WeightedRandomChestContent(Item.diamond.itemID, 0, 1, 3, 3) };
 	/*
 	 * When using the mithion structure program, its a bit dated.
-	 * http://www.minecraftforum.net/topic/1336152-132-updated-metadata-support-simpleschematic-to-java-file-converter/ 
-	 * make sure to use an updated file
-	 * set(updating it as i go) here,
-	 * https://dl.dropboxusercontent.com/u/126429646
+	 * http://www.minecraftforum
+	 * .net/topic/1336152-132-updated-metadata-support-simpleschematic
+	 * -to-java-file-converter/ make sure to use an updated file set(updating it
+	 * as i go) here, https://dl.dropboxusercontent.com/u/126429646
 	 * /SchematicToJavaConverter_1.7/Config/textureMappings.ini place into
 	 * folder/config/ over the old one. when using blocks with multi
 	 * directions(Stairs/pistons/etc) remember its Block.name, direction,

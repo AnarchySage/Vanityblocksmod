@@ -1,9 +1,11 @@
 package vanityblocks.Registrations;
 
-import vanityblocks.VanityRandomBlocks;
-import vanityblocks.VanityRandomItemBlock;
 import vanityblocks.Storageprops;
+import vanityblocks.Blocks.HiddenTrapdoor;
+import vanityblocks.Blocks.VanityRandomBlocks;
+import vanityblocks.ItemBlocks.VanityRandomItemBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
@@ -18,13 +20,14 @@ public class RandomBlockRegistrations {
 		randomblocksconfig = Storageprops.randomblocksconfig;
 		RandomBlocks = new VanityRandomBlocks(randomblocksconfig);
 
-		 String[] randomblocknames = { "Clay Brick",
-		 "White Soul Sand", "Lapis block - old", "Lapis Brick - old",
-		 "Lapis Brick - Current", "Invisible Glass", "", "",
-		 "", "", "", "" };
+		String[] randomblocknames = { "Clay Brick", "White Soul Sand",
+				"Lapis block - old", "Lapis Brick - old",
+				"Lapis Brick - Current", "Invisible Glass", "", "", "", "", "",
+				"" };
 		/* ##### Vannila ##### */
 		GameRegistry.registerBlock(RandomBlocks,
-				vanityblocks.VanityRandomItemBlock.class, "Random Blocks");
+				vanityblocks.ItemBlocks.VanityRandomItemBlock.class,
+				"Random Blocks");
 		LanguageRegistry.addName(new ItemStack(RandomBlocks, 1, 0),
 				"Clay Brick");
 		LanguageRegistry.addName(new ItemStack(RandomBlocks, 1, 1),
@@ -37,8 +40,20 @@ public class RandomBlockRegistrations {
 				"Lapis Brick - Current");
 	}
 
+	public static void trapdoorregistration() {
+		// Trapdoors = new VanityTrapDoors(trapdoorconfigs, Material.wood,
+		// "textureName");
+		hiddentrapdoor = new HiddenTrapdoor(Storageprops.trapdoorconfigs);
+		hiddentrapdoor.setHardness(3.0F).setStepSound(Block.soundWoodFootstep)
+				.setUnlocalizedName("trapdoor.hidden");
+		GameRegistry.registerBlock(hiddentrapdoor, "trapdoor.hidden");
+		LanguageRegistry.addName(hiddentrapdoor, "Hidden Trapdoor");
+		GameRegistry.addShapelessRecipe(new ItemStack(hiddentrapdoor),
+				new ItemStack(Block.trapdoor));
+	}
+
 	public static void addRecipes() {
-	//	System.out.println("Random Block Registration loaded");
+		// System.out.println("Random Block Registration loaded");
 		if (Storageprops.enableclaybrick) {
 			GameRegistry.addRecipe(new ItemStack(RandomBlocks, 4, 0),
 					new Object[] { "xx", "xx", 'x',
@@ -61,24 +76,26 @@ public class RandomBlockRegistrations {
 		}
 		if (Storageprops.enableoldlapisblock) {
 			GameRegistry.addRecipe(new ItemStack(RandomBlocks, 1, 2),
-					new Object[] { "xx", "xx", 'x', new ItemStack(Item.dyePowder, 1, 4) });
+					new Object[] { "xx", "xx", 'x',
+							new ItemStack(Item.dyePowder, 1, 4) });
 			GameRegistry.addShapelessRecipe(
 					new ItemStack(Item.dyePowder, 4, 4), new ItemStack(
 							RandomBlocks, 1, 2));
-			// ^old lapis block, \/ old lapis brick 
+			// ^old lapis block, \/ old lapis brick
 			GameRegistry.addRecipe(new ItemStack(RandomBlocks, 4, 3),
 					new Object[] { "xx", "xx", 'x',
 							new ItemStack(RandomBlocks, 1, 2) });
-			GameRegistry.addShapelessRecipe(
-					new ItemStack(RandomBlocks, 1, 2), new ItemStack(
-							RandomBlocks, 1, 3));
+			GameRegistry.addShapelessRecipe(new ItemStack(RandomBlocks, 1, 2),
+					new ItemStack(RandomBlocks, 1, 3));
 			// lapis brick current
 			GameRegistry.addRecipe(new ItemStack(RandomBlocks, 1, 4),
-					new Object[] { "xx", "xx", 'x', new ItemStack(Block.blockLapis) });
+					new Object[] { "xx", "xx", 'x',
+							new ItemStack(Block.blockLapis) });
 		}
 
 	}
 
 	public static Block RandomBlocks;
+	public static Block hiddentrapdoor;
 	public static int randomblocksconfig;
 }

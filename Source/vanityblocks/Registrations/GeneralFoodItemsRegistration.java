@@ -26,7 +26,6 @@ public class GeneralFoodItemsRegistration {
 	public static Item mugmilkhotchocosugar;
 
 	/*
-	 * To do: make textures, figure out random dupe shit
 	 * Potion.waterBreathing.id for fish item
 	 */
 	public static void generalitemregistration() {

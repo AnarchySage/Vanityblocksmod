@@ -4,10 +4,10 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import vanityblocks.Storageprops;
-import vanityblocks.TileMeltingcore;
-import vanityblocks.VanityDesignblock;
-import vanityblocks.VanityDesignworldblock;
-import vanityblocks.Vanitytileblock;
+import vanityblocks.Blocks.VanityDesignblock;
+import vanityblocks.Blocks.VanityDesignworldblock;
+import vanityblocks.Blocks.Vanitytileblock;
+import vanityblocks.tileentitys.TileMeltingcore;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -25,7 +25,7 @@ public class TEBlocksRegistration {
 		String[] vannilastorageBlockNames = { "Melting Core" };
 
 		GameRegistry.registerBlock(Vanitytileblock,
-				vanityblocks.VanitytileItemBlock.class, "Vanity TE ");
+				vanityblocks.ItemBlocks.VanitytileItemBlock.class, "Vanity TE ");
 		GameRegistry.registerTileEntity(TileMeltingcore.class,
 				"Vanityblocks MeltingCore");
 		LanguageRegistry.addName(new ItemStack(Vanitytileblock, 1, 0),

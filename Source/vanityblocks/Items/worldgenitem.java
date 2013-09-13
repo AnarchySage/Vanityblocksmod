@@ -19,10 +19,14 @@ public class worldgenitem extends Item {
 		this.setHasSubtypes(true);
 		setCreativeTab(vanityblocks.VanityBlocks.tabCustom);
 	}
-	public boolean onItemUse(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, World par3World, int i, int j, int k, int par7, float par8, float par9, float par10) {
+
+	public boolean onItemUse(ItemStack par1ItemStack,
+			EntityPlayer par2EntityPlayer, World par3World, int i, int j,
+			int k, int par7, float par8, float par9, float par10) {
 		return new StructureTest().generate(par3World, null, i, j, k);
-		
+
 	}
+
 	@SideOnly(Side.CLIENT)
 	@Override
 	public Icon getIconFromDamage(int meta) {

@@ -3,15 +3,19 @@ package vanityblocks;
 import vanityblocks.FuelHandler.VanityForestryFuelHandler;
 import vanityblocks.FuelHandler.VanitymodFuelHandler;
 import vanityblocks.FuelHandler.VanityvanFuelHandler;
+import vanityblocks.Registrations.CurtainRegistrations;
 import vanityblocks.Registrations.GeneralFoodItemsRegistration;
 import vanityblocks.Registrations.GeneralItemRegistration;
 import vanityblocks.Registrations.Modbypass;
+import vanityblocks.Registrations.RandomRecipes;
+import vanityblocks.Registrations.RedstoneLampRegistrations;
 import vanityblocks.Registrations.RupeeRegistration;
 import vanityblocks.Registrations.StorageBlocksRegistration;
 import vanityblocks.Registrations.TEBlocksRegistration;
 import vanityblocks.Registrations.VanityBlocksRegistration;
 import vanityblocks.Registrations.RandomBlockRegistrations;
 import vanityblocks.Registrations.VanityBlocksRegistration;
+import vanityblocks.Renders.BlockCurtainRender;
 import vanityblocks.WorldGen.AVillageTrades;
 import vanityblocks.WorldGen.MarbleGen;
 import vanityblocks.WorldGen.VillageModHandler;
@@ -23,6 +27,7 @@ import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraftforge.common.ChestGenHooks;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
+import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
@@ -48,13 +53,7 @@ import cpw.mods.fml.relauncher.Side;
 		+ "."
 		+ DefaultProps.LOCALBUILDVERSION)
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
-/*
- * TO DO Hold f3 and hit h for item id's, Villager that trades modded items
- * Vanity - Chiseled sandstone blocks, chairs? redstone lamps diff colored,
- * curtains maybe?, inverted redstone lamps, colored sand/glass ADD
- * STONEHENGE!!!!!!!!!! Item.doorWood.setMaxStackSize(16); - way to change
- * stacksize of vannila
- */
+
 public class VanityBlocks {
 
 	@Instance("VanityBlocks")
@@ -114,10 +113,6 @@ public class VanityBlocks {
 			RupeeRegistration.rupeeregistration();
 			RupeeRegistration.addrupeerecipes();
 		}
-		/* ######################## World Gen Registration ###### */
-		GameRegistry.registerWorldGenerator(new MarbleGen(0));
-		GameRegistry.registerFuelHandler(new VanityvanFuelHandler());
-
 		/*
 		 * Registration of the Random blocks
 		 */
@@ -125,6 +120,32 @@ public class VanityBlocks {
 			RandomBlockRegistrations.randomblockregistration();
 			RandomBlockRegistrations.addRecipes();
 		}
+		/* Registration of the redstone lamps */
+		if (Storageprops.enableredstonelamps) {
+			RedstoneLampRegistrations.redstonelampregistration();
+			RedstoneLampRegistrations.addRecipes();
+		}
+		/*Registration of the Trapdoors */
+		if (Storageprops.enabletrapdoors) {
+			RandomBlockRegistrations.trapdoorregistration();
+		} 
+		/*Registration of the random recipes */
+		if (Storageprops.enablerandomrecipes) {
+			RandomRecipes.addRandomRecipes();
+		}
+		/* Registration of the Curtains */
+		if (Storageprops.enablecurtains) {
+			CurtainRegistrations.CurtainRegistration();
+			CurtainRegistrations.addCurtainRecipes();
+			RenderingRegistry.registerBlockHandler(new BlockCurtainRender());
+		}
+		/* ######################## World Gen Registration ###### */
+		if (Storageprops.enableworldgen) {
+		GameRegistry.registerWorldGenerator(new MarbleGen(0));
+		}
+		/* Fuel handler for vannila stuff */
+		GameRegistry.registerFuelHandler(new VanityvanFuelHandler());
+
 		/*
 		 * Removed code for time being. GameRegistry.registerWorldGenerator(new
 		 * UnderWaterRuinHandler()); //Registration of world gen for

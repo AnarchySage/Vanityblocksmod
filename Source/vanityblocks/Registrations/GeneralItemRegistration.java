@@ -4,10 +4,10 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
-import vanityblocks.ForestryBlock;
-import vanityblocks.StorageBlock;
-import vanityblocks.StorageBlockMod;
 import vanityblocks.Storageprops;
+import vanityblocks.Blocks.ForestryBlock;
+import vanityblocks.Blocks.StorageBlock;
+import vanityblocks.Blocks.StorageBlockMod;
 import vanityblocks.Items.arrowstorageitem;
 import vanityblocks.Items.bigbluerupee;
 import vanityblocks.Items.biggreenrupee;
@@ -28,7 +28,8 @@ public class GeneralItemRegistration {
 	public static Item coalstorageitem;
 	public static Item arrowstorageitem;
 	public static Item blazestorageitem;
-//	public static Item worldgenitem;
+
+	// public static Item worldgenitem;
 
 	public static void generalitemregistration() {
 		if (Storageprops.enableflintitem) {
@@ -55,8 +56,9 @@ public class GeneralItemRegistration {
 					.setUnlocalizedName("BlazeStorageItem");
 			LanguageRegistry.addName(blazestorageitem, "Blaze Rod Bundle");
 		}
-//			worldgenitem = new worldgenitem(19500).setUnlocalizedName("worldgenitem");
-//			LanguageRegistry.addName(worldgenitem, "Worldgen Test Item");
+		// worldgenitem = new
+		// worldgenitem(19500).setUnlocalizedName("worldgenitem");
+		// LanguageRegistry.addName(worldgenitem, "Worldgen Test Item");
 	}
 
 	public static void additemrecipes() {

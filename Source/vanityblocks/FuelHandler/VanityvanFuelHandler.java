@@ -17,7 +17,7 @@ public class VanityvanFuelHandler implements IFuelHandler {
 			// return 21600;
 			// }
 		}
-		if (fuel.itemID == GeneralItemRegistration.blazestorageitem.itemID){
+		if (fuel.itemID == GeneralItemRegistration.blazestorageitem.itemID) {
 			return 21600;
 		}
 		if (fuel.itemID == GeneralItemRegistration.coalstorageitem.itemID) {

@@ -1,12 +1,12 @@
 package vanityblocks.Registrations;
 
-import vanityblocks.ForestryBlock;
-import vanityblocks.StorageBlock;
-import vanityblocks.StorageBlockMod;
-import vanityblocks.StorageItemBlock;
-import vanityblocks.StorageItemForestryBlock;
-import vanityblocks.StorageItemModBlock;
 import vanityblocks.Storageprops;
+import vanityblocks.Blocks.ForestryBlock;
+import vanityblocks.Blocks.StorageBlock;
+import vanityblocks.Blocks.StorageBlockMod;
+import vanityblocks.ItemBlocks.StorageItemBlock;
+import vanityblocks.ItemBlocks.StorageItemForestryBlock;
+import vanityblocks.ItemBlocks.StorageItemModBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -38,7 +38,7 @@ public class StorageBlocksRegistration {
 				"Honeydew Block", "Peat Block", "", "", "", "", "", "", "", "" };
 		/* ##### Vannila ##### */
 		GameRegistry.registerBlock(StorageBlock,
-				vanityblocks.StorageItemBlock.class, "Vannila Storage Block");
+				vanityblocks.ItemBlocks.StorageItemBlock.class, "Vannila Storage Block");
 		LanguageRegistry.addName(new ItemStack(StorageBlock, 1, 0),
 				"Charcoal block");
 		LanguageRegistry.addName(new ItemStack(StorageBlock, 1, 1),
@@ -57,7 +57,7 @@ public class StorageBlocksRegistration {
 				"Bone Block");
 		/* ########### Modded #### */
 		GameRegistry.registerBlock(StorageBlockMod,
-				vanityblocks.StorageItemModBlock.class, "Modded Storage Block");
+				vanityblocks.ItemBlocks.StorageItemModBlock.class, "Modded Storage Block");
 		LanguageRegistry.addName(new ItemStack(StorageBlockMod, 1, 0),
 				"Tin Block");
 		LanguageRegistry.addName(new ItemStack(StorageBlockMod, 1, 1),
@@ -397,7 +397,7 @@ public class StorageBlocksRegistration {
 		if (Loader.isModLoaded("Forestry")) {
 			try {
 				GameRegistry.registerBlock(ForestryBlock,
-						vanityblocks.StorageItemForestryBlock.class,
+						vanityblocks.ItemBlocks.StorageItemForestryBlock.class,
 						"ForestryStorage Block");
 				LanguageRegistry.addName(new ItemStack(ForestryBlock, 1, 0),
 						"Apatite Block");

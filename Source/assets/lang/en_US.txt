@@ -1,8 +1,0 @@
-# VanityBlocks Core Language File = UNITED STATES ENGLISH
-newversion.message1.name=\u00a77New \u00a73VanityBlocks \u00a77version available! v
-newversion.message2.name=New VanityBlocks version available! v
-newversion.failed.name=VanityBlocks update check failed! Trying again in 15 seconds
-newversion.success.name=VanityBlocks remote version found:
-
-
-# </file>

@@ -11,6 +11,7 @@ public class Proxy {
 
 	public void addNames() {
 	}
+
 	public static String getMinecraftVersion() {
 		return Loader.instance().getMinecraftModContainer().getVersion();
 	}
