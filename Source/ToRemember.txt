@@ -1,0 +1,18 @@
+﻿Things to remember
+
+[¤8:45:28:PM¤] ..DemoXin.. Anarchy: Rather than using "gradle(w) setupDevWorkspace", you use "gradlew setupDecompWorkspace"
+For it to be a te, i must extend blockcontainer or override hastileentity
+Hold f3 and hit h for item id's
+Renders can be done with metadata switching
+Item.doorWood.setMaxStackSize(16); - way to change stacksize of vannila
+Short.Maxvalue is required to use any meta in the block
+i can do if (flag) for true and using ! to make it false
+
+ System.out.println("Check Starting");
+ 
+ add build/ to the end of the rm -rf in configure on jenkins if the build folder derps
+ 
+ 
+ or under the project delete the workspace wipe out workspace.
+ 
+ https://github.com/AnarchySage/Vanityblocksmod/tree/14d8bbdcf9937ec797ea7014a4b3e1fdbd4a6c50/Source/vanityblocks/WorldGen

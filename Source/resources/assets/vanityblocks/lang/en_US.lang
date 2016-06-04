@@ -1,0 +1,151 @@
+itemGroup.tabvanityblocks=Anarchy's VanityBlocks
+
+tile.null.charcoalblock.name=Charcoal Block
+tile.null.enderpearlblock.name=Ender pearl block
+tile.null.slimeblock.name=Slime block
+tile.null.sugarblock.name=Sugar Block
+tile.null.cocoablock.name=Cocoa chunk
+tile.null.sugarcaneblock.name=Sugar Cane Block
+tile.null.leatherblock.name=Leather Block
+tile.null.boneblock.name=Bone Block
+
+tile.null.tinblock.name=Tin Block
+tile.null.copperblock.name=Copper Block
+tile.null.silverblock.name=Silver Block
+tile.null.leadblock.name=Lead Block
+tile.null.nikoliteblock.name=Nikolite Block
+tile.null.nickelblock.name=Nickel Block
+tile.null.electrumblock.name=Electrum Block
+tile.null.platinumblock.name=Platinum Block
+tile.null.invarblock.name=Invar Block
+tile.null.brassblock.name=Brass Block
+tile.null.rubberblock.name=Rubber Block
+
+tile.null.9xcobble.name=9X Compressed Cobblestone
+tile.null.81xcobble.name=81X Compressed Cobblestone
+tile.null.729xcobble.name=729X Compressed Cobblestone
+tile.null.9xdirt.name=9X Compressed Dirt
+tile.null.81xdirt.name=81X Compressed Dirt
+tile.null.729xdirt.name=729X Compressed Dirt
+tile.null.9xsand.name=9X Compressed Sand
+tile.null.81xsand.name=81X Compressed Sand
+tile.null.729xsand.name=729X Compressed Sand
+tile.null.9xgravel.name=9X Compressed Gravel
+tile.null.81xgravel.name=81X Compressed Gravel
+tile.null.729xgravel.name=729X Compressed Gravel
+
+item.greenrupee1.name=Green Rupee - 1 Rupee's
+item.bluerupee5.name=Blue Rupee - 5 Rupee's
+item.redrupee20.name=Red Rupee - 20 Rupee's
+item.biggreenrupee50.name=Big Green Rupee - 50 Rupee's
+item.bigbluerupee100.name=Big Blue Rupee - 100 Rupee's
+item.bigredrupee200.name=Big Red Rupee - 200 Rupee's
+
+item.flintitem.name=Flint Storage Item
+item.coalstorageitem.name=Coal Storage Item( 8 Pieces )
+item.arrowstorageitem.name=Arrow Bundle
+item.blazestorageitem.name=Blaze Rod Bundle
+
+tile.null.apatiteblock.name=Apatite Block
+tile.null.honeyblock.name=Honey Block
+tile.null.honeydewblock.name=Honeydew Block
+tile.null.peatblock.name=Peat Block
+
+tile.null.claybrick.name=Clay Brick
+tile.null.whitesoulsand.name=White Soul Sand
+tile.null.lapisblockold.name=Lapis Block - Old
+tile.null.lapisbrickold.name=Lapis Brick - Old
+tile.null.lapisbrickcurrent.name=Lapis Brick - Current
+tile.null.hiddentrapdoor.name=Hidden Trapdoor
+
+tile.null.lavalamp.name=Lava Lamp
+tile.null.stonetrimmedglowstone.name=Stone Trimmed Glowstone
+
+tile.null.meltingcore.name=Melting Core
+
+tile.null.blackLamp_Lit.name=Lit Black Redstone Lamp
+tile.null.redLamp_Lit.name=Lit Red Redstone Lamp
+tile.null.greenLamp_Lit.name=Lit Green Redstone Lamp
+tile.null.brownLamp_Lit.name=Lit Brown Redstone Lamp
+tile.null.blueLamp_Lit.name=Lit Blue Redstone Lamp
+tile.null.purpleLamp_Lit.name=Lit Purple Redstone Lamp
+tile.null.pinkLamp_Lit.name=Lit Pink Redstone Lamp
+tile.null.lightBlueLamp_Lit.name=Lit Light Blue Redstone Lamp
+tile.null.magentaLamp_Lit.name=Lit Magenta Redstone Lamp
+
+tile.null.blackLamp.name=Dim Black Redstone Lamp
+tile.null.redLamp.name=Dim Red Redstone Lamp
+tile.null.greenLamp.name=Dim Green Redstone Lamp
+tile.null.brownLamp.name=Dim Brown Redstone Lamp
+tile.null.blueLamp.name=Dim Blue Redstone Lamp
+tile.null.purpleLamp.name=Dim Purple Redstone Lamp
+tile.null.pinkLamp.name=Dim Pink Redstone Lamp
+tile.null.lightBlueLamp.name=Dim Light Blue Redstone Lamp
+tile.null.magentaLamp.name=Dim Magenta Redstone Lamp
+
+tile.null.marble.name=Marble
+tile.null.mbrick.name=Marble Brick
+tile.null.mchiseled.name=Chiseled Marble
+tile.null.mpillar.name=Marble Pillar
+tile.null.mtile.name=Marble Tile
+tile.null.amarble.name=Ashford Black Marble
+tile.null.amarblebrick.name=Ashford Black Marble Brick
+tile.null.amarblechiseled.name=Chiseled Ashford Black Marble
+tile.null.amarblepillar.name=Ashford Black Marble Pillar
+tile.null.amarbletile.name=Ashford Black Marble Tile
+
+tile.null.granite.name=Rough Granite
+tile.null.polishedgranite.name=Polished Granite
+tile.null.diorite.name=Rough Diorite
+tile.null.polisheddiorite.name=Polished Diorite
+tile.null.andesite.name=Rough Andesite
+tile.null.polishedandesite.name=Polished Andesite
+item.stonepolishitem.name=Stone Polisher
+
+tile.marblestair.name=Marble Stairs
+tile.marblebrickstair.name=Marble Brick Stairs
+tile.marblepillarstair.name=Marble Pillar Stairs
+tile.marbletilestair.name=Marble Tile Stairs
+tile.blackmarblestair.name=Ashford Black Marble Stairs
+tile.blackmarblebrickstair.name=Ashford Black Marble Brick Stairs
+tile.blackmarblepillarstair.name=Ashford Black Marble Pillar Stairs
+tile.blackmarbletilestair.name=Ashford Black Marble Tile Stairs
+
+tile.null.mslab.name=Marble Slab
+tile.null.mbrickslab.name=Marble Brick Slab
+tile.null.mchiseledslab.name=Chiseled Marble Slab
+tile.null.mpillarslab.name=Marble Pillar Slab
+tile.null.mtileslab.name=Marble Tile Slab
+tile.null.amarbleslab.name=Ashford Black Marble Slab
+tile.null.amarblebrickslab.name=Ashford Black Marble Brick Slab
+tile.null.amarblechiseledslab.name=Chiseled Ashford Black Marble Slab
+tile.null.amarblepillarslab.name=Ashford Black Marble Pillar Slab
+tile.null.amarbletileslab.name=Ashford Black Marble Tile Slab
+			
+tile.null.mwall.name=Marble Wall
+tile.null.mbrickwall.name=Marble Brick Wall
+tile.null.mchiseledwall.name=Chiseled Marble Wall
+tile.null.mpillarwall.name=Marble Pillar Wall
+tile.null.mtilewall.name=Marble Tile Wall
+tile.null.amarblewall.name=Ashford Black Marble Wall
+tile.null.amarblebrickwall.name=Ashford Black Marble Brick Wall
+tile.null.amarblechiseledwall.name=Chiseled Ashford Black Marble Wall
+tile.null.amarblepillarwall.name=Ashford Black Marble Pillar Wall
+tile.null.amarbletilewall.name=Ashford Black Marble Tile Wall
+
+tile.stair.white.name=White Stained Clay Stairs
+tile.stair.orange.name=Orange Stained Clay Stairs
+tile.stair.magenta.name=Magenta Stained Clay Stairs
+tile.stair.lightblue.name=Light Blue Stained Clay Stairs
+tile.stair.yellow.name=Yellow Stained Clay Stairs
+tile.stair.lime.name=Lime Stained Clay Stairs
+tile.stair.pink.name=Pink Stained Clay Stairs
+tile.stair.gray.name=Gray Stained Clay Stairs
+tile.stair.lightgray.name=Light Gray Stained Clay Stairs
+tile.stair.cyan.name=Cyan Stained Clay Stairs
+tile.stair.purple.name=Purple Stained Clay Stairs
+tile.stair.blue.name=Blue Stained Clay Stairs
+tile.stair.brown.name=Brown Stained Clay Stairs
+tile.stair.green.name=Green Stained Clay Stairs
+tile.stair.red.name=Red Stained Clay Stairs
+tile.stair.black.name=Black Stained Clay Stairs

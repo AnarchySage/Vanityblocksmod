@@ -1,0 +1,143 @@
+itemGroup.tabvanityblocks=Anarchy's VanityBlocks
+
+tile.null.charcoalblock.name=Holzkohleblock
+tile.null.enderpearlblock.name=Enderperlenblock
+tile.null.slimeblock.name=Schleimblock
+tile.null.sugarblock.name=Zuckerblock
+tile.null.cocoablock.name=Kakaoblock
+tile.null.sugarcaneblock.name=Zuckerrohrblock
+tile.null.leatherblock.name=Lederblock
+tile.null.boneblock.name=Knochenblock
+
+tile.null.tinblock.name=Zinnblock
+tile.null.copperblock.name=Kupferblock
+tile.null.silverblock.name=Silberblock
+tile.null.leadblock.name=Bleiblock
+tile.null.nikoliteblock.name=Nikolitblock
+tile.null.nickelblock.name=Nickelblock
+tile.null.electrumblock.name=Elektrumblock
+tile.null.platinumblock.name=Platinblock
+tile.null.invarblock.name=Invarblock
+tile.null.brassblock.name=Messingblock
+tile.null.rubberblock.name=Gummiblock
+
+tile.null.9xcobble.name=9X Gepresster Pflasterstein
+tile.null.81xcobble.name=81X Gepresster Pflasterstein
+tile.null.729xcobble.name=729X Gepresster Pflasterstein
+tile.null.9xdirt.name=9X Gepresste Erde
+tile.null.81xdirt.name=81X Gepresste Erde
+tile.null.729xdirt.name=729X Gepresste Erde
+tile.null.9xsand.name=9X Gepresster Sand
+tile.null.81xsand.name=81X Gepresster Sand
+tile.null.729xsand.name=729X Gepresster Sand
+tile.null.9xgravel.name=9X Gepresster Kies
+tile.null.81xgravel.name=81X Gepresster Kies
+tile.null.729xgravel.name=729X Gepresster Kies
+
+item.greenrupee1.name=Grüner Rubin - 1 Rubin
+item.bluerupee5.name=Blauer Rubin - 5 Rubine
+item.redrupee20.name=Roter Rubin - 20 Rubine
+item.biggreenrupee50.name=Riesiger Grüner Rubin - 50 Rubine
+item.bigbluerupee100.name=Riesiger Blauer Rubin - 100 Rubine
+item.bigredrupee200.name=Riesiger Roter Rubin - 200 Rubine
+
+item.flintitem.name=Feuersteinhaufen
+item.coalstorageitem.name=Kohlehaufen( 8 Stück )
+item.arrowstorageitem.name=Pfeilbündel
+item.blazestorageitem.name=Lohenrutenbündel
+
+tile.null.apatiteblock.name=Apatitblock
+tile.null.honeyblock.name=Honigblock
+tile.null.honeydewblock.name=Honigtaublock
+tile.null.peatblock.name=Torfblock
+
+tile.null.claybrick.name=Lehmblock
+tile.null.whitesoulsand.name=Weißer Seelensand
+tile.null.lapisblockold.name=Lapisblock - Alt
+tile.null.lapisbrickold.name=Lapisziegel - Alt
+tile.null.lapisbrickcurrent.name=Lapisziegel
+tile.null.hiddentrapdoor.name=Versteckte Falltür
+
+tile.null.lavalamp.name=Lavalampe
+tile.null.stonetrimmedglowstone.name=Steinbeschmückter Glowstone
+
+tile.null.meltingcore.name=Schmelzkern
+
+tile.null.blackLamp_Lit.name=Leuchtende Schwarze Redstone-Lampe
+tile.null.redLamp_Lit.name=Leuchtende Rote Redstone-Lampe
+tile.null.greenLamp_Lit.name=Leuchtende Grüne Redstone-Lampe
+tile.null.brownLamp_Lit.name=Leuchtende Braune Redstone-Lampe
+tile.null.blueLamp_Lit.name=Leuchtende Blaue Redstone-Lampe
+tile.null.purpleLamp_Lit.name=Leuchtende Violette Redstone-Lampe
+tile.null.pinkLamp_Lit.name=Leuchtende Pinke Redstone-Lampe
+tile.null.lightBlueLamp_Lit.name=Leuchtende Hellblaue Redstone-Lampe
+tile.null.magentaLamp_Lit.name=Leuchtende Magentafarbene Redstone-Lampe
+
+tile.null.blackLamp.name=Matte Schwarze Redstone-Lampe
+tile.null.redLamp.name=Matte Rote Redstone-Lampe
+tile.null.greenLamp.name=Matte Grüne Redstone-Lampe
+tile.null.brownLamp.name=Matte Braune Redstone-Lampe
+tile.null.blueLamp.name=Matte Blaue Redstone-Lampe
+tile.null.purpleLamp.name=Matte Violette Redstone-Lampe
+tile.null.pinkLamp.name=Matte Pinke Redstone-Lampe
+tile.null.lightBlueLamp.name=Matte Hellblaue Redstone-Lampe
+tile.null.magentaLamp.name=Matte Magentafarbene Redstone-Lampe
+
+tile.null.marble.name=Marmor
+tile.null.mbrick.name=Marmorziegel
+tile.null.mchiseled.name=Gemeißelter Marmor
+tile.null.mpillar.name=Marmorsäule
+tile.null.mtile.name=Marmorfliese
+tile.null.amarble.name=Schwarzer Ashford-Marmor
+tile.null.amarblebrick.name=Schwarze Ashford-Marmorziegel
+tile.null.amarblechiseled.name=Gemeißelter Schwarzer Ashford-Marmor
+tile.null.amarblepillar.name=Schwarze Ashford-Marmorsäule
+tile.null.amarbletile.name=Schwarze Ashford-Fliese
+
+tile.marblestair.name=Marmortreppe
+tile.marblebrickstair.name=Marmorziegeltreppe
+tile.marblepillarstair.name=Marmorsäulentreppe
+tile.marbletilestair.name=Marmorfliesentreppe
+tile.blackmarblestair.name=Schwarze Ashford-Marmortreppe
+tile.blackmarblebrickstair.name=Schwarze Ashford-Marmorziegeltreppe
+tile.blackmarblepillarstair.name=Schwarze Ashford-Marmorsäulentreppe
+tile.blackmarbletilestair.name=Schwarze Ashford-Marmorfliesentreppe
+
+tile.null.mslab.name=Marmorstufe
+tile.null.mbrickslab.name=Marmorziegelstufe
+tile.null.mchiseledslab.name=Gemeißelte Marmorstufe
+tile.null.mpillarslab.name=Marmorsäulenstufe
+tile.null.mtileslab.name=Marmorfliesenstufe
+tile.null.amarbleslab.name=Schwarze Ashford-Marmorstufe
+tile.null.amarblebrickslab.name=Schwarze Ashford-Marmorziegelstufe
+tile.null.amarblechiseledslab.name=Gemeißelte Schwarze Ashford-Marmorstufe
+tile.null.amarblepillarslab.name=Schwarze Ashford-Marmorsäulenstufe
+tile.null.amarbletileslab.name=Schwarze Ashford-Marmorfliesenstufe
+			
+tile.null.mwall.name=Marmorstufe
+tile.null.mbrickwall.name=Marmorziegelstufe
+tile.null.mchiseledwall.name=Gemeißelte Marmorstufe
+tile.null.mpillarwall.name=Marmorsäulenstufe
+tile.null.mtilewall.name=Marmorfliesenstufe
+tile.null.amarblewall.name=Schwarze Ashford-Marmorstufe
+tile.null.amarblebrickwall.name=Schwarze Ashford-Marmorziegelstufe
+tile.null.amarblechiseledwall.name=Gemeißelte Schwarze Ashford-Marmorstufe
+tile.null.amarblepillarwall.name=Schwarze Ashford-Marmorsäulenstufe
+tile.null.amarbletilewall.name=Schwarze Ashford-Marmorfliesenstufe
+
+tile.stair.white.name=Weiß Gefärbte Tontreppe
+tile.stair.orange.name=Orange Gefärbte Tontreppe
+tile.stair.magenta.name=Magenta Gefärbte Tontreppe
+tile.stair.lightblue.name=Hellblau Gefärbte Tontreppe
+tile.stair.yellow.name=Gelb Gefärbte Tontreppe
+tile.stair.lime.name=Hellgrün Gefärbte Tontreppe
+tile.stair.pink.name=Pink Gefärbte Tontreppe
+tile.stair.gray.name=Grau Gefärbte Tontreppe
+tile.stair.lightgray.name=Hellgrau Gefärbte Tontreppe
+tile.stair.cyan.name=Türkis Gefärbte Tontreppe
+tile.stair.purple.name=Violett Gefärbte Tontreppe
+tile.stair.blue.name=Blau Gefärbte Tontreppe
+tile.stair.brown.name=Braun Gefärbte Tontreppe
+tile.stair.green.name=Grün Gefärbte Tontreppe
+tile.stair.red.name=Rot Gefärbte Tontreppe
+tile.stair.black.name=Schwarz Gefärbte Tontreppe

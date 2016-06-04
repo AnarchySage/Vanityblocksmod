@@ -1,0 +1,143 @@
+itemGroup.tabvanityblocks=Anarchy's VanityBlocks
+
+tile.null.charcoalblock.name=Древесноугольный блок
+tile.null.enderpearlblock.name=Блок жемчуга Края
+tile.null.slimeblock.name=Слизневый блок
+tile.null.sugarblock.name=Сахарный блок
+tile.null.cocoablock.name=Кусок какао
+tile.null.sugarcaneblock.name=Блок сахарного тростника
+tile.null.leatherblock.name=Кожанный блок
+tile.null.boneblock.name=Костный блок
+
+tile.null.tinblock.name=Оловянный блок
+tile.null.copperblock.name=Медный блок
+tile.null.silverblock.name=Серебряный блок
+tile.null.leadblock.name=Свинцовый блок
+tile.null.nikoliteblock.name=Николитовый блок
+tile.null.nickelblock.name=Никелевый блок
+tile.null.electrumblock.name=Электрумовый блок
+tile.null.platinumblock.name=Платиновый блок
+tile.null.invarblock.name=Инваровый блок
+tile.null.brassblock.name=Латунный блок
+tile.null.rubberblock.name=Резиновый блок
+
+tile.null.9xcobble.name=Сжатый булыжник в 9X
+tile.null.81xcobble.name=Сжатый булыжник в 81X
+tile.null.729xcobble.name=Сжатый булыжник в 729X
+tile.null.9xdirt.name=Сжатая земля в 9X
+tile.null.81xdirt.name=Сжатая земля в 81X
+tile.null.729xdirt.name=Сжатая земля в 729X
+tile.null.9xsand.name=Сжатый песок в 9X
+tile.null.81xsand.name=Сжатый песок в 81X
+tile.null.729xsand.name=Сжатый песок в 729X
+tile.null.9xgravel.name=Сжатый гравий в 9X
+tile.null.81xgravel.name=Сжатый гравий в 81X
+tile.null.729xgravel.name=Сжатый гравий в 729X
+
+item.greenrupee1.name=Зелёная рупия - 1 рупия
+item.bluerupee5.name=Синяя рупия - 5 рупий
+item.redrupee20.name=Красная рупия - 20 рупий
+item.biggreenrupee50.name=Большая зелёная рупия - 50 рупий
+item.bigbluerupee100.name=Большая синяя рупия - 100 рупий
+item.bigredrupee200.name=Большая красная рупия - 200 рупий
+
+item.flintitem.name=Хранилище кремня
+item.coalstorageitem.name=Хранилище угля ( 8 частей )
+item.arrowstorageitem.name=Пучок стрел
+item.blazestorageitem.name=Пучок огненных стержней
+
+tile.null.apatiteblock.name=Апатитовый блок
+tile.null.honeyblock.name=Медовый блок
+tile.null.honeydewblock.name=Нектарный блок
+tile.null.peatblock.name=Торфяной блок
+
+tile.null.claybrick.name=Глиняный кирпич
+tile.null.whitesoulsand.name=Белый песок душ
+tile.null.lapisblockold.name=Старый лазуритовый блок
+tile.null.lapisbrickold.name=Старый лазуритовый кирпич
+tile.null.lapisbrickcurrent.name=Новый лазуритовый кирпич
+tile.null.hiddentrapdoor.name=Спрятанный люк
+
+tile.null.lavalamp.name=Лавовая лампа
+tile.null.stonetrimmedglowstone.name=Светящийся камень, обшитый камнем
+
+tile.null.meltingcore.name=Ядро плавления
+
+tile.null.blackLamp_Lit.name=Зажжёная чёрная лампа на красном камне
+tile.null.redLamp_Lit.name=Зажжёная красная лампа на красном камне
+tile.null.greenLamp_Lit.name=Зажжёная зелёная лампа на красном камне
+tile.null.brownLamp_Lit.name=Зажжёная коричневая лампа на красном камне
+tile.null.blueLamp_Lit.name=Зажжёная синяя лампа на красном камне
+tile.null.purpleLamp_Lit.name=Зажжёная фиолетовая лампа на красном камне
+tile.null.pinkLamp_Lit.name=Зажжёная розовая лампа на красном камне
+tile.null.lightBlueLamp_Lit.name=Зажжёная светло-синяя лампа на красном камне
+tile.null.magentaLamp_Lit.name=Зажжёная сиреневая лампа на красном камне
+
+tile.null.blackLamp.name=Тусклая чёрная лампа на красном камне
+tile.null.redLamp.name=Тусклая красная лампа на красном камне
+tile.null.greenLamp.name=Тусклая зелёная лампа на красном камне
+tile.null.brownLamp.name=Тусклая коричневая лампа на красном камне
+tile.null.blueLamp.name=Тусклая синяя лампа на красном камне
+tile.null.purpleLamp.name=Тусклая фиолетовая лампа на красном камне
+tile.null.pinkLamp.name=Тусклая розовая лампа на красном камне
+tile.null.lightBlueLamp.name=Тусклая светло-синяя лампа на красном камне
+tile.null.magentaLamp.name=Тусклая сиреневая лампа на красном камне
+
+tile.null.marble.name=Мрамор
+tile.null.mbrick.name=Мраморный кирпич
+tile.null.mchiseled.name=Резной мрамор
+tile.null.mpillar.name=Мраморная колонна
+tile.null.mtile.name=Мраморная плитка
+tile.null.amarble.name=Пепельный чёрный мрамор
+tile.null.amarblebrick.name=Пепельный чёрный мраморный кирпич
+tile.null.amarblechiseled.name=Резной пепельный чёрный мрамор
+tile.null.amarblepillar.name=Пепельная чёрная мраморная колонна
+tile.null.amarbletile.name=Пепельная чёрная мраморная плитка
+
+tile.marblestair.name=Мраморные ступеньки
+tile.marblebrickstair.name=Ступеньки из мраморного кирпича
+tile.marblepillarstair.name=Ступеньки из мраморной колонны
+tile.marbletilestair.name=Ступеньки из мраморной плитки
+tile.blackmarblestair.name=Ступеньки из пепельного чёрного мрамора
+tile.blackmarblebrickstair.name=Ступеньки из пепельного чёрного мраморного кирпича
+tile.blackmarblepillarstair.name=Ступеньки из пепельной чёрной мраморной колонны
+tile.blackmarbletilestair.name=Ступеньки из пепельной чёрной мраморной плитки
+
+tile.null.mslab.name=Мраморная плита
+tile.null.mbrickslab.name=Плита из мраморного кирпича
+tile.null.mchiseledslab.name=Резная мраморная плита
+tile.null.mpillarslab.name=Плита из мраморной колонны
+tile.null.mtileslab.name=Плита из мраморной плитки
+tile.null.amarbleslab.name=Плита из пепельного чёрного мрамора
+tile.null.amarblebrickslab.name=Плита из пепельного чёрного мраморного кирпича
+tile.null.amarblechiseledslab.name=Плита из резного пепельного чёрного мрамора
+tile.null.amarblepillarslab.name=Плита из пепельной чёрной мраморной колонны
+tile.null.amarbletileslab.name=Плита из пепельной чёрной мраморной плитки
+
+tile.null.mwall.name=Мраморная стена
+tile.null.mbrickwall.name=Стена из мраморного кирпича
+tile.null.mchiseledwall.name=Резная мраморная стена
+tile.null.mpillarwall.name=Стена из мраморной колонны
+tile.null.mtilewall.name=Стена из мраморной плитки
+tile.null.amarblewall.name=Стена из пепельного чёрного мрамора
+tile.null.amarblebrickwall.name=Стена из пепельного чёрного мраморного кирпича
+tile.null.amarblechiseledwall.name=Стена из резного пепельного чёрного мрамора
+tile.null.amarblepillarwall.name=Стена из пепельной чёрной мраморной колонны
+tile.null.amarbletilewall.name=Стена из пепельной чёрной мраморной плитки
+
+tile.stair.white.name=Ступеньки из белой обожжённой глины
+tile.stair.orange.name=Ступеньки из оранжевой обожжённой глины
+tile.stair.magenta.name=Ступеньки из сиреневой обожжённой глины
+tile.stair.lightblue.name=Ступеньки из светло-синей обожжённой глины
+tile.stair.yellow.name=Ступеньки из жёлтой обожжённой глины
+tile.stair.lime.name=Ступеньки из лаймовой обожжённой глины
+tile.stair.pink.name=Ступеньки из розовой обожжённой глины
+tile.stair.gray.name=Ступеньки из серой обожжённой глины
+tile.stair.lightgray.name=Ступеньки из светло-серой обожжённой глины
+tile.stair.cyan.name=Ступеньки из бирюзовой обожжённой глины
+tile.stair.purple.name=Ступеньки из фиолетовой обожжённой глины
+tile.stair.blue.name=Ступеньки из синей обожжённой глины
+tile.stair.brown.name=Ступеньки из коричневой обожжённой глины
+tile.stair.green.name=Ступеньки из зелёной обожжённой глины
+tile.stair.red.name=Ступеньки из красной обожжённой глины
+tile.stair.black.name=Ступеньки из чёрной обожжённой глины

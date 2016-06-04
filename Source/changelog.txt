@@ -1,4 +1,25 @@
+1.7.10
+Build 84: Added Granite, diorite, andesite
+Build 83: Crafteverywhere did a chinese translation for VanityBlocks.
+Build 82: Vexatos added german translations and updated mispelling in the english
+Build 81: Added stained clay stairs. Recipes are the colored clay in a stair formation. Little simple addition i figured people would like.
+Build 51-80 : Updated to 1.7.10. Removed the slime block due to vannila's. Removed dimensions for now, since i cant get them to work. Removed the mug items, broken as hell and no clue why. Did localizations for all blocks/items so someone can translate if they wanted to. All blocks work atm as well(except dimensions and curtains(curtains will be back soon)). Removed version checker code, using straight jenkins from now, check every couple of days for a new build, may implement some sort of another update checker later on. Also version is now gonna be "VanityBlocks-V MCVERSIONHERE.B buildhere". Gradle script fun. First test build.
 1.6
+Build 51: Updated Changelog/github settings
+Build 36-50: New Jenkins Setup + Failure to fix dimensions
+Build 33: Fixed Npe related to fuel handler
+Build 32: Fixed Melting core, should work now with both liquid and items.
+Build 31: Fixed Dimension and providers loading place so less lag.
+Build 30: Fixed all imports, added some settings to the dimensions.
+Build 29: Fixed subnames so Stone Trimmed Glowstone was named correctly.
+Build 28: Stupid jenkins built before i wanted it to.
+Build 27: Added if statements to the portal block to prevent portal apperance if dimensions is disabled.
+Build 26: Forgot recipe for lighter, and formatter ran on new stuff.
+Build 25: ADDED DIMENIONS BISHES! Several dimensions, make the book ingame with a lighter and a book, read it for more info/the thread.
+Build 23: Finished Compressed common materials.
+Build 22: Fixed missing texture issue.
+Build 20: Added Compressed common materials, cobble,(working on these dirt, sand, gravel)
+V4.0.4: Updated to 1.6.4. Fixed hardness on curtains(whoops xD). Used new name mappings for 1.6 stuff.
 V4.0.3: Added a bit of info to the Version checker. Added a config to disable it checking, disable in the config. Added config to enable/disable redstone lamp colors, also added redstone lamps with colors(some colors missing(if you wish to finish/redo them, please let me know). Added recipes to craft the nametag(why is that a dungeon loot item?), iron, gold, diamond horse armor, cause i can, can disable in the config. Added a hidden trap door, will grab texture of the block placed on(should work for all mod blocks). Added Curtains that will take the texture of the block you use on them(some blocks wont work). To make them, similiar to door with any wools, makes the e-w, put it in the crafting table to make n-w, and it in the table to make it back to the e-w curtain.
 V4.0.2: Fixed a name issue with rubber blocks. Added a Lapis brick for current lapis block. Added another light source, Stone Trimmed Glowstone. Added marble/black marble stairs using single id for each(config option disables/enables all).
 V4.0.1: Fixed a config issue breaking McUpdater. Made blaze rod storage and coal storage items burnable for the item x 9 ticks. Removed recipe to make coal storage item for 1.6's coal block(will remove fully soon). Added a version checker(will check to see if version is old, if so, says so). Added Old Lapis block with brick texture, new lapis with brick texture(id had to shift, sorry).
