@@ -45,6 +45,7 @@ item.flintitem.name=Flint Storage Item
 item.coalstorageitem.name=Coal Storage Item( 8 Pieces )
 item.arrowstorageitem.name=Arrow Bundle
 item.blazestorageitem.name=Blaze Rod Bundle
+item.oredictionarybook.name=Forge Ore Dictionary Swapper
 
 tile.null.apatiteblock.name=Apatite Block
 tile.null.honeyblock.name=Honey Block

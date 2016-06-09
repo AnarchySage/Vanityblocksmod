@@ -21,32 +21,13 @@ public class GADWorldGen implements IWorldGenerator {
 		Granite = new WorldGenMinable(
 				VanityBlocksRegistration.VanityWorldGraniteblock, 0,
 				(Storageprops.gadvein), Blocks.stone);
-		Granite = new WorldGenMinable(
-				VanityBlocksRegistration.VanityWorldGraniteblock, 0,
-				(Storageprops.gadvein), Blocks.dirt);
-		Granite = new WorldGenMinable(
-				VanityBlocksRegistration.VanityWorldGraniteblock, 0,
-				(Storageprops.gadvein), Blocks.gravel);
 		Diorite = new WorldGenMinable(
 				VanityBlocksRegistration.VanityWorldDioriteblock, 0,
 				(Storageprops.gadvein), Blocks.stone);
-		Diorite = new WorldGenMinable(
-				VanityBlocksRegistration.VanityWorldDioriteblock, 0,
-				(Storageprops.gadvein), Blocks.dirt);
-		Diorite = new WorldGenMinable(
-				VanityBlocksRegistration.VanityWorldDioriteblock, 0,
-				(Storageprops.gadvein), Blocks.gravel);
 		Andesite = new WorldGenMinable(
 				VanityBlocksRegistration.VanityWorldAndesiteblock, 0,
 				(Storageprops.gadvein), Blocks.stone);
-		Andesite = new WorldGenMinable(
-				VanityBlocksRegistration.VanityWorldAndesiteblock, 0,
-				(Storageprops.gadvein), Blocks.dirt);
-		Andesite = new WorldGenMinable(
-				VanityBlocksRegistration.VanityWorldAndesiteblock, 0,
-				(Storageprops.gadvein), Blocks.gravel);
 	}
-
 	public void generate(Random random, int chunkX, int chunkZ, World world,
 			IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
 		if (Storageprops.enablediorite) {
@@ -56,7 +37,6 @@ public class GADWorldGen implements IWorldGenerator {
 				generateAndesiteSurface(random, chunkX * 16, chunkZ * 16, world);
 		}
 	}
-
 	void generateGraniteSurface(Random random, int xChunk, int zChunk, World world) {
 		int heightBand;
 		int xPos, yPos, zPos;

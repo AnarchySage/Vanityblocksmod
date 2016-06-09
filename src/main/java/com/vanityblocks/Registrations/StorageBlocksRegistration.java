@@ -28,16 +28,6 @@ public class StorageBlocksRegistration {
 		ForestryBlockId = Storageprops.forestryblockconfig;
 		ForestryBlock = new ForestryBlock(ForestryBlockId);
 
-		// String[] vannilastorageBlockNames = { "Sugar Cane Block",
-		// "Charcoal Block", "Enderpearl Block", "Slime Block", "Sugar Block",
-		// "Cocoa Block", "", "Leather Block", "Bone Block", "", "", "" };
-		// String[] modstorageBlockNames = { "Tin Block", "Copper Block",
-		// "Silver Block", "Lead Block", "Nikolite Block", "Nickel Block",
-		// "Electrum Block", "Platinum Block", "Invar Block",
-		// "Brass Block", "Rubber Block", "", "" };
-		// String[] forestrystorageBlockNames = { "Apatitde Block",
-		// "Honey Block", "Honeydew Block", "Peat Block", "", "", "", "", "",
-		// "", "", "" };
 		/* ##### Vannila ##### */
 		GameRegistry.registerBlock(StorageBlock, StorageItemBlock.class, modid
 				+ (StorageBlock.getUnlocalizedName().substring(0)));

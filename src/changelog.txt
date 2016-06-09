@@ -1,5 +1,6 @@
 1.7.10
-Build 84: Added Granite, diorite, andesite
+Build 85: Fixed Modded brass block having burn time?(remanant from coal coke?). Added code(need textures for), brick, tile, chiseled and pillars of GDA Blocks. Optimized and removed icon arrays on items that didnt need it. Added a pointless book to exchange ingots and block in ore dictionary called Forge Ore Dictionary Swapper(didnt know forge lexicon was remade but hell why not). Passive mobs now drops bones on all kills(Cows-3, chicken 1, pigs 2, sheep 2), can turn off via config.
+Build 84: Added Granite, Diorite and Andesite generation.
 Build 83: Crafteverywhere did a chinese translation for VanityBlocks.
 Build 82: Vexatos added german translations and updated mispelling in the english
 Build 81: Added stained clay stairs. Recipes are the colored clay in a stair formation. Little simple addition i figured people would like.

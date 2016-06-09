@@ -23,7 +23,6 @@ import com.vanityblocks.ItemBlocks.DesignWorldGraniteItemBlock;
 import com.vanityblocks.ItemBlocks.DesignWorldItemBlock;
 import com.vanityblocks.ItemBlocks.ItemBlockMarbleSlab;
 import com.vanityblocks.ItemBlocks.ItemBlockMarbleWall;
-import com.vanityblocks.Items.flintitem;
 import com.vanityblocks.Items.stonepolishitem;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -89,10 +88,25 @@ public class VanityBlocksRegistration {
 		if (Storageprops.enablediorite) {
 			GameRegistry.registerBlock(VanityWorldGraniteblock, DesignWorldGraniteItemBlock.class, 
 					"Vanity Blocks Granite World Blocks");
+			OreDictionary.registerOre("stoneGranite", new ItemStack(
+					VanityWorldGraniteblock, 1, 0));
+			OreDictionary.registerOre("blockGranite", new ItemStack(
+					VanityWorldGraniteblock, 1, 0));
+			
 			GameRegistry.registerBlock(VanityWorldDioriteblock, DesignWorldDioriteItemBlock.class, 
 					"Vanity Blocks Diorite World Blocks");
+			OreDictionary.registerOre("stoneDiorite", new ItemStack(
+					VanityWorldDioriteblock, 1, 0));
+			OreDictionary.registerOre("blockDiorite", new ItemStack(
+					VanityWorldDioriteblock, 1, 0));
+			
 			GameRegistry.registerBlock(VanityWorldAndesiteblock, DesignWorldAndesiteItemBlock.class,
 					"Vanity Blocks Andesite World Blocks");	
+			OreDictionary.registerOre("stoneAndesite", new ItemStack(
+					VanityWorldAndesiteblock, 1, 0));
+			OreDictionary.registerOre("blockAndesite", new ItemStack(
+					VanityWorldAndesiteblock, 1, 0));
+			
 			stonepolish = new stonepolishitem(Storageprops.stonepolishitem - 256);
 			GameRegistry.registerItem(stonepolish, "stonepolishitem");
 			//First Item is what i get back, second and third is what is used

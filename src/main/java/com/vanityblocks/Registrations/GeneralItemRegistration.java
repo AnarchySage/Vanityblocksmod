@@ -9,6 +9,7 @@ import com.vanityblocks.Items.arrowstorageitem;
 import com.vanityblocks.Items.blazestorageitem;
 import com.vanityblocks.Items.coalstorageitem;
 import com.vanityblocks.Items.flintitem;
+import com.vanityblocks.Items.worldgenitem;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -19,8 +20,6 @@ public class GeneralItemRegistration {
 	public static Item blazestorageitem;
 	public static Item worldgenitem;
 	public static Item villagemineitem;
-
-	// public static Item worldgenitem;
 
 	public static void generalitemregistration() {
 		if (Storageprops.enableflintitem) {
@@ -43,11 +42,10 @@ public class GeneralItemRegistration {
 					Storageprops.blazestorageitem - 256);
 			GameRegistry.registerItem(blazestorageitem, "blazestorageitem");
 		}
-		// WHY WONT THIS FUCKER WORK, fucking hell
-		// worldgenitem = new worldgenitem(19500);
-		// GameRegistry.registerItem(worldgenitem, "worldgenitem");
-		// villagemineitem = new villagemineitem(19501);
-		// GameRegistry.registerItem(villagemineitem, "villagemineitem");
+		 //worldgenitem = new worldgenitem(19500);
+		 //GameRegistry.registerItem(worldgenitem, "worldgenitem");
+		 //worldgenitem = new worldgenitem(19501);
+		 //GameRegistry.registerItem(worldgenitem, "worldgenitem");
 
 		// LanguageRegistry.addName(worldgenitem, "Worldgen Test Item");
 	}

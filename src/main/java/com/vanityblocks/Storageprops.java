@@ -17,9 +17,9 @@ public class Storageprops {
 				.get(enabled, "Enable Storageblocks?", true).getBoolean(true);
 		enablerupees = config.get(enabled, "Enabled the Rupees?", true)
 				.getBoolean(true);
-		enableclaymugstuff = config.get(enabled,
-				"Enable the Mug stuff(like hot chocolate)", true).getBoolean(
-				true);
+		//enableclaymugstuff = config.get(enabled,
+		//		"Enable the Mug stuff(like hot chocolate)", true).getBoolean(
+		//		true);
 		furnacemelts = config.get(enabled,
 				"Allow furnace melting of stuff like iron doors?", true)
 				.getBoolean(true);
@@ -30,18 +30,18 @@ public class Storageprops {
 				"Enable the redstone lamp colors?", true).getBoolean(true);
 		enabletrapdoors = config.get(enabled, "Enable hidden trap doors", true)
 				.getBoolean(true);
-		enablecurtains = config.get(enabled, "Enable the curtains?", true)
-				.getBoolean(true);
+		//enablecurtains = config.get(enabled, "Enable the curtains?", true)
+		//		.getBoolean(true);
 		enablerandomrecipes = config.get(enabled,
 				"Enable random recipes load?", true).getBoolean(true);
 		enablecompressblocks = config.get(enabled,
 				"Enable the Common Compressed Blocks?", true).getBoolean(true);
 		enablepillars = config.get(enabled, "Enable the Pillars?", true)
 				.getBoolean(true);
-		enablepressureplate = config.get(enabled,
-				"Enable the Pressure Plates?", true).getBoolean(true);
+		//enablepressureplate = config.get(enabled,
+		//		"Enable the Pressure Plates?", true).getBoolean(true);
 		enableclaystairs = config.get(enabled, "Enable the Clay Stairs?", true).getBoolean(true);
-		enablefences = config.get(enabled, "Enable the fences?", true).getBoolean(true);
+		//enablefences = config.get(enabled, "Enable the fences?", true).getBoolean(true);
 
 		/*
 		 * String blocks = "Block id's"; trapdoorconfigs =
@@ -207,11 +207,13 @@ public class Storageprops {
 				"Set the true/false here as well for the gregtech option ^",
 				true).getBoolean(true);
 		enablegregtechbypass = config
-				.get(category2,
-						"Set this to true if you want to unnerf gregtechs planks and others(requires 2 logs(shapeless)",
+				.get(category2,"Set this to true if you want to unnerf gregtechs planks and others(requires 2 logs(shapeless)",
 						false).getBoolean(false);
+		enableoredictionaryfix = config.get(category2, "Set this to true if you want an item to craft and use with ore dictionary ignots to get back a single ingot type(useful for dungeon loot ingots",
+				true).getBoolean(true);
 
 		String category3 = "Recipe enable or disable";
+		enablebonedrops = config.get(category3, "Enable bones from all passive mobs?", true).getBoolean(true);
 		dragoneggrecipe = config
 				.get(category3,
 						"Crafting Dragon Egg(Requires Ender Pearl Block enabled)",
@@ -263,7 +265,6 @@ public class Storageprops {
 		String category5 = "World Generation - Marble";
 		enableworldgen = config.get(category5, "Allow Worldgen?", true)
 				.getBoolean(true);
-		enablediorite = config.get(category5, "Allow Diorite and Andesite?(uses white marble gen rules)", true).getBoolean(true);
 		generatemarble = config.get(category5,
 				"Allow marble(white and black) to generate in the world?", true)
 				.getBoolean(true);
@@ -324,13 +325,15 @@ public class Storageprops {
 		// "Type true for main textures, false for alt textures";
 		String category9 = "World Generation - Granite, Andesite, Diorite + others";
 		stonepolishitem = config.get(category9, "Stone Polish Item Id(used to make polished stones)", 19013).getInt(19013);
+		
+		enablediorite = config.get(category9, "Allow Granite, and Diorite and Andesite?", true).getBoolean(true);
 		gadheight = config.get(category9,
 				"Height-How low should the stones generate?", 10)
 				.getInt();
 		gadrange = config
 				.get(category9,
 						"Range-What is the range from ^, such as, if height was 10, and range was 20, it would generate from 10-30.",
-						22).getInt();
+						80).getInt();
 		gadvein = config
 				.get(category9,
 						"VeinThickness- How big of a vien of stone should spawn,say you want 50 in a vein, do 25",
@@ -435,7 +438,7 @@ public class Storageprops {
 	public static boolean enableredstonelamps;
 	public static boolean enabletrapdoors;
 	public static boolean enablerandomrecipes;
-	public static boolean enablecurtains;
+	//public static boolean enablecurtains;
 	public static boolean enablecompressblocks;
 	public static boolean enablebuttons;
 	public static boolean enablepressureplate;
@@ -497,12 +500,14 @@ public class Storageprops {
 	public static boolean enablepeat;
 	public static boolean gregtechcompat;
 	public static boolean enablegregtechbypass;
+	public static boolean enableoredictionaryfix;
+	public static int oredictionarybook;
 	public static boolean enablemeltingcore;
 	public static boolean enablelavalamp;
 	public static boolean enablestoneglowstone;
 	public static boolean enablepillars;
 	public static boolean enableclaystairs;
-	public static boolean enablefences;
+	//public static boolean enablefences;
 	// #### Recipe booleans
 	public static boolean magmacreamtoslime;
 	public static boolean dragoneggrecipe;
@@ -530,6 +535,7 @@ public class Storageprops {
 	public static int arrowstorageitem;
 	public static boolean enableblazestorageitem;
 	public static int blazestorageitem;
+	public static boolean enablebonedrops;
 
 	/* ### General Food Item Ints and Booleans ###
 	public static int mugunfired;

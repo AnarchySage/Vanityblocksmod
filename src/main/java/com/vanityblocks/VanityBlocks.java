@@ -2,7 +2,9 @@ package com.vanityblocks;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraftforge.common.MinecraftForge;
 
+import com.vanityblocks.Events.MobDropsBoneEvent;
 import com.vanityblocks.FuelHandler.VanityForestryFuelHandler;
 import com.vanityblocks.FuelHandler.VanitymodFuelHandler;
 import com.vanityblocks.FuelHandler.VanityvanFuelHandler;
@@ -10,6 +12,7 @@ import com.vanityblocks.Registrations.ClayStairRegistration;
 import com.vanityblocks.Registrations.CompressedRegistrations;
 import com.vanityblocks.Registrations.GeneralItemRegistration;
 import com.vanityblocks.Registrations.Modbypass;
+import com.vanityblocks.Registrations.OreDictionaryBypass;
 import com.vanityblocks.Registrations.RandomBlockRegistrations;
 import com.vanityblocks.Registrations.RandomRecipes;
 import com.vanityblocks.Registrations.RedstoneLampRegistrations;
@@ -89,12 +92,6 @@ public class VanityBlocks {
 			GeneralItemRegistration.generalitemregistration();
 			GeneralItemRegistration.additemrecipes();
 		}
-		/* General Food Item Registrations */
-		// if (Storageprops.enableclaymugstuff)
-		// {
-		// GeneralFoodItemsRegistration.generalitemregistration();
-		// GeneralFoodItemsRegistration.additemrecipes();
-		// }
 		/* Rupee Registration */
 		if (Storageprops.enablerupees) {
 			RupeeRegistration.rupeeregistration();
@@ -146,8 +143,12 @@ public class VanityBlocks {
 
 		/* ######################## World Gen Registration ###### */
 		if (Storageprops.enableworldgen) {
-			GameRegistry.registerWorldGenerator(new MarbleGen(0), 0);
+			GameRegistry.registerWorldGenerator(new MarbleGen(0), 25);
 			GameRegistry.registerWorldGenerator(new GADWorldGen(0), 0);
+
+		}
+		if (Storageprops.enablebonedrops) {
+		MinecraftForge.EVENT_BUS.register(new MobDropsBoneEvent());
 		}
 		/*
 		 * Removed code for time being. GameRegistry.registerWorldGenerator(new
@@ -171,10 +172,6 @@ public class VanityBlocks {
 			// TODO Auto-generated method stub
 			return Item
 					.getItemFromBlock(VanityBlocksRegistration.VanityDesignblock);
-			// return new
-			// ItemStack(vanityblocks.Registrations.VanityBlocksRegistration.VanityDesignblock,
-			// 1, 0);
-
 		}
 	};
 
@@ -191,7 +188,12 @@ public class VanityBlocks {
 		/* Mod bypassing */
 		if (Storageprops.enablegregtechbypass) {
 			Modbypass.bypassrecipes();
-			FMLLog.info("[VanityBlocks] Bypass recipes are enabled");
+			FMLLog.info("[VanityBlocks] Bypass recipes for Gregtech are enabled");
+		}
+		// Enables the Ore Dictionary ingot attempt fix
+		if (Storageprops.enableoredictionaryfix) {
+			OreDictionaryBypass.bypassrecipes();
+			FMLLog.info("[VanityBlocks] Bypass for OreDictionary ingots are enabled");
 		}
 		FMLLog.info("[VanityBlocks] Seems to have loaded well!");
 	}

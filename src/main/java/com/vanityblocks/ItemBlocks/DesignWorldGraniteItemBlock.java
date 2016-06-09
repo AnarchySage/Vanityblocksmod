@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 public class DesignWorldGraniteItemBlock extends ItemBlock {
 
 	private final static String[] subNames = { "Granite", "Polished Granite",
-		"", "", "","", "","", "","", "", "", "", };
+		"Polished Granite Brick", "Polished Granite Chiseled", "Polished Granite Pillar","Polished Granite Tile", "","", "","", "", "", "", };
 
 	public DesignWorldGraniteItemBlock(Block id) {
 		super(id);
@@ -32,23 +32,23 @@ public class DesignWorldGraniteItemBlock extends ItemBlock {
 			name = "polishedgranite";
 			break;
 		}
-		/*case 2: {
-			name = "mchiseled";
+		case 2: {
+			name = "polishedgranitebrick";
 			break;
 		}
 		case 3: {
-			name = "mpillar";
+			name = "polishedgranitechisel";
 			break;
 		}
 		case 4: {
-			name = "mtile";
+			name = "polishedgranitepillar";
 			break;
 		}
 		case 5: {
-			name = "amarble";
+			name = "polishedgranitetile";
 			break;
 		}
-		case 6: {
+		/*case 6: {
 			name = "amarblebrick";
 			break;
 		}

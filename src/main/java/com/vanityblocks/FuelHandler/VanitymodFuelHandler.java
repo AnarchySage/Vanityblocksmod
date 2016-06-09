@@ -1,17 +1,17 @@
 package com.vanityblocks.FuelHandler;
 
-import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-
-import com.vanityblocks.Registrations.StorageBlocksRegistration;
-
 import cpw.mods.fml.common.IFuelHandler;
 
 public class VanitymodFuelHandler implements IFuelHandler {
+
 	@Override
+	public int getBurnTime(ItemStack fuel) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}
+	/*@Override
 	public int getBurnTime(ItemStack fuel) {
 		Item item = fuel.getItem();
 		if (item instanceof ItemBlock
