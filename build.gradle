@@ -24,8 +24,7 @@ archivesBaseName = "VanityBlocks-V1.7.10"
 minecraft {
     version = "1.7.10-10.13.4.1558-1.7.10"
 }
-
-//test
+ 
 
 dependencies {
     // you may put jars on which you depend on in ./libs
