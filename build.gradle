@@ -60,14 +60,15 @@ processResources
     // copy everything else, thats not the mcmod.info
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
-		exclude '**/*/Todo-ideas.txt'
-		exclude '**/*/ToRemember.txt'
+	exclude 'Todo-ideas.txt'
+	exclude 'ToRemember.txt'
+	
     }
 }
 
 
-
-jar {
-	archiveName = project.archivesBaseName + project.minecraft.version + project.version + ".jar"
-	//destinationDir = project.getBuildDir()
-}
+// This might be breaking the jenkisn
+//jar {
+//	archiveName = project.archivesBaseName + project.minecraft.version + project.version + ".jar"
+//	//destinationDir = project.getBuildDir()
+//}
