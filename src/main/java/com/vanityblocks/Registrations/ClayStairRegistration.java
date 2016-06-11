@@ -80,85 +80,51 @@ public class ClayStairRegistration {
 	public static void addRecipes() {		
 		GameRegistry.addRecipe(
 				new ItemStack(stairwhite, 4), "  x", " xx","xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 0));
-		GameRegistry.addRecipe(
-				new ItemStack(stairwhite, 4), "x   ", "xx ", "xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 0));
 		
 		GameRegistry.addRecipe(
 				new ItemStack(stairorange, 4), "  x", " xx","xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 1));
-		GameRegistry.addRecipe(
-				new ItemStack(stairorange, 4), "x   ", "xx ", "xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 1));
 		
 		GameRegistry.addRecipe(
 				new ItemStack(stairmagenta, 4), "  x", " xx","xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 2));
-		GameRegistry.addRecipe(
-				new ItemStack(stairmagenta, 4), "x   ", "xx ", "xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 2));
 		
 		GameRegistry.addRecipe(
 				new ItemStack(stairlightblue, 4), "  x", " xx","xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 3));
-		GameRegistry.addRecipe(
-				new ItemStack(stairlightblue, 4), "x   ", "xx ", "xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 3));
 		
 		GameRegistry.addRecipe(
 				new ItemStack(stairyellow, 4), "  x", " xx","xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 4));
-		GameRegistry.addRecipe(
-				new ItemStack(stairyellow, 4), "x   ", "xx ", "xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 4));
 		
 		GameRegistry.addRecipe(
 				new ItemStack(stairlime, 4), "  x", " xx","xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 5));
-		GameRegistry.addRecipe(
-				new ItemStack(stairlime, 4), "x   ", "xx ", "xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 5));
 		
 		GameRegistry.addRecipe(
 				new ItemStack(stairpink, 4), "  x", " xx","xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 6));
-		GameRegistry.addRecipe(
-				new ItemStack(stairpink, 4), "x   ", "xx ", "xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 6));
 		
 		GameRegistry.addRecipe(
 				new ItemStack(stairgray, 4), "  x", " xx","xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 7));
-		GameRegistry.addRecipe(
-				new ItemStack(stairgray, 4), "x   ", "xx ", "xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 7));
 		
 		GameRegistry.addRecipe(
 				new ItemStack(stairlightgray, 4), "  x", " xx","xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 8));
-		GameRegistry.addRecipe(
-				new ItemStack(stairlightgray, 4), "x   ", "xx ", "xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 8));
 		
 		GameRegistry.addRecipe(
 				new ItemStack(staircyan, 4), "  x", " xx","xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 9));
-		GameRegistry.addRecipe(
-				new ItemStack(staircyan, 4), "x   ", "xx ", "xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 9));
 		
 		GameRegistry.addRecipe(
 				new ItemStack(stairpurple, 4), "  x", " xx","xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 10));
-		GameRegistry.addRecipe(
-				new ItemStack(stairpurple, 4), "x   ", "xx ", "xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 10));
 		
 		GameRegistry.addRecipe(
 				new ItemStack(stairblue, 4), "  x", " xx","xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 11));
-		GameRegistry.addRecipe(
-				new ItemStack(stairblue, 4), "x   ", "xx ", "xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 11));
 		
 		GameRegistry.addRecipe(
 				new ItemStack(stairbrown, 4), "  x", " xx","xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 12));
-		GameRegistry.addRecipe(
-				new ItemStack(stairbrown, 4), "x   ", "xx ", "xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 12));
 		
 		GameRegistry.addRecipe(
 				new ItemStack(stairgreen, 4), "  x", " xx","xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 13));
-		GameRegistry.addRecipe(
-				new ItemStack(stairgreen, 4), "x   ", "xx ", "xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 13));
 		
 		GameRegistry.addRecipe(
 				new ItemStack(stairred, 4), "  x", " xx","xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 14));
-		GameRegistry.addRecipe(
-				new ItemStack(stairred, 4), "x   ", "xx ", "xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 14));
 		
 		GameRegistry.addRecipe(
 				new ItemStack(stairblack, 4), "  x", " xx","xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 15));
-		GameRegistry.addRecipe(
-				new ItemStack(stairblack, 4), "x   ", "xx ", "xxx", 'x', new ItemStack(Blocks.stained_hardened_clay, 1, 15));
-		
-		
 	}
 	
 	public static Block stairwhite;
