@@ -558,7 +558,7 @@ public class OreDictionaryBypass {
 			}
 		if (!OreDictionary.getOres("blockElectrum").isEmpty()) {
 			ItemStack Electrumblock;
-			Electrumblock = OreDictionary.getOres("Electrum").get(0);
+			Electrumblock = OreDictionary.getOres("blockElectrum").get(0);
 			ItemStack result = Electrumblock.copy();
 			result.stackSize = 1;
 			GameRegistry.addRecipe(new ShapelessOreRecipe(result, "blockElectrum", oredictionarybook ));
