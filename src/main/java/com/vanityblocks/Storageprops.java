@@ -17,9 +17,6 @@ public class Storageprops {
 				.get(enabled, "Enable Storageblocks?", true).getBoolean(true);
 		enablerupees = config.get(enabled, "Enabled the Rupees?", true)
 				.getBoolean(true);
-		//enableclaymugstuff = config.get(enabled,
-		//		"Enable the Mug stuff(like hot chocolate)", true).getBoolean(
-		//		true);
 		furnacemelts = config.get(enabled,
 				"Allow furnace melting of stuff like iron doors?", true)
 				.getBoolean(true);
@@ -38,8 +35,6 @@ public class Storageprops {
 				"Enable the Common Compressed Blocks?", true).getBoolean(true);
 		enablepillars = config.get(enabled, "Enable the Pillars?", true)
 				.getBoolean(true);
-		//enablepressureplate = config.get(enabled,
-		//		"Enable the Pressure Plates?", true).getBoolean(true);
 		enableclaystairs = config.get(enabled, "Enable the Clay Stairs?", true).getBoolean(true);
 		//enablefences = config.get(enabled, "Enable the fences?", true).getBoolean(true);
 
@@ -469,9 +464,11 @@ public class Storageprops {
 	public static int marblestair;
 	public static int marblebrickstair;
 	public static int marblepillarstair;
+	public static int marblechiseledstair;
 	public static int marbletilestair;
 	public static int blackmarblestair;
 	public static int blackmarblebrickstair;
+	public static int blackmarblechiseledstair;
 	public static int blackmarblepillarstair;
 	public static int blackmarbletilestair;
 	// Enabled blocks?

@@ -45,10 +45,12 @@ public class VanityBlocksRegistration {
 	public static Block VanityWorldAndesiteblock;
 	public static Block marblestair;
 	public static Block marblebrickstair;
+	public static Block marblechiseledstair;
 	public static Block marblepillarstair;
 	public static Block marbletilestair;
 	public static Block blackmarblestair;
 	public static Block blackmarblebrickstair;
+	public static Block blackmarblechiseledstair;
 	public static Block blackmarblepillarstair;
 	public static Block blackmarbletilestair;
 	public static Item stonepolish;
@@ -150,34 +152,50 @@ public class VanityBlocksRegistration {
 					VanityDesignworldblock, 1).setBlockName("marblebrickstair");
 			marblebrickstair.stepSound = Block.soundTypeStone;
 			GameRegistry.registerBlock(marblebrickstair, "marblebrickstair");
-
-			marblepillarstair = new MarbleStair(Storageprops.marblepillarstair,
+			
+			marblechiseledstair = new MarbleStair(Storageprops.marblechiseledstair,
 					VanityDesignworldblock, 2)
+					.setBlockName("marblechiseledstair");
+			marblechiseledstair.stepSound = Block.soundTypeStone;
+			GameRegistry.registerBlock(marblechiseledstair,
+					"marblechiseledstair");
+			
+			marblepillarstair = new MarbleStair(
+					Storageprops.marblepillarstair,
+					VanityDesignworldblock, 3)
 					.setBlockName("marblepillarstair");
 			marblepillarstair.stepSound = Block.soundTypeStone;
-			GameRegistry.registerBlock(marblepillarstair, "marblepillarstair");
+			GameRegistry.registerBlock(marblepillarstair,
+					"marblepillarstair");
 
 			marbletilestair = new MarbleStair(Storageprops.marbletilestair,
-					VanityDesignworldblock, 3).setBlockName("marbletilestair");
+					VanityDesignworldblock, 4).setBlockName("marbletilestair");
 			marbletilestair.stepSound = Block.soundTypeStone;
 			GameRegistry.registerBlock(marbletilestair, "marbletilestair");
 		}
 		if (Storageprops.generatemarble && Storageprops.marblestairs) {
 			blackmarblestair = new MarbleStair(Storageprops.blackmarblestair,
-					VanityDesignworldblock, 4).setBlockName("blackmarblestair");
+					VanityDesignworldblock, 5).setBlockName("blackmarblestair");
 			blackmarblestair.stepSound = Block.soundTypeStone;
 			GameRegistry.registerBlock(blackmarblestair, "blackmarblestair");
 
 			blackmarblebrickstair = new MarbleStair(
 					Storageprops.blackmarblebrickstair, VanityDesignworldblock,
-					5).setBlockName("blackmarblebrickstair");
+					6).setBlockName("blackmarblebrickstair");
 			blackmarblebrickstair.stepSound = Block.soundTypeStone;
 			GameRegistry.registerBlock(blackmarblebrickstair,
 					"blackmarblebrickstair");
+			
+			blackmarblechiseledstair = new MarbleStair(
+					Storageprops.blackmarblechiseledstair, VanityDesignworldblock,
+					7).setBlockName("blackmarblechiseledstair");
+			blackmarblechiseledstair.stepSound = Block.soundTypeStone;
+			GameRegistry.registerBlock(blackmarblechiseledstair,
+					"blackmarblechiseledstair");
 
 			blackmarblepillarstair = new MarbleStair(
 					Storageprops.blackmarblepillarstair,
-					VanityDesignworldblock, 6)
+					VanityDesignworldblock, 8)
 					.setBlockName("blackmarblepillarstair");
 			blackmarblepillarstair.stepSound = Block.soundTypeStone;
 			GameRegistry.registerBlock(blackmarblepillarstair,
@@ -185,7 +203,7 @@ public class VanityBlocksRegistration {
 
 			blackmarbletilestair = new MarbleStair(
 					Storageprops.blackmarbletilestair, VanityDesignworldblock,
-					7).setBlockName("blackmarbletilestair");
+					9).setBlockName("blackmarbletilestair");
 			blackmarbletilestair.stepSound = Block.soundTypeStone;
 			GameRegistry.registerBlock(blackmarbletilestair,
 					"blackmarbletilestair");
@@ -358,14 +376,8 @@ public class VanityBlocksRegistration {
 					"x   ", "xx ", "xxx", 'x', new ItemStack(
 							VanityDesignworldblock, 0, 6));
 			GameRegistry.addRecipe(new ItemStack(blackmarblepillarstair, 4),
-					"  x", " xx", "xxx", 'x', new ItemStack(
-							VanityDesignworldblock, 0, 8));
-			GameRegistry.addRecipe(new ItemStack(blackmarblepillarstair, 4),
 					"x   ", "xx ", "xxx", 'x', new ItemStack(
 							VanityDesignworldblock, 0, 8));
-			GameRegistry.addRecipe(new ItemStack(blackmarbletilestair, 4),
-					"  x", " xx", "xxx", 'x', new ItemStack(
-							VanityDesignworldblock, 0, 9));
 			GameRegistry.addRecipe(new ItemStack(blackmarbletilestair, 4),
 					"x   ", "xx ", "xxx", 'x', new ItemStack(
 							VanityDesignworldblock, 0, 9));

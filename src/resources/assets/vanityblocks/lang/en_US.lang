@@ -105,10 +105,12 @@ item.stonepolishitem.name=Stone Polisher
 
 tile.marblestair.name=Marble Stairs
 tile.marblebrickstair.name=Marble Brick Stairs
+tile.marblechiseledstair.name= Marble Chiseled Stairs
 tile.marblepillarstair.name=Marble Pillar Stairs
 tile.marbletilestair.name=Marble Tile Stairs
 tile.blackmarblestair.name=Ashford Black Marble Stairs
 tile.blackmarblebrickstair.name=Ashford Black Marble Brick Stairs
+tile.blackmarblechiseledstair.name Ashford Black Marble Stairs
 tile.blackmarblepillarstair.name=Ashford Black Marble Pillar Stairs
 tile.blackmarbletilestair.name=Ashford Black Marble Tile Stairs
 

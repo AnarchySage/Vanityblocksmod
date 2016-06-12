@@ -155,7 +155,10 @@ public class RedstonelitLamps extends BlockRedstoneLight {
 		int metadata = par1World.getBlockMetadata(x, y, z);
 		return metadata;
 	}
-
+	public int idDropped(int meta, Random random)
+    {
+        return (meta);
+    }
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item p_149666_1_, CreativeTabs p_149666_2_,
 			List p_149666_3_) {

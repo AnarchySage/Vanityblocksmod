@@ -19,6 +19,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class RedstonedimLamps extends BlockRedstoneLight {
+	private static final World par1World = null;
 	// private final boolean powered;
 	private final boolean field_150171_a;
 
