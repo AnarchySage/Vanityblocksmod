@@ -159,7 +159,7 @@ public class OreDictionaryBypass {
 			}
 		if (!OreDictionary.getOres("ingotElectrum").isEmpty()) {
 			ItemStack Electrumingot;
-			Electrumingot = OreDictionary.getOres("Electrum").get(0);
+			Electrumingot = OreDictionary.getOres("ingotElectrum").get(0);
 			ItemStack result = Electrumingot.copy();
 			result.stackSize = 1;
 			GameRegistry.addRecipe(new ShapelessOreRecipe(result, "ingotElectrum", oredictionarybook ));

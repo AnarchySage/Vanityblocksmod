@@ -1,4 +1,5 @@
 1.7.10
+Build 88: Fixed electrum call in oredictionarybypass file.
 Build 87: Fixed missing stairs and wrong textures for marble/black marble. Added missing chiseled stairs.
 Build 86. Fixed stair recipe. Added granite, diorite and andesite to oredictionary.
 Build 85: Fixed Modded brass block having burn time?(remanant from coal coke?). Added code(need textures for), brick, tile, chiseled and pillars of GDA Blocks. Optimized and removed icon arrays on items that didnt need it. Added a pointless book to exchange ingots and block in ore dictionary called Forge Ore Dictionary Swapper(didnt know forge lexicon was remade but hell why not). Passive mobs now drops bones on all kills(Cows-3, chicken 1, pigs 2, sheep 2), can turn off via config.
