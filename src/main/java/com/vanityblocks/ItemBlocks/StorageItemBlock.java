@@ -42,8 +42,12 @@ public class StorageItemBlock extends ItemBlock {
 			name = "boneblock";
 			break;
 		}
+		case 7: {
+			name = "fleshblock";
+			break;
+		}
 		default:
-			name = "Report_To_The_Author";
+			name = "Report To The Author";
 		}
 		return getUnlocalizedName() + "." + name;
 	}

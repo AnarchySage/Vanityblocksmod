@@ -152,6 +152,8 @@ public class Storageprops {
 				true).getBoolean(true);
 		enablebone = config.get(category1, "Enable Bone Block crafting?", true)
 				.getBoolean(true);
+		enableflesh = config.get(category1, "Enable Zombie flesh Block Crafting?", true)
+				.getBoolean(true);
 		enabletin = config.get(category1, "Enable Tin Block crafting?", true)
 				.getBoolean(true);
 		enablecopper = config.get(category1, "Enable Copper Block crafting?",
@@ -209,6 +211,10 @@ public class Storageprops {
 
 		String category3 = "Recipe enable or disable";
 		enablebonedrops = config.get(category3, "Enable bones from all passive mobs?", true).getBoolean(true);
+		bonedropscow = config.get(category3, "How many bones do cow/mooshrooms drop?", 3).getInt();
+		bonedropssheep = config.get(category3, "How many bones do sheep drop?", 2).getInt();
+		bonedropspig = config.get(category3, "How many bones do pigs drop?", 1).getInt();
+		bonedropschicken = config.get(category3, "How many bones do chicken drop?", 1).getInt();
 		dragoneggrecipe = config
 				.get(category3,
 						"Crafting Dragon Egg(Requires Ender Pearl Block enabled)",
@@ -313,11 +319,7 @@ public class Storageprops {
 				.get(category8,
 						"Enabled/Allow Black marble stairs?(note black marble needs to be enabled)",
 						true).getBoolean(true);
-		// String category7 = "Texture swapping";
-		// Property blackmarbletextures =
-		// config.get(category6,"Do you want to use my textures for black marble or alt textures? type true for mine, false for alt",true);
-		// blackmarbletextures.comment =
-		// "Type true for main textures, false for alt textures";
+		
 		String category9 = "World Generation - Granite, Andesite, Diorite + others";
 		stonepolishitem = config.get(category9, "Stone Polish Item Id(used to make polished stones)", 19013).getInt(19013);
 		
@@ -480,6 +482,7 @@ public class Storageprops {
 	public static boolean enablecocoa;
 	public static boolean enableleather;
 	public static boolean enablebone;
+	public static boolean enableflesh;
 	public static boolean enabletin;
 	public static boolean enablecopper;
 	public static boolean enablesilver;
@@ -533,7 +536,11 @@ public class Storageprops {
 	public static boolean enableblazestorageitem;
 	public static int blazestorageitem;
 	public static boolean enablebonedrops;
-
+	public static int bonedropscow;
+	public static int bonedropssheep;
+	public static int bonedropspig;
+	public static int bonedropschicken;
+	
 	/* ### General Food Item Ints and Booleans ###
 	public static int mugunfired;
 	public static int emptymug;

@@ -1,5 +1,7 @@
 package com.vanityblocks.Events;
 
+import com.vanityblocks.Storageprops;
+
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.passive.EntityChicken;
 import net.minecraft.entity.passive.EntityCow;
@@ -28,27 +30,28 @@ public class MobDropsBoneEvent {
 		//Everything must only drop 1 or 0 due to stack size limits.
 				
 		if (event.entityLiving instanceof EntityCow) {
-		    ItemStack itemStackToDrop = new ItemStack(Items.bone, 3);
+		    //ItemStack itemStackToDrop = new ItemStack(Items.bone, 3);
+		    ItemStack itemStackToDrop = new ItemStack(Items.bone, Storageprops.bonedropscow);
 		    event.drops.add(new EntityItem(event.entity.worldObj, event.entity.posX, 
 		    		event.entity.posY, event.entity.posZ, itemStackToDrop));
 		}
 		if (event.entityLiving instanceof EntitySheep) {
-		    ItemStack itemStackToDrop = new ItemStack(Items.bone, 2);
+		    ItemStack itemStackToDrop = new ItemStack(Items.bone, Storageprops.bonedropssheep);
 		    event.drops.add(new EntityItem(event.entity.worldObj, event.entity.posX, 
 		    		event.entity.posY, event.entity.posZ, itemStackToDrop));
 		}
 		if (event.entityLiving instanceof EntityPig) {
-		    ItemStack itemStackToDrop = new ItemStack(Items.bone, 1);
+		    ItemStack itemStackToDrop = new ItemStack(Items.bone, Storageprops.bonedropspig);
 		    event.drops.add(new EntityItem(event.entity.worldObj, event.entity.posX, 
 		    		event.entity.posY, event.entity.posZ, itemStackToDrop));
 		}
 		if (event.entityLiving instanceof EntityChicken) {
-		    ItemStack itemStackToDrop = new ItemStack(Items.bone, 1);
+		    ItemStack itemStackToDrop = new ItemStack(Items.bone, Storageprops.bonedropschicken);
 		    event.drops.add(new EntityItem(event.entity.worldObj, event.entity.posX, 
 		    		event.entity.posY, event.entity.posZ, itemStackToDrop));
 		}
 		if (event.entityLiving instanceof EntityMooshroom) {
-		    ItemStack itemStackToDrop = new ItemStack(Items.bone, 3);
+		    ItemStack itemStackToDrop = new ItemStack(Items.bone, Storageprops.bonedropscow);
 		    event.drops.add(new EntityItem(event.entity.worldObj, event.entity.posX, 
 		    		event.entity.posY, event.entity.posZ, itemStackToDrop));
 		}

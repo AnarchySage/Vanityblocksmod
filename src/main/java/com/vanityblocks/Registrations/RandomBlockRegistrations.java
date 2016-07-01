@@ -53,10 +53,13 @@ public class RandomBlockRegistrations {
 			}
 		}
 		if (Storageprops.enablewhitesoulsand) {
-			GameRegistry.addShapelessRecipe(new ItemStack(RandomBlocks, 1, 1),
-					new ItemStack(Blocks.soul_sand, 1), new ItemStack(
-							Items.sugar, 1));
-		}
+			//GameRegistry.addShapelessRecipe(new ItemStack(RandomBlocks, 1, 1),
+			//		new ItemStack(Blocks.soul_sand, 1), new ItemStack(
+			//				Items.sugar, 1));
+			GameRegistry.addRecipe(new ItemStack(RandomBlocks, 2, 1),
+					new Object[] { " x ", "xyx", " x ", 'x', new ItemStack(Items.sugar), 
+				'y', new ItemStack(Blocks.soul_sand)});
+			}
 		if (Storageprops.enableoldlapisblock) {
 			GameRegistry.addRecipe(new ItemStack(RandomBlocks, 1, 2),
 					new Object[] { "xx", "xx", 'x',

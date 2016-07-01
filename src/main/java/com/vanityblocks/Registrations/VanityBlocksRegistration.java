@@ -339,49 +339,37 @@ public class VanityBlocksRegistration {
 		/* Recipes for marble stairs */
 		if (Storageprops.generatemarble && Storageprops.marblestairs) {
 			GameRegistry.addRecipe(new ItemStack(marblestair, 4), "  x", " xx",
-					"xxx", 'x', new ItemStack(VanityDesignworldblock, 0, 0));
-			GameRegistry.addRecipe(new ItemStack(marblestair, 4), "x   ",
-					"xx ", "xxx", 'x', new ItemStack(VanityDesignworldblock, 0,
+					"xxx", 'x', new ItemStack(VanityDesignworldblock, 0, 
 							0));
 			GameRegistry.addRecipe(new ItemStack(marblebrickstair, 4), "  x",
 					" xx", "xxx", 'x', new ItemStack(VanityDesignworldblock, 0,
 							1));
-			GameRegistry.addRecipe(new ItemStack(marblebrickstair, 4), "x   ",
+			GameRegistry.addRecipe(new ItemStack(marblechiseledstair, 4), "x  ",
 					"xx ", "xxx", 'x', new ItemStack(VanityDesignworldblock, 0,
-							1));
-			GameRegistry.addRecipe(new ItemStack(marblepillarstair, 4), "  x",
-					" xx", "xxx", 'x', new ItemStack(VanityDesignworldblock, 0,
-							3));
-			GameRegistry.addRecipe(new ItemStack(marblepillarstair, 4), "x   ",
+							2));
+			GameRegistry.addRecipe(new ItemStack(marblepillarstair, 4), "x  ",
 					"xx ", "xxx", 'x', new ItemStack(VanityDesignworldblock, 0,
 							3));
-			GameRegistry.addRecipe(new ItemStack(marbletilestair, 4), "  x",
-					" xx", "xxx", 'x', new ItemStack(VanityDesignworldblock, 0,
-							4));
-			GameRegistry.addRecipe(new ItemStack(marbletilestair, 4), "x   ",
+			GameRegistry.addRecipe(new ItemStack(marbletilestair, 4), "x  ",
 					"xx ", "xxx", 'x', new ItemStack(VanityDesignworldblock, 0,
 							4));
-		}
 		if (Storageprops.generatemarble && Storageprops.marblestairs) {
-			GameRegistry.addRecipe(new ItemStack(blackmarblestair, 4), "  x",
-					" xx", "xxx", 'x', new ItemStack(VanityDesignworldblock, 0,
-							5));
-			GameRegistry.addRecipe(new ItemStack(blackmarblestair, 4), "x   ",
+			GameRegistry.addRecipe(new ItemStack(blackmarblestair, 4), "x  ",
 					"xx ", "xxx", 'x', new ItemStack(VanityDesignworldblock, 0,
 							5));
 			GameRegistry.addRecipe(new ItemStack(blackmarblebrickstair, 4),
-					"  x", " xx", "xxx", 'x', new ItemStack(
+					"x  ", "xx ", "xxx", 'x', new ItemStack(
 							VanityDesignworldblock, 0, 6));
-			GameRegistry.addRecipe(new ItemStack(blackmarblebrickstair, 4),
-					"x   ", "xx ", "xxx", 'x', new ItemStack(
-							VanityDesignworldblock, 0, 6));
+			GameRegistry.addRecipe(new ItemStack(blackmarblechiseledstair, 4),
+					"x  ", "xx ", "xxx", 'x', new ItemStack(
+							VanityDesignworldblock, 0, 7));
 			GameRegistry.addRecipe(new ItemStack(blackmarblepillarstair, 4),
-					"x   ", "xx ", "xxx", 'x', new ItemStack(
+					"x  ", "xx ", "xxx", 'x', new ItemStack(
 							VanityDesignworldblock, 0, 8));
 			GameRegistry.addRecipe(new ItemStack(blackmarbletilestair, 4),
-					"x   ", "xx ", "xxx", 'x', new ItemStack(
+					"x  ", "xx ", "xxx", 'x', new ItemStack(
 							VanityDesignworldblock, 0, 9));
+			}
 		}
 	}
-
 }

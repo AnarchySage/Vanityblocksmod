@@ -98,7 +98,7 @@ public class StorageBlock extends Block {
 	@SideOnly(Side.CLIENT)
 	// @Override
 	public void registerBlockIcons(IIconRegister par1IconRegister) {
-		icons = new IIcon[9];
+		icons = new IIcon[11];
 
 		icons[0] = par1IconRegister.registerIcon("vanityblocks:charcoalblock");
 		icons[1] = par1IconRegister
@@ -106,9 +106,11 @@ public class StorageBlock extends Block {
 		icons[2] = par1IconRegister.registerIcon("vanityblocks:sugarblock");
 		icons[3] = par1IconRegister.registerIcon("vanityblocks:cocoablock");
 		icons[4] = par1IconRegister.registerIcon("vanityblocks:leatherblock");
-		icons[5] = par1IconRegister.registerIcon("vanityblocks:boneblock");
+		icons[5] = par1IconRegister.registerIcon("vanityblocks:bone_block_top");
 		icons[7] = par1IconRegister.registerIcon("vanityblocks:reedtop");
 		icons[8] = par1IconRegister.registerIcon("vanityblocks:reedside");
+		icons[9] = par1IconRegister.registerIcon("vanityblocks:fleshblock");
+		icons[10]= par1IconRegister.registerIcon("vanityblocks:bone_block_side");
 	}
 
 	@Override
@@ -144,7 +146,17 @@ public class StorageBlock extends Block {
 			return icons[4];
 		}
 		if (metadata == 6) {
-			return icons[5];
+			switch (side) {
+			case 0:
+				return icons[5];
+			case 1:
+				return icons[5];
+			default:
+				return icons[10];
+			}
+		}
+		if (metadata == 7) {
+			return icons[9];
 		}
 		return blockIcon;
 	}
@@ -163,5 +175,6 @@ public class StorageBlock extends Block {
 		p_149666_3_.add(new ItemStack(p_149666_1_, 1, 4));
 		p_149666_3_.add(new ItemStack(p_149666_1_, 1, 5));
 		p_149666_3_.add(new ItemStack(p_149666_1_, 1, 6));
+		p_149666_3_.add(new ItemStack(p_149666_1_, 1, 7));
 	}
 }

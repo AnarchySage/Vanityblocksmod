@@ -3,9 +3,11 @@ package com.vanityblocks.Blocks;
 import java.util.List;
 import java.util.Random;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockRedstoneLight;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
@@ -19,12 +21,12 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class RedstonelitLamps extends BlockRedstoneLight {
 	private final boolean field_150171_a;
-
+	private Item drop;
+	private int meta;
 	public RedstonelitLamps(int redstonelamplitconfig, boolean p_i45421_1_) {
 		super(p_i45421_1_); // super(Material.redstoneLight);
 		setCreativeTab(VanityBlocks.tabvanityblocks);
 		this.field_150171_a = p_i45421_1_;
-
 		if (p_i45421_1_) {
 			this.setLightLevel(1.0F);
 		}
@@ -146,19 +148,10 @@ public class RedstonelitLamps extends BlockRedstoneLight {
 		}
 	}
 
-	@Override
-	public int damageDropped(int metadata) {
-		return metadata;
-	}
-
 	public int idPicked(World par1World, int x, int y, int z) {
 		int metadata = par1World.getBlockMetadata(x, y, z);
 		return metadata;
 	}
-	public int idDropped(int meta, Random random)
-    {
-        return (meta);
-    }
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item p_149666_1_, CreativeTabs p_149666_2_,
 			List p_149666_3_) {

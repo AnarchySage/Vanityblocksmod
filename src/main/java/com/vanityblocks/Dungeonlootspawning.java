@@ -362,10 +362,10 @@ public class Dungeonlootspawning {
 					new WeightedRandomChestContent(new ItemStack(
 							StorageBlocksRegistration.StorageBlockMod, 0, 3),
 							1, 2, 9));
-			ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST).addItem(
-					new WeightedRandomChestContent(new ItemStack(
-							StorageBlocksRegistration.StorageBlockMod, 0, 4),
-							1, 2, 9));
+			//ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST).addItem(
+			//		new WeightedRandomChestContent(new ItemStack(
+			//				StorageBlocksRegistration.StorageBlockMod, 0, 4),
+			//				1, 2, 9));
 			ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST).addItem(
 					new WeightedRandomChestContent(new ItemStack(
 							StorageBlocksRegistration.StorageBlockMod, 0, 5),
@@ -407,10 +407,10 @@ public class Dungeonlootspawning {
 					new WeightedRandomChestContent(new ItemStack(
 							StorageBlocksRegistration.StorageBlockMod, 0, 3),
 							3, 5, 12));
-			ChestGenHooks.getInfo(ChestGenHooks.MINESHAFT_CORRIDOR).addItem(
-					new WeightedRandomChestContent(new ItemStack(
-							StorageBlocksRegistration.StorageBlockMod, 0, 4),
-							3, 5, 12));
+			//ChestGenHooks.getInfo(ChestGenHooks.MINESHAFT_CORRIDOR).addItem(
+			//		new WeightedRandomChestContent(new ItemStack(
+			//				StorageBlocksRegistration.StorageBlockMod, 0, 4),
+			//				3, 5, 12));
 			ChestGenHooks.getInfo(ChestGenHooks.MINESHAFT_CORRIDOR).addItem(
 					new WeightedRandomChestContent(new ItemStack(
 							StorageBlocksRegistration.StorageBlockMod, 0, 5),
@@ -452,10 +452,10 @@ public class Dungeonlootspawning {
 					new WeightedRandomChestContent(new ItemStack(
 							StorageBlocksRegistration.StorageBlockMod, 0, 3),
 							3, 5, 12));
-			ChestGenHooks.getInfo(ChestGenHooks.PYRAMID_DESERT_CHEST).addItem(
-					new WeightedRandomChestContent(new ItemStack(
-							StorageBlocksRegistration.StorageBlockMod, 0, 4),
-							3, 5, 12));
+			//ChestGenHooks.getInfo(ChestGenHooks.PYRAMID_DESERT_CHEST).addItem(
+			//		new WeightedRandomChestContent(new ItemStack(
+			//				StorageBlocksRegistration.StorageBlockMod, 0, 4),
+			//				3, 5, 12));
 			ChestGenHooks.getInfo(ChestGenHooks.PYRAMID_DESERT_CHEST).addItem(
 					new WeightedRandomChestContent(new ItemStack(
 							StorageBlocksRegistration.StorageBlockMod, 0, 5),
@@ -497,10 +497,10 @@ public class Dungeonlootspawning {
 					new WeightedRandomChestContent(new ItemStack(
 							StorageBlocksRegistration.StorageBlockMod, 0, 3),
 							3, 5, 12));
-			ChestGenHooks.getInfo(ChestGenHooks.PYRAMID_JUNGLE_CHEST).addItem(
-					new WeightedRandomChestContent(new ItemStack(
-							StorageBlocksRegistration.StorageBlockMod, 0, 4),
-							3, 5, 12));
+			//ChestGenHooks.getInfo(ChestGenHooks.PYRAMID_JUNGLE_CHEST).addItem(
+			//		new WeightedRandomChestContent(new ItemStack(
+			//				StorageBlocksRegistration.StorageBlockMod, 0, 4),
+			//				3, 5, 12));
 			ChestGenHooks.getInfo(ChestGenHooks.PYRAMID_JUNGLE_CHEST).addItem(
 					new WeightedRandomChestContent(new ItemStack(
 							StorageBlocksRegistration.StorageBlockMod, 0, 5),
@@ -542,10 +542,10 @@ public class Dungeonlootspawning {
 					new WeightedRandomChestContent(new ItemStack(
 							StorageBlocksRegistration.StorageBlockMod, 0, 3),
 							3, 5, 12));
-			ChestGenHooks.getInfo(ChestGenHooks.STRONGHOLD_CORRIDOR).addItem(
-					new WeightedRandomChestContent(new ItemStack(
-							StorageBlocksRegistration.StorageBlockMod, 0, 4),
-							3, 5, 12));
+			//ChestGenHooks.getInfo(ChestGenHooks.STRONGHOLD_CORRIDOR).addItem(
+			//		new WeightedRandomChestContent(new ItemStack(
+			//				StorageBlocksRegistration.StorageBlockMod, 0, 4),
+			//				3, 5, 12));
 			ChestGenHooks.getInfo(ChestGenHooks.STRONGHOLD_CORRIDOR).addItem(
 					new WeightedRandomChestContent(new ItemStack(
 							StorageBlocksRegistration.StorageBlockMod, 0, 5),
@@ -587,10 +587,10 @@ public class Dungeonlootspawning {
 					new WeightedRandomChestContent(new ItemStack(
 							StorageBlocksRegistration.StorageBlockMod, 0, 3),
 							3, 5, 12));
-			ChestGenHooks.getInfo(ChestGenHooks.STRONGHOLD_LIBRARY).addItem(
-					new WeightedRandomChestContent(new ItemStack(
-							StorageBlocksRegistration.StorageBlockMod, 0, 4),
-							3, 5, 12));
+			//ChestGenHooks.getInfo(ChestGenHooks.STRONGHOLD_LIBRARY).addItem(
+			//		new WeightedRandomChestContent(new ItemStack(
+			//				StorageBlocksRegistration.StorageBlockMod, 0, 4),
+			//				3, 5, 12));
 			ChestGenHooks.getInfo(ChestGenHooks.STRONGHOLD_LIBRARY).addItem(
 					new WeightedRandomChestContent(new ItemStack(
 							StorageBlocksRegistration.StorageBlockMod, 0, 5),
@@ -632,10 +632,10 @@ public class Dungeonlootspawning {
 					new WeightedRandomChestContent(new ItemStack(
 							StorageBlocksRegistration.StorageBlockMod, 0, 3),
 							3, 5, 12));
-			ChestGenHooks.getInfo(ChestGenHooks.STRONGHOLD_CROSSING).addItem(
-					new WeightedRandomChestContent(new ItemStack(
-							StorageBlocksRegistration.StorageBlockMod, 0, 4),
-							3, 5, 12));
+			//ChestGenHooks.getInfo(ChestGenHooks.STRONGHOLD_CROSSING).addItem(
+			//		new WeightedRandomChestContent(new ItemStack(
+			//				StorageBlocksRegistration.StorageBlockMod, 0, 4),
+			//				3, 5, 12));
 			ChestGenHooks.getInfo(ChestGenHooks.STRONGHOLD_CROSSING).addItem(
 					new WeightedRandomChestContent(new ItemStack(
 							StorageBlocksRegistration.StorageBlockMod, 0, 5),

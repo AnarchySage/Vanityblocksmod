@@ -120,6 +120,17 @@ public class StorageBlocksRegistration {
 						StorageBlock, 1, 6));
 			}
 		}
+		if (Storageprops.enableflesh) {
+			GameRegistry.addRecipe(new ItemStack(StorageBlock, 1, 7),
+					new Object[] { "xxx", "x x", "xxx", 'x',
+							new ItemStack(Items.rotten_flesh) });
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.rotten_flesh, 8),
+					new ItemStack(StorageBlock, 1, 7));
+			if (Storageprops.gregtechcompat) {
+				OreDictionary.registerOre("blockFlesh", new ItemStack(
+						StorageBlock, 1, 7));
+			}
+		}
 	}
 
 	public static void addModRecipes() {
@@ -192,7 +203,7 @@ public class StorageBlocksRegistration {
 				}
 			}
 		}
-		if (Storageprops.enablenikolite) {
+		/*if (Storageprops.enablenikolite) {
 			if (!OreDictionary.getOres("dustNikolite").isEmpty()) {
 				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(
 						StorageBlockMod, 1, 4), "xxx", "xxx", "xxx", 'x',
@@ -208,7 +219,7 @@ public class StorageBlocksRegistration {
 							StorageBlockMod, 1, 4));
 				}
 			}
-		}
+		}*/
 		if (Storageprops.enablenickel) {
 			if (!OreDictionary.getOres("ingotNickel").isEmpty()) {
 				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(

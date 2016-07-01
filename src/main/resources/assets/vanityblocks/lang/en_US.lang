@@ -8,6 +8,7 @@ tile.null.cocoablock.name=Cocoa chunk
 tile.null.sugarcaneblock.name=Sugar Cane Block
 tile.null.leatherblock.name=Leather Block
 tile.null.boneblock.name=Bone Block
+tile.null.fleshblock.name=Flesh Block
 
 tile.null.tinblock.name=Tin Block
 tile.null.copperblock.name=Copper Block
