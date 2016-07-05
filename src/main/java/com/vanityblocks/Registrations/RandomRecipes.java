@@ -16,10 +16,10 @@ public class RandomRecipes {
 			GameRegistry.addRecipe(new ItemStack(Items.feather, 1), "xx", "xx",
 					'x', new ItemStack(Items.arrow, 1));
 		}
-		if (Storageprops.fleshtoleather) {
-			GameRegistry.addSmelting(Items.rotten_flesh, new ItemStack(
-					Items.leather, 1), 0.5F);
-		}
+		//if (Storageprops.fleshtoleather) {
+		//	GameRegistry.addSmelting(Items.rotten_flesh, new ItemStack(
+		//			Items.leather, 1), 0.5F);
+		//}
 		if (Storageprops.quartzblocktoquartz) {
 			GameRegistry.addShapelessRecipe(new ItemStack(Items.quartz, 4),
 					new ItemStack(Blocks.quartz_block));

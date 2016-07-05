@@ -24,7 +24,6 @@ public class MarbleGen implements IWorldGenerator {
 				VanityBlocksRegistration.VanityDesignworldblock, 5,
 				(Storageprops.blackmarblevein), Blocks.stone);
 	}
-
 	public void generate(Random random, int chunkX, int chunkZ, World world,
 			IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
 		if (Storageprops.generatemarble) {
@@ -45,7 +44,7 @@ public class MarbleGen implements IWorldGenerator {
 				zPos = zChunk + random.nextInt(16);
 
 				marble.generate(world, random, xPos, yPos, zPos);
-				FMLLog.info("Generating marble at " + "x" + xPos + "y" + yPos + "z" + zPos);
+				//FMLLog.info("Generating marble at " + "x" + xPos + "y" + yPos + "z" + zPos);
 
 			}
 		}

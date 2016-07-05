@@ -126,6 +126,10 @@ public class StorageBlocksRegistration {
 							new ItemStack(Items.rotten_flesh) });
 			GameRegistry.addShapelessRecipe(new ItemStack(Items.rotten_flesh, 8),
 					new ItemStack(StorageBlock, 1, 7));
+		if (Storageprops.fleshtoleather) {
+			GameRegistry.addSmelting(new ItemStack(StorageBlock,1, 7), new ItemStack(
+					Items.leather, 1), 0.1F);
+		}			
 			if (Storageprops.gregtechcompat) {
 				OreDictionary.registerOre("blockFlesh", new ItemStack(
 						StorageBlock, 1, 7));

@@ -140,13 +140,6 @@ public class VanityBlocks {
 		if (Storageprops.dungeonlootenablemod) {
 			Dungeonlootspawning.chestHooks();
 		}
-
-		/* ######################## World Gen Registration ###### */
-		if (Storageprops.enableworldgen) {
-			GameRegistry.registerWorldGenerator(new MarbleGen(0), 25);
-			GameRegistry.registerWorldGenerator(new GADWorldGen(0), 0);
-
-		}
 		if (Storageprops.enablebonedrops) {
 		MinecraftForge.EVENT_BUS.register(new MobDropsBoneEvent());
 		}
@@ -194,6 +187,12 @@ public class VanityBlocks {
 		if (Storageprops.enableoredictionaryfix) {
 			OreDictionaryBypass.bypassrecipes();
 			FMLLog.info("[VanityBlocks] Bypass for OreDictionary ingots are enabled");
+		}
+		/* ######################## World Gen Registration ###### */
+		if (Storageprops.enableworldgen) {
+			GameRegistry.registerWorldGenerator(new MarbleGen(0), 25);
+			GameRegistry.registerWorldGenerator(new GADWorldGen(0), 0);
+
 		}
 		FMLLog.info("[VanityBlocks] Seems to have loaded well!");
 	}
