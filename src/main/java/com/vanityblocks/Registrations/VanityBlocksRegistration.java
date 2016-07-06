@@ -85,6 +85,9 @@ public class VanityBlocksRegistration {
 		/* Block registration and naming for world gen */
 		if (Storageprops.generatemarble) {
 			GameRegistry.registerBlock(VanityDesignworldblock,DesignWorldItemBlock.class, "Vanity Blocks World blocks");
+			OreDictionary.registerOre("blockMarble", new ItemStack(VanityDesignworldblock, 1, 0));
+			OreDictionary.registerOre("blockAshfordMarble", new ItemStack(VanityDesignworldblock, 1, 5));
+			OreDictionary.registerOre("blockBlackMarble", new ItemStack(VanityDesignworldblock, 1, 5));	
 		}
 		/* Allows Diorite, Andesite and Granite to spawn + Item to polish */
 		if (Storageprops.enablediorite) {

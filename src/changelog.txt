@@ -1,4 +1,5 @@
 1.7.10
+Build 93: Added marble types to the ore dictionary.
 Build 92: Removed FmlLog for testing something. Changed zombie flesh to leather recipe, its now a zombie flesh block to 1 leather. Was exploitable otherwise.
 Build 91: Change White soul sand to give 4 back and recipe as well. Disabled nikolite spawning in chests, and removed recipe, will remove when i recode mod. Added Config option for bone drop amounts from passive mobs. Added zombie flesh block(made with 8 flesh like chest(bypass's same recipe in other mods)). Changed bone block texture to 1.10's. 
 Build 90: LizzytheTrickster fixed the heirachy of files to put assets in.
